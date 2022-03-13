@@ -25,7 +25,7 @@
 							<li><a href="blog.html">Blog</a></li>
 							<li><a href="contact.html">Contact</a></li>
 							<li class="nav-item book-btn">
-                        <a class="nav-link" href="pages/book.html">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
 						</ul>
 					</nav>
@@ -301,7 +301,7 @@
 				<div class="row">
 					<div class="col-md-4 col-sm-6 fh5co-tours animate-box"
 						data-animate-effect="fadeIn">
-						<div href="#">
+						<div>
 							<img src="images/place-1.jpg"
 								alt="Free HTML5 Website Template by FreeHTML5.co"
 								class="img-responsive">
@@ -316,7 +316,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6 fh5co-tours animate-box"
 						data-animate-effect="fadeIn">
-						<div href="#">
+						<div>
 							<img src="images/place-2.jpg"
 								alt="Free HTML5 Website Template by FreeHTML5.co"
 								class="img-responsive">
