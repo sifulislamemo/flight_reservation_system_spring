@@ -1,3 +1,8 @@
+
+	</div>
+	<!-- END fh5co-page -->
+
+</div>
 <script src="/resources/home/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="/resources/home/js/jquery.easing.1.3.js"></script>
