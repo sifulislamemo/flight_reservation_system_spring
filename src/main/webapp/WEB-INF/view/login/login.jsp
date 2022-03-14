@@ -18,13 +18,17 @@
   <!-- Bootstrap CSS -->
   <link href="/resources/vendor/css/bootstrap.css" rel="stylesheet">
   <!-- bootstrap theme -->
-  <link href="/resources/vendor/login/login.css" rel="stylesheet">
-  
-
+  <link href="/resources/login/login.css" rel="stylesheet">
   
 </head>
 
 <body >
+<div class="container">
+				<div class="nav-header" >
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+					<h1 id="fh5co-logo" >
+						<a href="/"><i class="icon-airplane"></i>S I TRAVEL</a>
+					</h1>
 
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
@@ -56,7 +60,7 @@
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<a href="/admin" class="btn float-right login_btn">Login</a>
 					</div>
 				</form>
 			</div>
@@ -71,6 +75,9 @@
 		</div>
 	</div>
 </div>
+
+	</div>
+			</div>
 
 <script src="/resources/vendor/js/bootstrap.js"></script>
 </body>

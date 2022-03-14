@@ -73,7 +73,13 @@ figure {
   margin-bottom: 0;
   z-index: 9999999;
 }
-
+.searchFlight{
+	 margin-top: 50px;
+	width: 103%;
+    max-width: 180%;
+    margin-bottom: 100px;
+	
+}
 .stuck {
   position: fixed !important;
   top: 0 !important;

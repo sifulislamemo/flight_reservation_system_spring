@@ -17,7 +17,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="/resources/vendor/css/bootstrap.css" rel="stylesheet">
-    <link href="/resources/vendor/login/signUp.css" rel="stylesheet">
+    <link href="/resources/login/signUp.css" rel="stylesheet">
  
   
 
@@ -46,7 +46,7 @@
        
         <div class="btn btn-primary mt-3">Submit</div>
         <div class="card-footer">
-				<div class="d-flex justify-content-center links">
+				<div class="d-flex justify-content-center links">Plase login your account here? 
 					<a href="/login">Login</a>
 				</div>
 				
