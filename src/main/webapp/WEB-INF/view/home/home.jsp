@@ -8,8 +8,8 @@
 
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5"
-				style="background-image: url(images/cover_bg_1.jpg);">
+			<div class="fh5co-cover" data-stellar-background-ratio="1.0"
+				style="background-image: url(resources/assets/home/h1.jpg);">
 				<div class="desc">
 					<div class="container">
 						<div class="row">
@@ -49,19 +49,20 @@
 												</div>
 												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<div class="input-field">
-														<label for="date-start">Check In:</label> <input
+														<label for="date-start">Departing:</label> <input
 															type="text" class="form-control" id="date-start"
 															placeholder="mm/dd/yyyy" />
 													</div>
 												</div>
+												
 												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<div class="input-field">
-														<label for="date-end">Check Out:</label> <input
+														<label for="date-end">Returning:</label> <input
 															type="text" class="form-control" id="date-end"
 															placeholder="mm/dd/yyyy" />
 													</div>
 												</div>
-												<div class="col-sm-12 mt">
+												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<section>
 														<label for="class">Class:</label> <select
 															class="cs-select cs-skin-border">
@@ -72,6 +73,7 @@
 														</select>
 													</section>
 												</div>
+												
 												<div class="col-xxs-12 col-xs-6 mt">
 													<section>
 														<label for="class">Adult:</label> <select
@@ -95,6 +97,13 @@
 															<option value="4">4</option>
 														</select>
 													</section>
+												</div>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field">
+														<label for="from"></label> <input type="text"
+															class="form-control" id="to-place"
+															placeholder="Promo Code" />
+													</div>
 												</div>
 												<div class="col-xs-12">
 													<a href="/available_flight" class="btn btn-primary btn-block"
@@ -246,9 +255,11 @@
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
 									
-									<h2>Exclusive Limited Time Offer</h2>
-									<h3>Fly to Hong Kong via Los Angeles, USA</h3>
-									<span class="price">$599</span>
+									<h1>Fly S I TRAVEL and get a
+</h1>
+									<h2>Fly the Friendly Skies</h2>
+									
+									<span class="price"></span>
 									<!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
 								</div>
 							</div>
@@ -269,60 +280,7 @@
 							countries Vokalia and Consonantia, there live the blind texts.</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-4 col-sm-6 fh5co-tours animate-box"
-						data-animate-effect="fadeIn">
-						<div>
-							<img src="images/place-1.jpg"
-								alt="Free HTML5 Website Template by FreeHTML5.co"
-								class="img-responsive">
-							<div class="desc">
-								<span></span>
-								<h3>New York</h3>
-								<span>3 nights + Flight 5*Hotel</span> <span class="price">$1,000</span>
-								<a class="btn btn-primary btn-outline" href="#">Book Now <i
-									class="icon-arrow-right22"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 fh5co-tours animate-box"
-						data-animate-effect="fadeIn">
-						<div>
-							<img src="images/place-2.jpg"
-								alt="Free HTML5 Website Template by FreeHTML5.co"
-								class="img-responsive">
-							<div class="desc">
-								<span></span>
-								<h3>Philippines</h3>
-								<span>4 nights + Flight 5*Hotel</span> <span class="price">$1,000</span>
-								<a class="btn btn-primary btn-outline" href="#">Book Now <i
-									class="icon-arrow-right22"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 fh5co-tours animate-box"
-						data-animate-effect="fadeIn">
-						<div href="#">
-							<img src="images/place-3.jpg"
-								alt="Free HTML5 Website Template by FreeHTML5.co"
-								class="img-responsive">
-							<div class="desc">
-								<span></span>
-								<h3>Hongkong</h3>
-								<span>2 nights + Flight 4*Hotel</span> <span class="price">$1,000</span>
-								<a class="btn btn-primary btn-outline" href="#">Book Now <i
-									class="icon-arrow-right22"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 text-center animate-box">
-						<p>
-							<a class="btn btn-primary btn-outline btn-lg" href="#">See
-								All Offers <i class="icon-arrow-right22"></i>
-							</a>
-						</p>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 
@@ -336,8 +294,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Family Travel</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum
-									mollitia reprehenderit.</p>
+								<p>Best of family tour packages guarantee relaxation and activities for the complete family. Right from adults and kids to elderly, family packages include a vast range of sightseeing trips, historical tours, fun activities, a little bit of adventure and a lot of relaxing time.</p>
 								<p>
 									<a href="#">Learn More</a>
 								</p>
@@ -433,28 +390,28 @@
 					<div class="col-md-12">
 						<ul id="fh5co-destination-list" class="animate-box">
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-1.jpg);"><a
+								style="background-image: url(/resources/home/images/los_angeles.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Los Angeles</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-2.jpg);"><a
+								style="background-image: url(/resources/home/images/place-2.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Hongkong</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-3.jpg);"><a
+								style="background-image: url(/resources/home/images/place-3.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Italy</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-4.jpg);"><a
+								style="background-image: url(/resources/home/images/place-4.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Philippines</h2>
@@ -462,7 +419,7 @@
 							</a></li>
 
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-5.jpg);"><a
+								style="background-image: url(/resources/home/images/place-5.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Japan</h2>
@@ -477,35 +434,35 @@
 								</div>
 							</li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-6.jpg);"><a
+								style="background-image: url(/resources/home/images/place-6.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Paris</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-7.jpg);"><a
+								style="background-image: url(/resources/home/images/place-7.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Singapore</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-8.jpg);"><a
+								style="background-image: url(/resources/home/images/place-8.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Madagascar</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-9.jpg);"><a
+								style="background-image: url(/resources/home/images/place-9.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Egypt</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(images/place-10.jpg);"><a
+								style="background-image: url(/resources/home/images/place-10.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Indonesia</h2>
