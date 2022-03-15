@@ -79,6 +79,9 @@
 <script src="/resources/home/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="/resources/home/js/jquery.easing.1.3.js"></script>
+	
+	<script src="/resources/admin/vendor/jquery/jquery.min.js"></script>
+	<script src="/resources/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="/resources/home/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
