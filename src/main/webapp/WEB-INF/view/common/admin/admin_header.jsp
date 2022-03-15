@@ -67,7 +67,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Add Air Plane</a>
+                        <a class="collapse-item" href="/airplane/airplane_add">Add Air Plane</a>
                         <a class="collapse-item" href="cards.html">Edit Air Plane</a>
                         <a class="collapse-item" href="#">View Air Plane</a>
                     </div>
@@ -83,7 +83,7 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Add Flight</a>
+                        <a class="collapse-item" href="/airplane/flight_add">Add Flight</a>
                         <a class="collapse-item" href="cards.html">Edit Flight</a>
                         <a class="collapse-item" href="#">View Flight</a>
                     </div>
@@ -99,7 +99,7 @@
                 <div id="airport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Add Airport</a>
+                        <a class="collapse-item" href="/airplane/airport_add">Add Airport</a>
                         <a class="collapse-item" href="cards.html">Edit Airport</a>
                         <a class="collapse-item" href="#">View Airport</a>
                     </div>
@@ -109,15 +109,15 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#passenger"
                     aria-expanded="true" aria-controls="passenger">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Passenger</span>
+                    <i class="fas fa-fw fa-cog"></i> 
+                    <span>Traveller</span>
                 </a>
                 <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Passenger Add </a>
-                        <a class="collapse-item" href="cards.html">Passenger Edit</a>
-                        <a class="collapse-item" href="#">Passenger Details</a>
+                        <a class="collapse-item" href="/airplane/traveller_add">Traveller Add </a>
+                        <a class="collapse-item" href="cards.html">Traveller Edit</a>
+                        <a class="collapse-item" href="#">Traveller Details</a>
                     </div>
                 </div>
             </li>
@@ -131,7 +131,7 @@
                 <div id="country" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Country Add </a>
+                        <a class="collapse-item" href="/admin/country_add">Country Add </a>
                         <a class="collapse-item" href="cards.html">Country Edit</a>
                         <a class="collapse-item" href="#">Country View</a>
                     </div>

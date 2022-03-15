@@ -1983,13 +1983,23 @@ div.cs-select span {
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
-/*ticket_information*/
-.ticket_information{
-	margin-top: 150px;
-	 margin-bottom: 150px;
-	 margin-left: 150px;
-	 margin-right: 150px;
-	
+
+
+/*payment */
+.inlineimage {
+    max-width: 470px;
+    margin-right: 8px;
+    margin-left: 10px
+}
+
+.images {
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+    left: 20px;
+    text-align: center
 }
 
 /*# sourceMappingURL=style.css.map */

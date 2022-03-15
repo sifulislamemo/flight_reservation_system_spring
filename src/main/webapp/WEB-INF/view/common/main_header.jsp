@@ -45,7 +45,7 @@
 	<link rel="stylesheet" href="/resources/home/css/cs-skin-border.css">
 	
 	<link rel="stylesheet" href="/resources/home/css/style.css">
-<link rel="stylesheet" href="/resources/ticket_information/seat.scss">
+<!-- <link rel="stylesheet" href="/resources/ticket_information/seat.scss"> -->
 
 	<!-- Modernizr JS -->
 	<script src="/resources/home/js/modernizr-2.6.2.min.js"></script>

@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-public class TicketInformationController {
-	@RequestMapping(value = "/ticket_information")
-public ModelAndView ticketInformation() {
-	return new ModelAndView("ticket_information/ticket_information");
+@RequestMapping(value = "/airplane")
+public class TravellerController {
+	@RequestMapping(value = "/traveller_add")
+public ModelAndView travellerAdd() {
+	return new ModelAndView("admin/traveller/traveller_add");
 }
 }
