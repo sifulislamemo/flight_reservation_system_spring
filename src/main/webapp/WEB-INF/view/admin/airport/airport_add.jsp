@@ -3,27 +3,39 @@
 
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%> 
   
-  <h1>Create Airport </h1> <br>
-<div class="col-md-12">
+  <div role="tabpanel" class="tab-pane active container" id="flights">
+          <div class="col-lg-12">
+            <section class="panel color2">
+              <header class="panel-heading text-center">
+               <h1> Add Airport</h1>
+              </header>
+
+    
+                <div class="panel-body">
     <form method="post" action="/airport/save">
         <div class="form-group">
-            <label for="name">Airport_code:</label>
-            <input type="text" class="form-control" id="airplane_name" placeholder="Enter airport_code" name="airport_code">
+            <label for="">Airport Code:</label>
+            <input type="text" class="form-control" id="airport_code" placeholder="Enter Airport Code" name="airport_code">
         </div>
         <div class="form-group">
-            <label for="salary">airport_name:</label>
-            <input type="text" class="form-control" id="last_name" placeholder="Enter name" name="name">
+            <label for="">Airport Name:</label>
+            <input type="text" class="form-control" id="airport_name" placeholder="Enter Airport Name" name="name">
         </div>
         <div class="form-group">
-            <label for="nid">City:</label>
-            <input type="text" class="form-control" id="NID" placeholder="Enter city" name="city">
+            <label for="">City:</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
         </div>
         <div class="form-group">
-            <label for="area">Country:</label>
-            <input type="text" class="form-control" id="passport_id" placeholder="Enter country" name="country">
+            <label for="">Country:</label>
+            <input type="text" class="form-control" id="country" placeholder="Enter Country" name="country">
         </div>
  
-        <button type="submit" class="btn btn-primary">Submit</button>
+         <div class="container bg-light">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </div>
+    </div>
 
     </form>
 </div>     

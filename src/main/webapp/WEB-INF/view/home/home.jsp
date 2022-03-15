@@ -3,9 +3,6 @@
 
 <%@include file="/WEB-INF/view/common/main_header.jsp"%>
 
-
-		
-
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover" data-stellar-background-ratio="1.0"
@@ -62,7 +59,7 @@
 															placeholder="mm/dd/yyyy" />
 													</div>
 												</div>
-												<div class="col-xxs-12 col-xs-6 mt alternate">
+												<!-- <div class="col-xxs-12 col-xs-6 mt alternate">
 													<section>
 														<label for="class">Class:</label> <select
 															class="cs-select cs-skin-border">
@@ -104,7 +101,7 @@
 															class="form-control" id="to-place"
 															placeholder="Promo Code" />
 													</div>
-												</div>
+												</div> -->
 												<div class="col-xs-12">
 													<a href="/available_flight" class="btn btn-primary btn-block"
 														>Search Flight</a>
@@ -309,8 +306,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Travel Plans</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum
-									mollitia reprehenderit.</p>
+								<p>A travel plan is a package of actions designed by a workplace, school or other organisation to encourage safe, healthy and sustainable travel options. By reducing car travel, travel plans can improve health and wellbeing, free up car parking space, and make a positive contribution to the community and the environment.</p>
 								<p>
 									<a href="#">Learn More</a>
 								</p>
@@ -323,8 +319,7 @@
 							</span>
 							<div class="feature-copy">
 								<h3>Honeymoon</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum
-									mollitia reprehenderit.</p>
+								<p>Presenting the best honeymoon destinations outside India to plan an incredibly romantic vacation that'll make sure you have unlimited memories.</p>
 								<p>
 									<a href="#">Learn More</a>
 								</p>
@@ -397,21 +392,21 @@
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-2.jpg);"><a
+								style="background-image: url(/resources/home/images/hongkong.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Hongkong</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-3.jpg);"><a
+								style="background-image: url(/resources/home/images/italy.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Italy</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-4.jpg);"><a
+								style="background-image: url(/resources/home/images/philippines.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Philippines</h2>
@@ -419,7 +414,7 @@
 							</a></li>
 
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-5.jpg);"><a
+								style="background-image: url(/resources/home/images/japan.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Japan</h2>
@@ -434,35 +429,35 @@
 								</div>
 							</li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-6.jpg);"><a
+								style="background-image: url(/resources/home/images/paris.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Paris</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-7.jpg);"><a
+								style="background-image: url(/resources/home/images/singapore.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Singapore</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-8.jpg);"><a
+								style="background-image: url(/resources/home/images/madagascar.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Madagascar</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-9.jpg);"><a
+								style="background-image: url(/resources/home/images/egypt.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Egypt</h2>
 									</div>
 							</a></li>
 							<li class="one-forth text-center"
-								style="background-image: url(/resources/home/images/place-10.jpg);"><a
+								style="background-image: url(/resources/home/images/indonesia.jpg);"><a
 								href="#">
 									<div class="case-studies-summary">
 										<h2>Indonesia</h2>

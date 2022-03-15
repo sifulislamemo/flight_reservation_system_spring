@@ -2,11 +2,11 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
- <div class="row">
+ <div role="tabpanel" class="tab-pane active container" id="flights">
           <div class="col-lg-12">
             <section class="panel color2">
               <header class="panel-heading text-center">
-               <h1> Create City</h1>
+               <h1> Country</h1>
               </header>
                 <div class="panel-body">
                    <form method="post" action="/city/save">
@@ -23,7 +23,7 @@
             <input type="text" class="form-control" id="longitude" placeholder="Enter longitude" name="longitude">
         </div>
         <div class="form-group">
-            <label for="area">Country:</label>
+            <label for="country">Country:</label>
             <input type="text" class="form-control" id="country" placeholder="Enter country" name="country">
         </div>
          <div class="form-group">
@@ -32,7 +32,12 @@
         </div>
 
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+         <div class="container bg-light">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </div>
+    </div>
 
     </form>
                 </div>

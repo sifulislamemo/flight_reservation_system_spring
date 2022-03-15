@@ -3,29 +3,29 @@
 
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%> 
 
-<div class="row">
+<div role="tabpanel" class="tab-pane active container" id="flights">
     <div class="col-lg-12">
         <section class="panel color2">
             <header class="panel-heading text-center">
-                <h1> Create Passenger</h1>
+                <h1> Add Traveller</h1>
             </header>
             <div class="panel-body">
                 <form method="post" action="/passenger/save">
                     <div class="form-group">
-                        <label for="name">First_name:</label>
-                        <input type="text" class="form-control" id="airplane_name" placeholder="Enter first_name" name="first_name">
+                        <label for="name">First Name:</label>
+                        <input type="text" class="form-control" id="airplane_name" placeholder="Enter First Name" name="first_name">
                     </div>
                     <div class="form-group">
-                        <label for="salary">Last_name:</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="Enter last_name" name="last_name">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name">
                     </div>
                     <div class="form-group">
                         <label for="nid">NID:</label>
                         <input type="text" class="form-control" id="NID" placeholder="Enter NID" name="NID">
                     </div>
                     <div class="form-group">
-                        <label for="area">Passport_id:</label>
-                        <input type="text" class="form-control" id="passport_id" placeholder="Enter passport_id" name="passport_id">
+                        <label for="passport_no">Passport No:</label>
+                        <input type="text" class="form-control" id="passport_no" placeholder="Enter Passport No" name="passport_no">
                     </div>
 
                     <div class="form-group">
@@ -44,16 +44,21 @@
 
                     <div class="form-group">
                         <label for="area">Contact:</label>
-                        <input type="text" class="form-control" id="contact" placeholder="Enter contact" name="contact">
+                        <input type="text" class="form-control" id="contact" placeholder="Enter Contact" name="contact">
                     </div>
 
                     <div class="form-group">
                         <label for="area">Email:</label>
-                        <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                        <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="container bg-light">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </div>
+    </div>
 
                 </form>
             </div>

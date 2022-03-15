@@ -38,7 +38,7 @@
                             <option value="Select" selected>Select A Country</option>
                             <option value="Canada">Canada</option>
                             <option value="Dubai">Dubai</option> 
-                            <option value="Canada">Itali</option>
+                            <option value="Canada">Italy</option>
                             <option value="Dubai">England</option> 
                             <option value="Canada">Dhaka</option>
                             <option value="Dubai">France</option> 
@@ -50,29 +50,35 @@
                     
                     <div class="form-group" >
                         <label for="area">Flight Date</label>
-                        <input type="f_date" class="form-control" id="f_date" name="f_date">
+                        <input type="date" class="form-control" id="f_date" name="f_date">
                     </div>
                     
                     
                     <div class="form-group">
                         <label for="area">Arrival time</label>
-                        <input type="text" class="form-control" id="arrival_time" name="arrival_time">
+                        <input type="date" class="form-control" id="arrival_time" name="arrival_time">
                     </div>
 
 
                     <div class="form-group">
                         <label for="area">Departure_time</label>
-                        <input type="text" class="form-control" id="departure_time" name="departure_time">
+                        <input type="date" class="form-control" id="departure_time" name="departure_time">
                     </div>
 
                     <div class="form-group">
-                        <label for="area">Class name</label>
-                        <input type="text" class="form-control" id="class_name" name="class_name">
+                        <label for="nid">Class</label>
+                        <select class="form-control input-lg m-bot15" name="departure">
+                            <option value="Select" selected>Select A Class</option>
+                            <option value="Canada">Economy</option>
+                            <option value="Dubai">First</option> 
+                            <option value="Canada">Business</option>
+
+                        </select>
                     </div>
 
                     <div class="form-group">
                         <label for="area">Flight charge:</label>
-                        <input type="text" class="form-control" id="flight_charge" name="flight_charge">
+                        <input type="number" class="form-control" id="flight_charge" name="flight_charge">
                     </div>
                     
                     <div class="form-group">
@@ -94,7 +100,12 @@
                     </div>
                     
                     
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="container bg-light">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </div>
+    </div>
                 </form>
             </div>
         </section>

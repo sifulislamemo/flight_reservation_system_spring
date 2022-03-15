@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping(value = "/airplane")
+@RequestMapping(value = "/admin")
 public class FlightController {
 	@RequestMapping(value = "/flight_add")
 public ModelAndView flightAdd() {

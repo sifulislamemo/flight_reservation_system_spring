@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                     <label for="city">Capacity:</label>
-                    <input type="text" class="form-control" id="capacity" placeholder="Enter capacity" name="capacity">
+                    <input type="number" class="form-control" id="capacity" placeholder="Enter capacity" name="capacity">
                 </div>
                 <div class="container bg-light">
         <div class="col-md-12 text-center">
