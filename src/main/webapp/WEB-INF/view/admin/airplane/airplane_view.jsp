@@ -1,12 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-</body>
-</html>
+<%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
+
+  <table>
+            <tr>
+                <th>Airplane Name</th>
+                <th>Owner</th>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Capacity</th>
+               
+            </tr>
+            <c:forEach items="${airplanes}" var="airplan">
+                <tr>
+                    <td>${airplan.airplane_name}</td>
+                    <td>${airplan.owner}</td>
+                    <td>${airplan.model}</td>
+                    <td>${airplan.engine}</td>
+                    <td>${airplan.capacity}</td>
+                    <td>
+                        <a href="/admin/airplane_update/${airplan.id}">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/admin/delete/${airplan.id}">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+             
+        </table> 
+  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>

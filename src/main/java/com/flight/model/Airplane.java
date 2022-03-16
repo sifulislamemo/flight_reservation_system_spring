@@ -17,7 +17,7 @@ public class Airplane {
     private String owner;
     private String model;
     private String engine;
-    private String capacity;
+    private int capacity;
 	public int getId() {
 		return id;
 	}
@@ -48,12 +48,13 @@ public class Airplane {
 	public void setEngine(String engine) {
 		this.engine = engine;
 	}
-	public String getCapacity() {
+	public int getCapacity() {
 		return capacity;
 	}
-	public void setCapacity(String capacity) {
+	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
+	
     
     
 

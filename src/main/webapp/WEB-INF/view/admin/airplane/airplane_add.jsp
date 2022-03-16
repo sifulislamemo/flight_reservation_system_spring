@@ -13,26 +13,26 @@
     
                 <div class="panel-body">
                
-            <form method="post" action="/airplane/save">
+            <form method="post" action="/admin/save">
                 <div class="form-group">
-                    <label for="name">Airplane Name:</label>
+                    <label for="airplane_name">Airplane Name:</label>
                     <input type="text" class="form-control" id="airplane_name" placeholder="Enter Name" name="airplane_name">
                 </div>
                 <div class="form-group">
-                    <label for="salary">Owner:</label>
+                    <label for="owner">Owner:</label>
                     <input type="text" class="form-control" id="owner" placeholder="Enter owner" name="owner">
                 </div>
                 <div class="form-group">
-                    <label for="nid">Model:</label>
+                    <label for="model">Model:</label>
                     <input type="text" class="form-control" id="model" placeholder="Enter model" name="model">
                 </div>
                 <div class="form-group">
-                    <label for="area">Engine:</label>
-                    <input type="text" class="form-control" id="engeen" placeholder="Enter engeen" name="engeen">
+                    <label for="engine">Engine:</label>
+                    <input type="text" class="form-control" id="engine" placeholder="Enter engine" name="engine">
                 </div>
 
                 <div class="form-group">
-                    <label for="city">Capacity:</label>
+                    <label for="capacity">Capacity:</label>
                     <input type="number" class="form-control" id="capacity" placeholder="Enter capacity" name="capacity">
                 </div>
                 <div class="container bg-light">

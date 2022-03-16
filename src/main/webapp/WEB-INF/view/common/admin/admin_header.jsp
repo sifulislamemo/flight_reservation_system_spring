@@ -68,8 +68,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/airplane_add">Add Air Plane</a>
-                        <a class="collapse-item" href="cards.html">Edit Air Plane</a>
-                        <a class="collapse-item" href="#">View Air Plane</a>
+                        <a class="collapse-item" href="/admin/airplane_update">Edit Air Plane</a>
+                        <a class="collapse-item" href="/admin/airplane_view">View Air Plane</a>
                     </div>
                 </div>
             </li>
