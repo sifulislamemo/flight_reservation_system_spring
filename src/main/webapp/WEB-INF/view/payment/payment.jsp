@@ -42,7 +42,7 @@
                     </div>
                     <div class="panel-footer">
                         <div class="row">
-                            <div class="col-xs-12"> <button class="btn btn-success btn-lg btn-block">Confirm Payment</button> </div>
+                            <div class="col-xs-12"> <a href="/home/invoice" class="btn btn-success btn-lg btn-block">Confirm Payment</a> </div>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,6 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -19,6 +17,7 @@
   <link href="/resources/vendor/css/bootstrap.css" rel="stylesheet">
   <!-- bootstrap theme -->
   <link href="/resources/login/login.css" rel="stylesheet">
+  
   
 </head>
 
