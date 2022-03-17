@@ -13,7 +13,7 @@
     
                 <div class="panel-body">
                
-            <form method="post" action="/admin/update">
+            <form method="post" action="/admin/airplane/update">
                 <div class="form-group">
                     <label for="airplane_name">Airplane Name:</label>
                     <input type="text" class="form-control" value="${airplanes.airplane_name}" id="airplane_name"  name="airplane_name">

@@ -20,50 +20,50 @@ import com.flight.service.AirplaneService;
 
 
 @RestController
-@RequestMapping(value = "/admin")
+@RequestMapping(value = "/admin/airplane")
 public class AirplaneController {
 	@Autowired
     AirplaneService airplaneService;
-	@RequestMapping(value = "/airplane_add", method = RequestMethod.GET)
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView airplaneAdd() {
-		return new ModelAndView("admin/airplane/airplane_add");
+		return new ModelAndView("admin/airplane/add");
 }
-//	@RequestMapping(value = "/airplane_update", method = RequestMethod.GET)
-//	public ModelAndView airplaneUpdate() {
-//		return new ModelAndView("admin/airplane/airplane_update");
-//}
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public ModelAndView airplaneUpdate() {
+		return new ModelAndView("admin/airplane/update");
+}
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public ModelAndView save(HttpServletRequest request){
         Airplane p = airplaneService.save(request);
-        return new ModelAndView("admin/airplane/airplane_add");
+        return new ModelAndView("admin/airplane/add");
     }
 	
-	  @RequestMapping(value = "/airplane_view", method = RequestMethod.GET) 
+	  @RequestMapping(value = "/view", method = RequestMethod.GET) 
 	  public ModelAndView view(){ 
 		  List<Airplane> airplanes = airplaneService.getAll();
-	return new ModelAndView("admin/airplane/airplane_view", "airplanes", airplanes); 
+	return new ModelAndView("admin/airplane/view", "airplanes", airplanes); 
 	}
 	  
-	  @RequestMapping(value = "/airplane_update/{id}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	    public ModelAndView edit(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
 	        Airplane airplanes = airplaneService.getAirplaneById(pid);
 
-	        return new ModelAndView("admin/airplane/airplane_update", "airplanes", airplanes);
+	        return new ModelAndView("admin/airplane/update", "airplanes", airplanes);
 	    }
 	  
 	  @RequestMapping(value = "/update", method = RequestMethod.POST)
 	    public ModelAndView update(HttpServletRequest request){
 		  Airplane p = airplaneService.update(request);
-	        return new ModelAndView("admin/airplane/airplane_update");
+	        return new ModelAndView("admin/airplane/update");
 	    }
 	
 	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	    public ModelAndView delete(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
 	        Airplane airplanes = airplaneService.delete(pid);
-	        return new ModelAndView("admin/airplane/airplane_view", "airplanes", airplanes);
+	        return new ModelAndView("admin/airplane/view", "airplanes", airplanes);
 	    }
 	
 }

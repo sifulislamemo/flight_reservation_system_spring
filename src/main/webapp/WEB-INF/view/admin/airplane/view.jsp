@@ -20,10 +20,10 @@
                     <td>${airplan.engine}</td>
                     <td>${airplan.capacity}</td>
                     <td>
-                        <a href="/admin/airplane_update/${airplan.id}">Edit</a>
+                        <a href="/admin/airplane/update/${airplan.id}">Edit</a>
                     </td>
                     <td>
-                        <a href="/admin/delete/${airplan.id}">Delete</a>
+                        <a href="/admin/airplane/delete/${airplan.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

@@ -13,7 +13,7 @@
     
                 <div class="panel-body">
                
-            <form method="post" action="/admin/save">
+            <form id = "airplaneSave">
                 <div class="form-group">
                     <label for="airplane_name">Airplane Name:</label>
                     <input type="text" class="form-control" id="airplane_name" placeholder="Enter Name" name="airplane_name">
@@ -37,8 +37,8 @@
                 </div>
                 <div class="container bg-light">
         <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        
+<!--             <button type="submit" class="btn btn-primary">Submit</button> -->
+        <input type="button" value="Save" id="btnSave" class="btn btn-primary" />
         </div>
     </div>
                  
@@ -49,3 +49,22 @@
              </div>   
 
   <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+  
+  <script>
+	$("#btnSave").on("click", function(e) {
+		$.ajax({
+			type : "POST",
+			url : "/admin/airplane/save",
+			data : $("#airplaneSave").serialize(),
+			success : function(data, status) {
+				$("#airplaneSave").trigger('reset'); 
+				$.alert({
+					title : 'Saved!',
+					content : 'Data Saved successfully!',
+				});
+			}
+
+		});
+
+	});
+  </script>

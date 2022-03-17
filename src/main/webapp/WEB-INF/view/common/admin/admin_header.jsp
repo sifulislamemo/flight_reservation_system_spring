@@ -67,9 +67,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/airplane_add">Add Air Plane</a>
-                        <a class="collapse-item" href="/admin/airplane_update">Edit Air Plane</a>
-                        <a class="collapse-item" href="/admin/airplane_view">View Air Plane</a>
+                        <a class="collapse-item" href="/admin/airplane/add">Add Air Plane</a>
+                        <a class="collapse-item" href="/admin/airplane/update">Edit Air Plane</a>
+                        <a class="collapse-item" href="/admin/airplane/view">View Air Plane</a>
                     </div>
                 </div>
             </li>
@@ -131,7 +131,7 @@
                 <div id="country" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/country_add">Country Add </a>
+                        <a class="collapse-item" href="/admin/country/add">Country Add </a>
                         <a class="collapse-item" href="cards.html">Country Edit</a>
                         <a class="collapse-item" href="#">Country View</a>
                     </div>
