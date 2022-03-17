@@ -14,6 +14,7 @@ import com.flight.model.Airplane;
 
 
 
+
 @Service(value = "airplaneService")
 public class AirplaneService {
 	@Autowired
@@ -52,6 +53,10 @@ public class AirplaneService {
 	        airplane.setEngine("engine");
 	        airplane.setCapacity(Integer.valueOf(request.getParameter("capacity")));
 	        return airplaneDAO.update(airplane);
+	    }
+	  public Airplane delete(int pid) {
+		  Airplane airplane = airplaneDAO.getAirplaneById(pid);
+	        return airplaneDAO.delete(airplane);
 	    }
 	 
 

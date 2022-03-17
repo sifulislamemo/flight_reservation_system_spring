@@ -16,6 +16,7 @@ import com.flight.model.Airplane;
 
 
 
+
 @Repository(value = "airplaneDAO")
 @Transactional
 public class AirplaneDAO {
@@ -51,6 +52,12 @@ public class AirplaneDAO {
 		        q.executeUpdate();
 		        getSession().flush();
 		        return p;
+		    }
+		 
+		 public Airplane delete(Airplane airplane) {
+		    	String sql = "delete airplane where id = '"+airplane.getId()+"'";
+		        int delete = getSession().createQuery(sql).executeUpdate();
+		        return airplane;
 		    }
 		 
 }

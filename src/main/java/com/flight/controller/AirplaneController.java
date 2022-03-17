@@ -18,6 +18,7 @@ import com.flight.service.AirplaneService;
 
 
 
+
 @RestController
 @RequestMapping(value = "/admin")
 public class AirplaneController {
@@ -48,16 +49,21 @@ public class AirplaneController {
 	    public ModelAndView edit(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
 	        Airplane airplanes = airplaneService.getAirplaneById(pid);
-	        System.out.println(airplanes.getAirplane_name());
+
 	        return new ModelAndView("admin/airplane/airplane_update", "airplanes", airplanes);
 	    }
 	  
 	  @RequestMapping(value = "/update", method = RequestMethod.POST)
 	    public ModelAndView update(HttpServletRequest request){
 		  Airplane p = airplaneService.update(request);
-	        return new ModelAndView("product/show");
+	        return new ModelAndView("admin/airplane/airplane_update");
 	    }
 	
-	
+	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	    public ModelAndView delete(@PathVariable String id){
+	        int pid = Integer.valueOf(id);
+	        Airplane airplanes = airplaneService.delete(pid);
+	        return new ModelAndView("admin/airplane/airplane_view", "airplanes", airplanes);
+	    }
 	
 }

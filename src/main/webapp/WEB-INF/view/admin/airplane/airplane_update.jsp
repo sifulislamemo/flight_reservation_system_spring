@@ -13,7 +13,7 @@
     
                 <div class="panel-body">
                
-            <form method="post" action="/admin/save">
+            <form method="post" action="/admin/update">
                 <div class="form-group">
                     <label for="airplane_name">Airplane Name:</label>
                     <input type="text" class="form-control" value="${airplanes.airplane_name}" id="airplane_name"  name="airplane_name">
@@ -38,7 +38,7 @@
                 <input type="hidden" name="id" value="${airplanes.id}"/><br/>
                 <div class="container bg-light">
         <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         
         </div>
     </div>
