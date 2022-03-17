@@ -11,10 +11,6 @@ import com.flight.dao.AirplaneDAO;
 import com.flight.model.Airplane;
 
 
-
-
-
-
 @Service(value = "airplaneService")
 public class AirplaneService {
 	@Autowired

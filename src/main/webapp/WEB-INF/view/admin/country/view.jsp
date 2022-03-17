@@ -3,5 +3,37 @@
 
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
 
-
+<div role="tabpanel" class="tab-pane active " id="">
+	<div class="col-lg-12">
+  <h1 style="text-align:center">Country List</h1>
+<table  class="table table-striped table-hover" >
+            <tr>
+                <th>City Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Country</th>
+                <th>City Code</th>
+                <th >Edit Action</th>
+                <th >Delete Action</th>
+               
+            </tr>
+            <c:forEach items="${country}" var="country">
+                <tr>
+                    <td>${country.city_name}</td>
+                    <td>${country.latitude}</td>
+                    <td>${country.longitude}</td>
+                    <td>${country.country}</td>
+                    <td>${country.city_code}</td>
+                    <td>
+                        <a href="/admin/country/update/${country.id}">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/admin/country/delete/${country.id}">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+             
+        </table> 
+        </div>
+</div>
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>

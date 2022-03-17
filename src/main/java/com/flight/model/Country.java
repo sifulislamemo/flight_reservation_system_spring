@@ -12,17 +12,18 @@ public class Country {
 @Id
 @GeneratedValue
 @Column(name = "id")
-private int city_id;
+private int id;
 private String city_name;
 private String latitude;
 private String longitude;
 private String country;
 private String city_code;
-public int getCity_id() {
-	return city_id;
+
+public int getId() {
+	return id;
 }
-public void setCity_id(int city_id) {
-	this.city_id = city_id;
+public void setId(int id) {
+	this.id = id;
 }
 public String getCity_name() {
 	return city_name;

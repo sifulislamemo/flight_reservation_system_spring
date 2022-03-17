@@ -132,8 +132,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/country/add">Country Add </a>
-                        <a class="collapse-item" href="cards.html">Country Edit</a>
-                        <a class="collapse-item" href="#">Country View</a>
+                        <a class="collapse-item" href="/admin/country/update">Country Edit</a>
+                        <a class="collapse-item" href="/admin/country/view">Country View</a>
                     </div>
                 </div>
             </li>

@@ -1,25 +1,45 @@
 package com.flight.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.flight.model.Airplane;
+
+import com.flight.model.Country;
+import com.flight.service.CountryService;
 
 @RestController
 @RequestMapping(value = "/admin/country")
 public class CountryController {
-	@RequestMapping(value = "/add")
+	@Autowired
+	CountryService countryService;
+	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
 public ModelAndView add() {
 	return new ModelAndView("admin/country/add");
 }
-//	@RequestMapping(value = "/save", method = RequestMethod.POST)
-//    public ModelAndView save(HttpServletRequest request){
-//        Airplane p = airplaneService.save(request);
-//        return new ModelAndView("admin/airplane/add");
-//    }
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+    public ModelAndView save(HttpServletRequest request){
+        Country country = countryService.save(request);
+        System.out.println(country.getLatitude());
+        return new ModelAndView("admin/country/add");
+    }
+	
+	@RequestMapping(value = "/view", method = RequestMethod.GET)
+	public ModelAndView view() {
+		List<Country> country = countryService.getAll();
+		return new ModelAndView("admin/country/view", "country", country);
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public ModelAndView Countryupdate() {
+		return new ModelAndView("admin/country/update");
+}
 	
 }
