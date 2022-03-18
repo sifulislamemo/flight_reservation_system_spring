@@ -41,9 +41,9 @@ public class AirplaneDAO {
 		 
 		 public Airplane getAirplaneById(int pid) {
 		        String sql = "from airplane where id = '" + pid + "'";
-		        List<Airplane> empList = getSession().createQuery(sql).list();
-		        System.out.println(empList.get(0));
-		        return empList.get(0);
+		        List<Airplane> airplaneList = getSession().createQuery(sql).list();
+		        
+		        return airplaneList.get(0);
 
 		    }
 		 public Airplane update(Airplane p) {

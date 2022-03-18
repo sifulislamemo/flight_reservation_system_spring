@@ -99,9 +99,9 @@
                 <div id="airport" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/airport_add">Add Airport</a>
-                        <a class="collapse-item" href="cards.html">Edit Airport</a>
-                        <a class="collapse-item" href="#">View Airport</a>
+                        <a class="collapse-item" href="/admin/airport/add">Add Airport</a>
+                        <a class="collapse-item" href="/admin/airport/update">Edit Airport</a>
+                        <a class="collapse-item" href="/admin/airport/view">View Airport</a>
                     </div>
                 </div>
             </li>

@@ -12,7 +12,7 @@
 
     
                 <div class="panel-body">
-    <form method="post" action="/airport/save">
+    <form method="post" action="/admin/airport/save">
         <div class="form-group">
             <label for="">Airport Code:</label>
             <input type="text" class="form-control" id="airport_code" placeholder="Enter Airport Code" name="airport_code">

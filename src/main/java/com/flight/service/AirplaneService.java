@@ -22,9 +22,9 @@ public class AirplaneService {
         String airplane_name = request.getParameter("airplane_name");
         Airplane airplane = new Airplane();
         airplane.setAirplane_name(airplane_name);
-        airplane.setOwner("owner");
-        airplane.setModel("model");
-        airplane.setEngine("engine");
+        airplane.setOwner(request.getParameter("owner"));
+        airplane.setModel(request.getParameter("model"));
+        airplane.setEngine(request.getParameter("engine"));
         airplane.setCapacity(Integer.valueOf(request.getParameter("capacity")));
         return airplaneDAO.save(airplane);
     }
@@ -40,13 +40,13 @@ public class AirplaneService {
 	    }
 	  
 	  public Airplane update(HttpServletRequest request) {
-	        String airplane_name = request.getParameter("airplane_name");
+		  String airplane_name = request.getParameter("airplane_name");
 	        Airplane airplane = new Airplane();
 	        airplane.setId(Integer.valueOf(request.getParameter("id")));
 	        airplane.setAirplane_name(airplane_name);
-	        airplane.setOwner("owner");
-	        airplane.setModel("model");
-	        airplane.setEngine("engine");
+	        airplane.setOwner(request.getParameter("owner"));
+	        airplane.setModel(request.getParameter("model"));
+	        airplane.setEngine(request.getParameter("engine"));
 	        airplane.setCapacity(Integer.valueOf(request.getParameter("capacity")));
 	        return airplaneDAO.update(airplane);
 	    }

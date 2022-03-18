@@ -35,6 +35,7 @@
 							class="form-control" id="city_code" value="${country.city_code}" placeholder="Enter City code"
 							name="city_code">
 					</div>
+					<input type="hidden" name="id" value="${country.id}"/><br/>
 
 
 					<div class="container bg-light">

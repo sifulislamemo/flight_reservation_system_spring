@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,5 +42,23 @@ public ModelAndView add() {
 	public ModelAndView Countryupdate() {
 		return new ModelAndView("admin/country/update");
 }
+	 @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+	    public ModelAndView edit(@PathVariable String id){
+	        int pid = Integer.valueOf(id);
+	        Country country = countryService.getCountryById(pid);
+
+	        return new ModelAndView("admin/country/update", "country", country);
+	    }
+	  @RequestMapping(value = "/update", method = RequestMethod.POST)
+	    public ModelAndView update(HttpServletRequest request){
+		  Country country = countryService.update(request);
+	        return new ModelAndView("admin/country/update");
+	    }
+	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	    public ModelAndView delete(@PathVariable String id){
+	        int pid = Integer.valueOf(id);
+	        Country country = countryService.delete(pid);
+	        return new ModelAndView("admin/country/view", "country", country);
+	    }
 	
 }
