@@ -9,8 +9,8 @@
 				<h1>Country Update</h1>
 			</header>
 			<div class="panel-body">
-				<form id="countrySave">
-					<div class="form-group">
+				<form  action="/admin/country/update" method="POST">
+					<div class="form-group" >
 						<label for="city_name">City name</label> <input type="text"
 							class="form-control" id="city_name" value="${country.city_name}" placeholder="Enter city name"
 							name="city_name">
@@ -57,20 +57,20 @@
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
  
  <script>
-	$("#btnSave").on("click", function(e) {
-		$.ajax({
-			type : "POST",
-			url : "/admin/country/update",
-			data : $("#countrySave").serialize(),
-			success : function(data, status) {
-				$("#countrySave").trigger('reset');
-				$.alert({
-					title : 'Update!',
-					content : 'Data Update successfully!',
-				});
-			}
+// 	$("#btnSave").on("click", function(e) {
+// 		$.ajax({
+// 			type : "POST",
+// 			url : "/admin/country/update",
+// 			data : $("#countrySave").serialize(),
+// 			success : function(data, status) {
+// 				$("#countrySave").trigger('reset');
+// 				$.alert({
+// 					title : 'Update!',
+// 					content : 'Data Update successfully!',
+// 				});
+// 			}
 
-		});
+// 		});
 
-	});
+// 	});
 </script>

@@ -12,8 +12,8 @@
                 <th>Model</th>
                 <th>Engine</th>
                 <th>Capacity</th>
-                <th >Edit Action</th>
-                <th >Delete Action</th>
+                <th>Action</th>
+                
                
             </tr>
             <c:forEach items="${airplanes}" var="airplan">
@@ -24,9 +24,8 @@
                     <td>${airplan.engine}</td>
                     <td>${airplan.capacity}</td>
                     <td>
-                        <a href="/admin/airplane/update/${airplan.id}">Edit</a>
-                    </td>
-                    <td>
+                        <a href="/admin/airplane/update/${airplan.id}">Edit</a> &nbsp; &nbsp;
+                   
                         <a href="/admin/airplane/delete/${airplan.id}">Delete</a>
                     </td>
                 </tr>

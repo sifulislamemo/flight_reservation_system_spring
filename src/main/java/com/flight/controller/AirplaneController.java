@@ -56,13 +56,15 @@ public class AirplaneController {
 	  @RequestMapping(value = "/update", method = RequestMethod.POST)
 	    public ModelAndView update(HttpServletRequest request){
 		  Airplane p = airplaneService.update(request);
-	        return new ModelAndView("admin/airplane/update");
+		  List<Airplane> airplanes = airplaneService.getAll();
+	        return new ModelAndView("admin/airplane/view", "airplanes", airplanes);
 	    }
 	
 	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	    public ModelAndView delete(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
-	        Airplane airplanes = airplaneService.delete(pid);
+	        Airplane a = airplaneService.delete(pid);
+	        List<Airplane> airplanes = airplaneService.getAll();
 	        return new ModelAndView("admin/airplane/view", "airplanes", airplanes);
 	    }
 	

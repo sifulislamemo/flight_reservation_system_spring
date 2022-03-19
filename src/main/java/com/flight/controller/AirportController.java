@@ -28,13 +28,13 @@ public class AirportController {
 		return new ModelAndView("admin/airport/add");
 }
 	@RequestMapping(value = "/update", method = RequestMethod.GET)
-	public ModelAndView AirportUpdate() {
+	public ModelAndView airportUpdate() {
 		return new ModelAndView("admin/airport/update");
 }
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public ModelAndView save(HttpServletRequest request){
-		Airport airport = airportService.save(request);
+		Airport a = airportService.save(request);
         return new ModelAndView("admin/airport/add");
     }
 	
@@ -54,15 +54,17 @@ public class AirportController {
 	  
 	  @RequestMapping(value = "/update", method = RequestMethod.POST)
 	    public ModelAndView update(HttpServletRequest request){
-		  Airport airport = airportService.update(request);
-	        return new ModelAndView("admin/airport/update");
+		  Airport a = airportService.update(request);
+		  List<Airport> airport = airportService.getAll();
+			return new ModelAndView("admin/airport/view", "airport", airport);
 	    }
 	
 	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	    public ModelAndView delete(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
-	        Airport airport = airportService.delete(pid);
-	        return new ModelAndView("admin/airport/view", "airport", airport);
+	        Airport a = airportService.delete(pid);
+	        List<Airport> airport = airportService.getAll();
+	    	return new ModelAndView("admin/airport/view", "airport", airport);
 	    }
 	
 	

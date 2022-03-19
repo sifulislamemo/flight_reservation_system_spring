@@ -57,8 +57,9 @@ public ModelAndView add() {
 	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	    public ModelAndView delete(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
-	        Country country = countryService.delete(pid);
-	        return new ModelAndView("admin/country/view", "country", country);
+	        Country c = countryService.delete(pid);
+	        List<Country> country = countryService.getAll();
+			return new ModelAndView("admin/country/view", "country", country);
 	    }
 	
 }

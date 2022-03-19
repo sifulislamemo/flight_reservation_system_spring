@@ -42,12 +42,12 @@ public class AirportDAO {
 	        return airportList.get(0);
 
 	    }
-	 public Airport update(Airport airport) {
-	        String hql = "update airport set airport_code = '"+airport.getAirport_code()+"', name = '"+airport.getName()+"', country = '"+airport.getCountry()+"', city = '"+airport.getCity()+"'  where id = '"+airport.getId()+"'";
+	 public Airport update(Airport a) {
+	        String hql = "update airport set airport_code = '"+a.getAirport_code()+"', name = '"+a.getName()+"', country = '"+a.getCountry()+"', city = '"+a.getCity()+"'  where id = '"+a.getId()+"'";
 	        Query q = getSession().createQuery(hql);
 	        q.executeUpdate();
 	        getSession().flush();
-	        return airport;
+	        return a;
 	    }
 	 
 	 public Airport delete(Airport airport) {

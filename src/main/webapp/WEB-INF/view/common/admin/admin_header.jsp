@@ -83,9 +83,9 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/flight_add">Add Flight</a>
+                        <a class="collapse-item" href="/admin/flight/add">Add Flight</a>
                         <a class="collapse-item" href="cards.html">Edit Flight</a>
-                        <a class="collapse-item" href="#">View Flight</a>
+                        <a class="collapse-item" href="/admin/flight/view">View Flight</a>
                     </div>
                 </div>
             </li>
@@ -115,9 +115,9 @@
                 <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/traveller_add">Traveller Add </a>
-                        <a class="collapse-item" href="cards.html">Traveller Edit</a>
-                        <a class="collapse-item" href="#">Traveller Details</a>
+                        <a class="collapse-item" href="/admin/traveller/add">Traveller Add </a>
+                        <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a>
+                        <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a>
                     </div>
                 </div>
             </li>

@@ -12,22 +12,21 @@
                 <th>Airport Name</th>
                 <th>Country</th>
                 <th>City</th>
-                <th>Edit Action</th>
-                <th>Delete Action</th>
+                <th> Action</th>
+                
                
             </tr>
-            <c:forEach items="${ai}" var="airplan">
+            <c:forEach items="${airport}" var="airport">
                 <tr>
-                    <td>${airplan.airplane_name}</td>
-                    <td>${airplan.owner}</td>
-                    <td>${airplan.model}</td>
-                    <td>${airplan.engine}</td>
-                    <td>${airplan.capacity}</td>
+                    <td>${airport.airport_code}</td>
+                    <td>${airport.name}</td>
+                    <td>${airport.country}</td>
+                    <td>${airport.city}</td>
+                    
                     <td>
-                        <a href="/admin/airplane/update/${airplan.id}">Edit</a>
-                    </td>
-                    <td>
-                        <a href="/admin/airplane/delete/${airplan.id}">Delete</a>
+                        <a href="/admin/airport/update/${airport.id}">Edit</a> &nbsp; &nbsp;
+                    
+                        <a href="/admin/airport/delete/${airport.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

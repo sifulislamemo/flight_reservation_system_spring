@@ -20,10 +20,10 @@ public Country save(HttpServletRequest request) {
 	String city_name = request.getParameter("city_name");
 	Country country = new Country();
 	country.setCity_name(city_name);
-	country.setLatitude("latitude");
-	country.setLongitude("longitude");
-	country.setCountry("country");
-	country.setCity_code("city_code");
+	country.setLatitude(request.getParameter("latitude"));
+	country.setLongitude(request.getParameter("longitude"));
+	country.setCountry(request.getParameter("country"));
+	country.setCity_code(request.getParameter("city_code"));
 	return countryDAO.save(country);
 }
 
@@ -39,11 +39,12 @@ public Country getCountryById(int pid) {
 public Country update(HttpServletRequest request) {
 	String city_name = request.getParameter("city_name");
 	Country country = new Country();
+	country.setId(Integer.valueOf(request.getParameter("id")));
 	country.setCity_name(city_name);
-	country.setLatitude("latitude");
-	country.setLongitude("longitude");
-	country.setCountry("country");
-	country.setCity_code("city_code");
+	country.setLatitude(request.getParameter("latitude"));
+	country.setLongitude(request.getParameter("longitude"));
+	country.setCountry(request.getParameter("country"));
+	country.setCity_code(request.getParameter("city_code"));
 	return countryDAO.update(country);
 }
 public Country delete(int pid) {

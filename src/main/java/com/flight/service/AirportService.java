@@ -23,9 +23,9 @@ public class AirportService {
         String airport_code = request.getParameter("airport_code");
         Airport airport = new Airport();
         airport.setAirport_code(airport_code);
-        airport.setName("name");
-        airport.setCountry("country");
-        airport.setCity("city");
+        airport.setName(request.getParameter("name"));
+        airport.setCountry(request.getParameter("country"));
+        airport.setCity(request.getParameter("city"));
         return airportDAO.save(airport);
     }
     
@@ -42,10 +42,11 @@ public class AirportService {
 	  public Airport update(HttpServletRequest request) {
 		  String airport_code = request.getParameter("airport_code");
 	        Airport airport = new Airport();
+	        airport.setId(Integer.valueOf(request.getParameter("id")));
 	        airport.setAirport_code(airport_code);
-	        airport.setName("name");
-	        airport.setCountry("country");
-	        airport.setCity("city");
+	        airport.setName(request.getParameter("name"));
+	        airport.setCountry(request.getParameter("country"));
+	        airport.setCity(request.getParameter("city"));
 	        return airportDAO.update(airport);
 	    }
 	  public Airport delete(int pid) {
