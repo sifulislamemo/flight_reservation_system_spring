@@ -80,12 +80,8 @@ public class Flight {
 	public String getClass_name() {
 		return class_name;
 	}
-	public Time getDeparting_time() {
-		return departing_time;
-	}
-	public void setDeparting_time(Time departing_time) {
-		this.departing_time = departing_time;
-	}
+
+	
 	public void setClass_name(String class_name) {
 		this.class_name = class_name;
 	}

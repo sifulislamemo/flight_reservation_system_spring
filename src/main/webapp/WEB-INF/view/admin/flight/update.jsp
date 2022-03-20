@@ -45,7 +45,7 @@
 
                     <div class="form-group">
                         <label >Arrival Airport</label>
-                        <select class="form-control input-lg m-bot15"value="${flight.arrival_airport}" name="arrival_airport">
+                        <select class="form-control input-lg m-bot15" name="arrival_airport" id="arrival_airport">
                             <option >Select A Country</option>
                             <option value="Dhaka">Dhaka</option>
                             <option value="France">France</option>
@@ -85,11 +85,11 @@
 
 <div class="form-group">
                         <label >Class</label><br/>
-                          <input type="checkbox" id="economy"value="${flight.class_name}" name="class_name" value="Economy"/>    
+                          <input type="checkbox" id="economy" value="${flight.class_name}" name="class_name" value="Economy"/>    
                  <label>Economy</label>     
               <input type="checkbox" id="first" value="${flight.class_name}"name="class_name" value="First" />    
                  <label>First</label>     
-              <input type="checkbox" id="business"value="${flight.class_name}" name="class_name" value="Business"/>    
+              <input type="checkbox" id="business" value="${flight.class_name}" name="class_name" value="Business"/>    
                  <label>Business</label>   
                     </div>
 
@@ -130,3 +130,18 @@
 </div> 
 
   <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+  
+  <script>
+
+  $("#arrival_airport option:selected").text('${flight.arrival_airport}');
+  var className = '${flight.class_name}';
+  if(className.includes('first')){
+	  $("#first").prop("checked", true);
+  }
+  if(className.includes('economy')){
+	  $("#economy").prop("checked", true);
+  }
+  if(className.includes('business')){
+	  $("#business").prop("checked", true);
+  }
+  </script>
