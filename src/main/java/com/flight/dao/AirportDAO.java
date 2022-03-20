@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
+import com.flight.model.Airplane;
 import com.flight.model.Airport;
 
 @Repository(value = "airportDAO")
@@ -43,16 +43,17 @@ public class AirportDAO {
 
 	    }
 	 public Airport update(Airport a) {
-	        String hql = "update airport set airport_code = '"+a.getAirport_code()+"', name = '"+a.getName()+"', country = '"+a.getCountry()+"', city = '"+a.getCity()+"'  where id = '"+a.getId()+"'";
-	        Query q = getSession().createQuery(hql);
-	        q.executeUpdate();
+	        //String hql = "update airport set airport_code = "+a.getAirport_code()+", name = "+a.getName()+", country = "+a.getCountry()+", city = "+a.getCity()+" where id = "+a.getId();
+	        getSession().update(a);
+	   
 	        getSession().flush();
 	        return a;
 	    }
 	 
 	 public Airport delete(Airport airport) {
-	    	String sql = "delete airport where id = '"+airport.getId()+"'";
-	        int delete = getSession().createQuery(sql).executeUpdate();
+	    	//String sql = "delete airport where id = '"+airport.getId()+"'";
+	        getSession().delete(airport);
+	        getSession().flush();
 	        return airport;
 	    }
 }

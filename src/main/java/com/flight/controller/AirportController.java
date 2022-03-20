@@ -66,6 +66,8 @@ public class AirportController {
 	        List<Airport> airport = airportService.getAll();
 	    	return new ModelAndView("admin/airport/view", "airport", airport);
 	    }
+	  
+	  
 	
 	
 }

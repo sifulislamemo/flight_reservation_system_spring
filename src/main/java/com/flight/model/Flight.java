@@ -1,5 +1,6 @@
 package com.flight.model;
 
+import java.sql.Time;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,7 +23,7 @@ public class Flight {
     private String arrival_airport;
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
 //    private Date departing_date;
-//    private String departing_time;
+//    private Time departing_time;
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
 //    private  Date arrival_date;
 //    private String arrival_time;
@@ -63,12 +64,7 @@ public class Flight {
 //		this.departing_date = departing_date;
 //	}
 //	
-//	public String getDeparting_time() {
-//		return departing_time;
-//	}
-//	public void setDeparting_time(String departing_time) {
-//		this.departing_time = departing_time;
-//	}
+	
 //	public Date getArrival_date() {
 //		return arrival_date;
 //	}
@@ -83,6 +79,12 @@ public class Flight {
 //	}
 	public String getClass_name() {
 		return class_name;
+	}
+	public Time getDeparting_time() {
+		return departing_time;
+	}
+	public void setDeparting_time(Time departing_time) {
+		this.departing_time = departing_time;
 	}
 	public void setClass_name(String class_name) {
 		this.class_name = class_name;

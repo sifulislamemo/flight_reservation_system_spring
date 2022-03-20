@@ -25,7 +25,7 @@
                 
                
             </tr>
-            <c:forEach items="${flight}" var="f">
+            <c:forEach items="${flight.fList}" var="f">
                 <tr>
                     <td>${f.airline}</td>
                     <td>${f.departure_airport}</td>

@@ -29,8 +29,8 @@ public class FlightDAO {
 	        return flight;
 	    }
 	    public List<Flight> getAll(){ 
-	    	String sql = "from flight"; 
-		 List<Flight> flight = getSession().createQuery(sql).list(); 
+	    	
+		 List<Flight> flight = getSession().createCriteria(Flight.class).list();
 		 return flight; 
 		  }
 	    public Flight getFlightById(int pid) {
