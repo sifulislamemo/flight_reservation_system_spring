@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,4 +37,12 @@ public ModelAndView flightAdd() {
 		  List<Flight> flight = flightService.getAll();
 	return new ModelAndView("admin/flight/view", "flight", flight); 
 	}
+	
+	 @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+	    public ModelAndView edit(@PathVariable String id){
+	        int pid = Integer.valueOf(id);
+	        Flight flight = flightService.getFlightById(pid);
+
+	        return new ModelAndView("admin/flight/update", "flight", flight);
+	    }
 }

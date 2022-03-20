@@ -36,4 +36,7 @@ public class FlightService {
 	  { 
 		  return flightDAO.getAll(); 
 	  }
+	public Flight getFlightById(int pid) {
+        return flightDAO.getFlightById(pid);
+    }
 }
