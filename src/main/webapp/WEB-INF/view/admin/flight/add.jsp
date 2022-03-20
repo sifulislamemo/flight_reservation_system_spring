@@ -16,21 +16,32 @@
                         <input type="text" class="form-control" id="airplane" name="airline">
                     </div>
                     
-                     <div class="form-group">
-                        <label for="nid">Departure Airport</label>
-                        <select class="form-control input-lg m-bot15" name="departure_airport">
-                            <option value="Select" selected>Select A Country</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Dubai">Dubai</option> 
-                            <option value="Italy">Italy</option>
-                            <option value="England">England</option> 
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="France">France</option> 
-                            <option value="USA">USA</option>
-                            <option value="India">India</option> 
+<!--                      <div class="form-group"> -->
+<!--                         <label for="nid">Departure Airport</label> -->
+<!--                         <select class="form-control input-lg m-bot15" name="departure_airport"> -->
+<!--                             <option value="Select" selected>Select A Country</option> -->
+<!--                             <option value="Canada">Canada</option> -->
+<!--                             <option value="Dubai">Dubai</option>  -->
+<!--                             <option value="Italy">Italy</option> -->
+<!--                             <option value="England">England</option>  -->
+<!--                             <option value="Dhaka">Dhaka</option> -->
+<!--                             <option value="France">France</option>  -->
+<!--                             <option value="USA">USA</option> -->
+<!--                             <option value="India">India</option>  -->
                           
-                        </select>
-                    </div>
+<!--                         </select> -->
+<!--                     </div> -->
+                    
+<div class="form-group row">
+					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label>
+					<div class="col-sm-9">
+						<select id="inputState" class="form-control" name="departure_airport">
+							<c:forEach items="${airport}" var="airport">
+								<option value="${airport.name}">${airport.name}</option>
+							</c:forEach>
+						</select>
+					</div>
+				</div>
 
 
                     <div class="form-group">
@@ -50,43 +61,31 @@
 
                    
                     
-                    <div class="form-group" >
-                        <label for="area">Departing Date</label>
-                        <input type="date" class="form-control" id="departing_date" name="departing_date">
-                    </div>
-                    
-                    
-<!--                     <div class="form-group"> -->
-<!--                         <label for="area">Returning Date</label> -->
-<!--                         <input type="date" class="form-control" id="arrival_time" name="arrival_time"> -->
+<!--                     <div class="form-group" > -->
+<!--                         <label for="area">Departing Date</label> -->
+<!--                         <input type="date" class="form-control" id="departing_date" name="departing_date"> -->
 <!--                     </div> -->
-
-
-                    <div class="form-group">
-                        <label for="area">Departing Time</label>
-                        <input type="time" class="form-control" id="departing_time" name="departing_time">
-                    </div>
                     
                     
-                    <div class="form-group" >
-                        <label for="area">Arrival Date</label>
-                        <input type="date" class="form-control" id="arrival_date" name="arrival_date">
-                    </div>
-                    <div class="form-group">
-                        <label for="area">Arrival Time</label>
-                        <input type="time" class="form-control" id="arrival_time" name="arrival_time">
-                    </div>
+
+
 
 <!--                     <div class="form-group"> -->
-<!--                         <label for="nid">Class</label> -->
-<!--                         <select class="form-control input-lg m-bot15" name="departure"> -->
-<!--                             <option value="Select" selected>Select A Class</option> -->
-<!--                             <option value="Canada">Economy</option> -->
-<!--                             <option value="Dubai">First</option>  -->
-<!--                             <option value="Canada">Business</option> -->
-
-<!--                         </select> -->
+<!--                         <label for="area">Departing Time</label> -->
+<!--                         <input type="time" class="form-control" id="departing_time" name="departing_time"> -->
 <!--                     </div> -->
+                    
+                    
+<!--                     <div class="form-group" > -->
+<!--                         <label for="area">Arrival Date</label> -->
+<!--                         <input type="date" class="form-control" id="arrival_date" name="arrival_date"> -->
+<!--                     </div> -->
+<!--                     <div class="form-group"> -->
+<!--                         <label for="area">Arrival Time</label> -->
+<!--                         <input type="time" class="form-control" id="arrival_time" name="arrival_time"> -->
+<!--                     </div> -->
+
+              
 
 <div class="form-group">
                         <label for="economy">Class</label><br/>

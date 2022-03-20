@@ -4,7 +4,7 @@
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
-  <h1 style="text-align:center">Traveller List</h1>
+  <h1 style="text-align:center">Flight List</h1>
 <table  class="table table-striped table-hover" >
             <tr>
                 <th>Airline</th>

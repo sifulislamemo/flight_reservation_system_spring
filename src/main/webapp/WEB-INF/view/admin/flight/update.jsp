@@ -16,21 +16,31 @@
                         <input type="text" class="form-control"value="${flight.airline}" id="airline" name="airline">
                     </div>
                     
-                     <div class="form-group">
-                        <label >Departure Airport</label>
-                        <select class="form-control input-lg m-bot15"value="${flight.departure_airport}" name="departure_airport">
-                            <option value="Select" selected>Select A Country</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Dubai">Dubai</option> 
-                            <option value="Italy">Italy</option>
-                            <option value="England">England</option> 
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="France">France</option> 
-                            <option value="USA">USA</option>
-                            <option value="India">India</option> 
+<!--                      <div class="form-group"> -->
+<!--                         <label >Departure Airport</label> -->
+<%--                         <select class="form-control input-lg m-bot15"value="${flight.departure_airport}" name="departure_airport"> --%>
+<!--                             <option value="Select" selected>Select A Country</option> -->
+<!--                             <option value="Canada">Canada</option> -->
+<!--                             <option value="Dubai">Dubai</option>  -->
+<!--                             <option value="Italy">Italy</option> -->
+<!--                             <option value="England">England</option>  -->
+<!--                             <option value="Dhaka">Dhaka</option> -->
+<!--                             <option value="France">France</option>  -->
+<!--                             <option value="USA">USA</option> -->
+<!--                             <option value="India">India</option>  -->
                           
-                        </select>
-                    </div>
+<!--                         </select> -->
+<!--                     </div> -->
+<!-- <div class="form-group row"> -->
+<!-- 					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label> -->
+<!-- 					<div class="col-sm-9"> -->
+<!-- 						<select id="inputState" class="form-control" name="departure_airport"> -->
+<%-- 							<c:forEach items="${airport}" var="airport"> --%>
+<%-- 								<option value="${airport.name}">${airport.name}</option> --%>
+<%-- 							</c:forEach> --%>
+<!-- 						</select> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 
 
                     <div class="form-group">

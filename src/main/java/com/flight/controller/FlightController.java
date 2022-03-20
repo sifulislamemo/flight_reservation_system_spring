@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.flight.model.Airplane;
+import com.flight.model.Airport;
 import com.flight.model.Flight;
 import com.flight.model.Traveller;
+import com.flight.service.AirportService;
 import com.flight.service.FlightService;
 import com.flight.service.TravellerService;
 
@@ -21,6 +23,9 @@ import com.flight.service.TravellerService;
 public class FlightController {
 	@Autowired
 	FlightService flightService;
+	@Autowired
+	AirportService airportService;
+	
 	@RequestMapping(value = "/add")
 public ModelAndView flightAdd() {
 	return new ModelAndView("admin/flight/add");
@@ -45,4 +50,13 @@ public ModelAndView flightAdd() {
 
 	        return new ModelAndView("admin/flight/update", "flight", flight);
 	    }
+	 
+	 @RequestMapping(value = "/add", method = RequestMethod.GET) 
+	  public ModelAndView airportView(){ 
+		  List<Airport> airport = airportService.getAll();
+	return new ModelAndView("admin/flight/add", "airport", airport); 
+	}
+	 
+	 
+	 
 }

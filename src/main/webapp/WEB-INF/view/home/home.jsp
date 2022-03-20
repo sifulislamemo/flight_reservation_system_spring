@@ -30,20 +30,51 @@
 									<div class="tab-content">
 										<div role="tabpanel" class="tab-pane active" id="flights">
 											<div class="row">
-												<div class="col-xxs-12 col-xs-6 mt">
-													<div class="input-field">
-														<label for="from">From:</label> <input type="text"
-															class="form-control" id="from-place"
-															placeholder="Dhaka, Bangladesh" />
-													</div>
-												</div>
-												<div class="col-xxs-12 col-xs-6 mt">
-													<div class="input-field">
-														<label for="from">To:</label> <input type="text"
-															class="form-control" id="to-place"
-															placeholder="Los Angeles, USA" />
-													</div>
-												</div>
+<!-- 												<div class="col-xxs-12 col-xs-6 mt"> -->
+<!-- 													<div class="input-field"> -->
+<!-- 														<label for="from">From:</label> <input type="text" -->
+<!-- 															class="form-control" id="from-place" -->
+<!-- 															placeholder="Dhaka, Bangladesh" /> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
+
+<div class="form-group">
+                        <label for="nid">Departure Airport</label>
+                        <select class="form-control input-lg m-bot15" name="departure_airport">
+                            <option value="Select" selected>Select A Country</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Dubai">Dubai</option> 
+                            <option value="Italy">Italy</option>
+                            <option value="England">England</option> 
+                            <option value="Dhaka">Dhaka</option>
+                            <option value="France">France</option> 
+                            <option value="USA">USA</option>
+                            <option value="India">India</option> 
+                          
+                        </select>
+                    </div>
+<!-- 												<div class="col-xxs-12 col-xs-6 mt"> -->
+<!-- 													<div class="input-field"> -->
+<!-- 														<label for="from">To:</label> <input type="text" -->
+<!-- 															class="form-control" id="to-place" -->
+<!-- 															placeholder="Los Angeles, USA" /> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
+
+<div class="form-group">
+                        <label for="salary">Arrival Airport</label>
+                        <select class="form-control input-lg m-bot15" name="arrival_airport">
+                            <option selected>Select A Country</option>
+                            <option value="Dhaka">Dhaka</option>
+                            <option value="France">France</option>
+                            <option value="USA">USA</option>
+                            <option value="India">India</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Italy">Italy</option>
+                            <option value="England">England</option>
+                        </select>
+                    </div>
 												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<div class="input-field">
 														<label for="date-start">Departing:</label> <input
