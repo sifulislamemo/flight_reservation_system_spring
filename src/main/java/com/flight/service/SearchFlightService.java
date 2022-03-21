@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.flight.dao.AirplaneDAO;
+import com.flight.dao.FlightDAO;
 import com.flight.dao.SearchFlightDAO;
 import com.flight.model.Flight;
 
@@ -13,8 +14,14 @@ import com.flight.model.Flight;
 public class SearchFlightService {
 	@Autowired
 	SearchFlightDAO searchFlightDAO;
+	@Autowired
+	FlightDAO flightDAO;
 	
 	 public List<Flight> getByDeparture(String departure_airport) {
          return searchFlightDAO.getByDeparture(departure_airport);
     }
+	 
+	 public Flight getFlightById(int pid) {
+	        return flightDAO.getFlightById(pid);
+	    }
 }

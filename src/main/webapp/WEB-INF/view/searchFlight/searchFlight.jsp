@@ -42,13 +42,13 @@
                     <td>${f.discount}</td>
                   
                     <td>
-                        <a class="btn btn-primary" href="/admin/flight/update/${f.id}">Edit</a> &nbsp; &nbsp;
+                        <a class="btn btn-primary" href="/home/ticket/information/${f.id}">Edit</a> &nbsp; &nbsp;
                    
                         <a class="btn btn-danger" href="/admin/flight/delete/${f.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
-             
+             <a class="btn btn-primary" href="/ticket_information/">book</a>
         </table> 
         </div>
 </div>

@@ -31,4 +31,12 @@ public class SearchFlightDAO {
       
         return flightList;
         }
+    
+    public Flight getFlightById(int pid) {
+        String sql = "from flight where id = '" + pid + "'";
+        List<Flight> flightList = getSession().createQuery(sql).list();
+        
+        return flightList.get(0);
+
+    }
 }

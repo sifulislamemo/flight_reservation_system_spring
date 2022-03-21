@@ -38,21 +38,21 @@
 <!-- 													</div> -->
 <!-- 												</div> -->
 
-<div class="form-group">
-                        <label for="nid">Departure Airport</label>
-                        <select class="form-control input-lg m-bot15" name="departure_airport">
-                            <option value="Select" selected>Select A Country</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Dubai">Dubai</option> 
-                            <option value="Italy">Italy</option>
-                            <option value="England">England</option> 
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="France">France</option> 
-                            <option value="USA">USA</option>
-                            <option value="India">India</option> 
+<!-- <div class="form-group"> -->
+<!--                         <label for="nid">Departure Airport</label> -->
+<!--                         <select class="form-control input-lg m-bot15" name="departure_airport"> -->
+<!--                             <option value="Select" selected>Select A Country</option> -->
+<!--                             <option value="Canada">Canada</option> -->
+<!--                             <option value="Dubai">Dubai</option>  -->
+<!--                             <option value="Italy">Italy</option> -->
+<!--                             <option value="England">England</option>  -->
+<!--                             <option value="Dhaka">Dhaka</option> -->
+<!--                             <option value="France">France</option>  -->
+<!--                             <option value="USA">USA</option> -->
+<!--                             <option value="India">India</option>  -->
                           
-                        </select>
-                    </div>
+<!--                         </select> -->
+<!--                     </div> -->
 <!-- 												<div class="col-xxs-12 col-xs-6 mt"> -->
 <!-- 													<div class="input-field"> -->
 <!-- 														<label for="from">To:</label> <input type="text" -->
@@ -61,20 +61,31 @@
 <!-- 													</div> -->
 <!-- 												</div> -->
 
-<div class="form-group">
-                        <label for="salary">Arrival Airport</label>
-                        <select class="form-control input-lg m-bot15" name="arrival_airport">
-                            <option selected>Select A Country</option>
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="France">France</option>
-                            <option value="USA">USA</option>
-                            <option value="India">India</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Dubai">Dubai</option>
-                            <option value="Italy">Italy</option>
-                            <option value="England">England</option>
-                        </select>
-                    </div>
+<!-- <div class="form-group"> -->
+<!--                         <label for="salary">Arrival Airport</label> -->
+<!--                         <select class="form-control input-lg m-bot15" name="arrival_airport"> -->
+<!--                             <option selected>Select A Country</option> -->
+<!--                             <option value="Dhaka">Dhaka</option> -->
+<!--                             <option value="France">France</option> -->
+<!--                             <option value="USA">USA</option> -->
+<!--                             <option value="India">India</option> -->
+<!--                             <option value="Canada">Canada</option> -->
+<!--                             <option value="Dubai">Dubai</option> -->
+<!--                             <option value="Italy">Italy</option> -->
+<!--                             <option value="England">England</option> -->
+<!--                         </select> -->
+<!--                     </div> -->
+
+<div class="form-group row">
+					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label>
+					<div class="col-sm-9">
+						<select id="inputState" class="form-control" name="departure_airport">
+							<c:forEach items="${airport}" var="airport">
+								<option value="${airport.name}">${airport.name}</option>
+							</c:forEach>
+						</select>
+					</div>
+				</div>
 												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<div class="input-field">
 														<label for="date-start">Departing:</label> <input
@@ -134,7 +145,7 @@
 													</div>
 												</div> -->
 												<div class="col-xs-12">
-													<a href="/available_flight" class="btn btn-primary btn-block"
+													<a href="/home/available/flight" class="btn btn-primary btn-block"
 														>Search Flight</a>
 												</div>
 											</div>

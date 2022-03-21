@@ -50,7 +50,8 @@ public ModelAndView flightAdd() {
 
 	        return new ModelAndView("admin/flight/update", "flight", flight);
 	    }
-	 
+
+		/* Departure Airport Drop-down */
 	 @RequestMapping(value = "/add", method = RequestMethod.GET) 
 	  public ModelAndView airportView(){ 
 		  List<Airport> airport = airportService.getAll();
