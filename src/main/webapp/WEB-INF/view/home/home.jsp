@@ -28,6 +28,7 @@
 
 									<!-- Tab panes -->
 									<div class="tab-content">
+									<form action="/home/available/flight" method="post">
 										<div role="tabpanel" class="tab-pane active" id="flights">
 											<div class="row">
 <!-- 												<div class="col-xxs-12 col-xs-6 mt"> -->
@@ -80,8 +81,8 @@
 					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label>
 					<div class="col-sm-9">
 						<select id="inputState" class="form-control" name="departure_airport">
-							<c:forEach items="${airport}" var="airport">
-								<option value="${airport.name}">${airport.name}</option>
+							<c:forEach items="${flight}" var="flight">
+								<option value="${flight.departure_airport}">${flight.departure_airport}</option>
 							</c:forEach>
 						</select>
 					</div>
@@ -145,12 +146,12 @@
 													</div>
 												</div> -->
 												<div class="col-xs-12">
-													<a href="/home/available/flight" class="btn btn-primary btn-block"
-														>Search Flight</a>
+													<button class="btn btn-primary btn-block" type="submit"
+														>Search Flight</button>
 												</div>
 											</div>
 										</div>
-
+</form>
 										<div role="tabpanel" class="tab-pane" id="hotels">
 											<div class="row">
 												<div class="col-xxs-12 col-xs-12 mt">

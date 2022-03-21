@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.flight.model.Airport;
+import com.flight.model.Flight;
 import com.flight.service.AirportService;
+import com.flight.service.FlightService;
 
 @RestController
 public class HomeController {
 	@Autowired
-	AirportService airportService;
+	FlightService flightService;
 	
 //	@RequestMapping(value = "/", method = RequestMethod.GET) 
 //	public ModelAndView home() {
@@ -23,8 +25,8 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET) 
 	  public ModelAndView airportView(){ 
-		  List<Airport> airport = airportService.getAll();
-	return new ModelAndView("home/home", "airport", airport); 
+		  List<Flight> flight = flightService.getAll();
+	return new ModelAndView("home/home", "flight", flight); 
 	}
 	
 	

@@ -32,6 +32,8 @@ public class SearchFlightDAO {
         return flightList;
         }
     
+		/* flight information */
+    
     public Flight getFlightById(int pid) {
         String sql = "from flight where id = '" + pid + "'";
         List<Flight> flightList = getSession().createQuery(sql).list();

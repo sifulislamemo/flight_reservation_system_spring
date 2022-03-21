@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.flight.model.Flight;
 import com.flight.service.FlightService;
+import com.flight.service.SearchFlightService;
 
 @RestController
 @RequestMapping(value = "/home")
@@ -23,16 +24,21 @@ public class SearchFlightController {
 	
 	@Autowired
 	FlightService flightService;
+	
+	@Autowired
+	SearchFlightService searchFlightService;
+	
 //	
 //	@RequestMapping(value = "/available_flight")
 //	 public ModelAndView signUp() {
 //	 	return new ModelAndView("searchFlight/searchFlight");
 //	 }
 //	
-	@RequestMapping(value = "/available/flight", method = RequestMethod.GET)
+	@RequestMapping(value = "/available/flight", method = RequestMethod.POST)
     public ModelAndView serachFlight(HttpServletRequest request) {
+		System.out.println(request.getParameter("departure_airport"));
         Map<String, Object> flight = new HashMap<String, Object>();
-        List<Flight> fList = flightService.getAll();
+        List<Flight> fList = searchFlightService.getByDeparture(request.getParameter("departure_airport"));
 //        for (int i = 0; i < fList.size(); i++) {
 //			System.out.println(fList.get(i).getDeparture_airport());
 //		}

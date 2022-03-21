@@ -34,6 +34,8 @@
     <!-- Page level custom scripts -->
     <script src="/resources/admin/js/demo/chart-area-demo.js"></script>
     <script src="/resources/admin/js/demo/chart-pie-demo.js"></script>
+    <!-- Save Show -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
 </body>
 
