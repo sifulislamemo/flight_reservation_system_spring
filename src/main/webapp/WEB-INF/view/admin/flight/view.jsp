@@ -10,7 +10,7 @@
                 <th>Airline</th>
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
-<!--                 <th>Departing Date</th> -->
+                <th>Departing Date</th>
 <!--                 <th>Departing Time</th> -->
 <!--                 <th>Arrival Date</th> -->
 <!--                 <th>Arrival Time</th> -->
@@ -30,7 +30,7 @@
                     <td>${f.airline}</td>
                     <td>${f.departure_airport}</td>
                     <td>${f.arrival_airport}</td>
-<%--                     <td>${f.departing_date}</td> --%>
+                    <td>${f.departing_date}</td>
 <%--                     <td>${f.departing_time}</td> --%>
 <%--                     <td>${f.arrival_date}</td> --%>
 <%--                     <td>${f.arrival_time}</td> --%>

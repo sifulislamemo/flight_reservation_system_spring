@@ -25,6 +25,16 @@
             <label for="">City:</label>
             <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
         </div>
+<!-- <div class="form-group row"> -->
+<!-- 					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label> -->
+<!-- 					<div class="col-sm-9"> -->
+<!-- 						<select id="inputState" class="form-control" name="city"> -->
+<%-- 							<c:forEach items="${country}" var="country"> --%>
+<%-- 								<option value="${country.city}">${country.city}</option> --%>
+<%-- 							</c:forEach> --%>
+<!-- 						</select> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
         <div class="form-group">
             <label for="">Country:</label>
             <input type="text" class="form-control" id="country" placeholder="Enter Country" name="country">

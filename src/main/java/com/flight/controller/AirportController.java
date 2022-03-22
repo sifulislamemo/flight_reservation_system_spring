@@ -13,8 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import com.flight.model.Airport;
-
+import com.flight.model.Country;
 import com.flight.service.AirportService;
+import com.flight.service.CountryService;
 
 
 
@@ -23,6 +24,8 @@ import com.flight.service.AirportService;
 public class AirportController {
 	@Autowired
 	AirportService airportService;
+	@Autowired
+	CountryService countryService;
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public ModelAndView AirportAdd() {
 		return new ModelAndView("admin/airport/add");
@@ -67,6 +70,13 @@ public class AirportController {
 	    	return new ModelAndView("admin/airport/view", "airport", airport);
 	    }
 	  
+	  /* Departure Country Drop-down */
+//	  @RequestMapping(value = "/add", method = RequestMethod.GET)
+//		public ModelAndView cityView() {
+//			List<Country> country = countryService.getAll();
+//			return new ModelAndView("admin/airport/add", "country", country);
+//		}
+//	  
 	  
 	
 	

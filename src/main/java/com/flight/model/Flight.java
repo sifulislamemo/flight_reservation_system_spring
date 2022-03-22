@@ -1,7 +1,8 @@
 package com.flight.model;
 
-import java.sql.Time;
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity(name = "flight")
 @Table(name = "flight")
@@ -18,20 +18,29 @@ public class Flight {
 	@GeneratedValue
 	@Column(name = "id")
 	 private int id;
+	@Column(name = "airline")
     private String airline;
+	@Column(name = "departure_airport")
     private String departure_airport;
+	@Column(name = "arrival_airport")
     private String arrival_airport;
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
-//    private Date departing_date;
+	@Column(name = "departing_date")
+    private Date departing_date;
 //    private Time departing_time;
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
 //    private  Date arrival_date;
 //    private String arrival_time;
+	@Column(name = "class_name")
     private String class_name;
+	@Column(name = "flight_charge")
     private double flight_charge;
+	 @Column(name = "airpalne")
     private String airpalne;
+    @Column(name = "flight_name")
     private String flight_name;
+    @Column(name = "seatNo")
     private String seatNo;
+    @Column(name = "discount")
     private double discount;
 	public int getId() {
 		return id;

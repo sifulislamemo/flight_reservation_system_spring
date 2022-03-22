@@ -32,39 +32,39 @@
 <!--                         </select> -->
 <!--                     </div> -->
                     
-<div class="form-group row">
-					<label for="name" class="col-sm-3 col-form-label">Departure Airport:</label>
-					<div class="col-sm-9">
+<div class="form-group">
+					<label for="" >Departure Airport:</label>
+<!-- 					<div class="col-sm-9"> -->
 						<select id="inputState" class="form-control" name="departure_airport">
 							<c:forEach items="${airport}" var="airport">
 								<option value="${airport.name}">${airport.name}</option>
 							</c:forEach>
 						</select>
-					</div>
+<!-- 					</div> -->
 				</div>
 
 
                     <div class="form-group">
-                        <label for="salary">Arrival Airport</label>
-                        <select class="form-control input-lg m-bot15" name="arrival_airport">
-                            <option selected>Select A Country</option>
-                            <option value="Dhaka">Dhaka</option>
-                            <option value="France">France</option>
-                            <option value="USA">USA</option>
-                            <option value="India">India</option>
-                            <option value="Canada">Canada</option>
-                            <option value="Dubai">Dubai</option>
-                            <option value="Italy">Italy</option>
-                            <option value="England">England</option>
-                        </select>
-                    </div>
+                        <label for="" >Arrival Airport:</label>
+<!-- 					<div class="col-sm-9"> -->
+						<select id="inputState" class="form-control" name="arrival_airport">
+							<c:forEach items="${airport}" var="airport">
+								<option value="${airport.name}">${airport.name}</option>
+							</c:forEach>
+						</select>
+<!-- 					</div> -->
+				</div>
+                        
+                        
+
+                 
 
                    
                     
-<!--                     <div class="form-group" > -->
-<!--                         <label for="area">Departing Date</label> -->
-<!--                         <input type="date" class="form-control" id="departing_date" name="departing_date"> -->
-<!--                     </div> -->
+                    <div class="form-group" >
+                        <label for="area">Departing Date</label>
+                        <input type="date" class="form-control" id="departing_date" name="departing_date">
+                    </div>
                     
                     
 

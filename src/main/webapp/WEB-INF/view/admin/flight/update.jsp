@@ -58,10 +58,10 @@
                         </select>
                     </div>
                     
-<!--                     <div class="form-group" > -->
-<!--                         <label for="departing_date">Departing Date</label> -->
-<%--                         <input type="date" class="form-control"value="${flight.departing_date}" id="departing_date" name="departing_date"> --%>
-<!--                     </div> -->
+                    <div class="form-group" >
+                        <label for="departing_date">Departing Date</label>
+                        <input type="date" class="form-control"value="${flight.departing_date}" id="departing_date" name="departing_date">
+                    </div>
                     
                     
 
