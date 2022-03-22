@@ -44,9 +44,8 @@ public Country getCountryById(int pid) {
 }
 
 public Country update(Country country) {
-    String hql = "update country set city_name = '"+country.getCity_name()+"', latitude = '"+country.getLatitude()+"', longitude = '"+country.getLongitude()+"', country = '"+country.getCountry()+"', city_code = '"+country.getCity_code()+"'  where id = '"+country.getId()+"'";
-    Query q = getSession().createQuery(hql);
-    q.executeUpdate();
+//    String hql = "update country set city_name = '"+country.getCity_name()+"', latitude = '"+country.getLatitude()+"', longitude = '"+country.getLongitude()+"', country = '"+country.getCountry()+"', city_code = '"+country.getCity_code()+"'  where id = '"+country.getId()+"'";
+	 getSession().update(country);
     getSession().flush();
     return country;
 }

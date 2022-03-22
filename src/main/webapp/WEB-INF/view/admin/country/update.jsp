@@ -9,7 +9,7 @@
 				<h1>Country Update</h1>
 			</header>
 			<div class="panel-body">
-				<form  action="/admin/country/update" method="POST">
+				<form  action="/admin/country/update" method="post">
 					<div class="form-group" >
 						<label for="city_name">City name</label> <input type="text"
 							class="form-control" id="city_name" value="${country.city_name}" placeholder="Enter city name"
@@ -40,8 +40,9 @@
 
 					<div class="container bg-light">
 						<div class="col-md-12 text-center">
-							<input type="button" value="Update" id="btnSave"
-								class="btn btn-primary" />
+						            <button type="submit" class="btn btn-primary">Update</button>
+						
+						
 
 						</div>
 					</div>

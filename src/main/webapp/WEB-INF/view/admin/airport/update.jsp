@@ -11,7 +11,7 @@
 
     
                 <div class="panel-body">
-    <form method="post" action="/admin/airport/update">
+    <form id = "airportUpdate" action="/admin/airport/update" method="post">
         <div class="form-group">
             <label for="airport_code">Airport Code:</label>
             <input type="text" class="form-control" value="${airport.airport_code}" id="airport_code"  name="airport_code">
@@ -32,10 +32,28 @@
          <div class="container bg-light">
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Update</button>
-        
+
         </div>
     </div>
 
     </form>
 </div> 
 <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%> 
+ <script>
+// 	$("#btnUpdate").on("click", function(e) {
+// 		$.ajax({
+// 			type : "POST",
+// 			url : "/admin/airport/update",
+// 			data : $("#airportUpdate").serialize(),
+// 			success : function(data, status) {
+// 				$("#airportUpdate").trigger('reset');
+// 				$.alert({
+// 					title : 'Update!',
+// 					content : 'Data Update successfully!',
+// 				});
+// 			}
+
+// 		});
+
+// 	});
+</script>

@@ -13,10 +13,15 @@ public class Country {
 @GeneratedValue
 @Column(name = "id")
 private int id;
+@Column(name = "city_name")
 private String city_name;
+@Column(name = "latitude")
 private String latitude;
+@Column(name = "longitude")
 private String longitude;
+@Column(name = "country")
 private String country;
+@Column(name = "city_code")
 private String city_code;
 
 public int getId() {

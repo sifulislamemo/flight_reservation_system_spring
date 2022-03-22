@@ -51,8 +51,9 @@ public ModelAndView add() {
 	    }
 	  @RequestMapping(value = "/update", method = RequestMethod.POST)
 	    public ModelAndView update(HttpServletRequest request){
-		  Country country = countryService.update(request);
-	        return new ModelAndView("admin/country/update");
+		  Country a = countryService.update(request);
+		  List<Country> country = countryService.getAll();
+			return new ModelAndView("admin/country/view", "country", country);
 	    }
 	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
 	    public ModelAndView delete(@PathVariable String id){
