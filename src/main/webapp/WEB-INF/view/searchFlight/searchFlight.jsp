@@ -42,7 +42,7 @@
                     <td>${f.discount}</td>
                   
                     <td>
-                        <a class="btn btn-primary" href="/home/ticket/information/${f.id}">Book Now</a> &nbsp; &nbsp;
+                        <a class="btn btn-primary" href="/home/booking/information/${f.id}">Book Now</a> &nbsp; &nbsp;
                    
                        
                     </td>

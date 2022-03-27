@@ -34,13 +34,13 @@
                     
 <div class="form-group">
 					<label for="" >Departure Airport:</label>
-<!-- 					<div class="col-sm-9"> -->
+
 						<select id="inputState" class="form-control" name="departure_airport">
 							<c:forEach items="${airport}" var="airport">
 								<option value="${airport.name}">${airport.name}</option>
 							</c:forEach>
 						</select>
-<!-- 					</div> -->
+
 				</div>
 
 

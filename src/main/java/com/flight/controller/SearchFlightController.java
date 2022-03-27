@@ -22,8 +22,8 @@ import com.flight.service.SearchFlightService;
 @RequestMapping(value = "/home")
 public class SearchFlightController {
 	
-	@Autowired
-	FlightService flightService;
+//	@Autowired
+//	FlightService flightService;
 	
 	@Autowired
 	SearchFlightService searchFlightService;
@@ -46,11 +46,11 @@ public class SearchFlightController {
         return new ModelAndView("searchFlight/searchFlight", "flight", flight);
     }
 	
-	@RequestMapping(value = "/ticket/information/{id}", method = RequestMethod.GET)
-    public ModelAndView edit(@PathVariable String id){
-        int pid = Integer.valueOf(id);
-        Flight flight = flightService.getFlightById(pid);
-
-        return new ModelAndView("ticket/information", "flight", flight);
-    }
+//	@RequestMapping(value = "/booking/information/{id}", method = RequestMethod.GET)
+//    public ModelAndView edit(@PathVariable String id){
+//        int pid = Integer.valueOf(id);
+//        Flight flight = flightService.getFlightById(pid);
+//
+//        return new ModelAndView("booking/information", "flight", flight);
+//    }
 }

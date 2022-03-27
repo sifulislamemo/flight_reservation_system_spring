@@ -14,14 +14,14 @@ import com.flight.model.Flight;
 public class SearchFlightService {
 	@Autowired
 	SearchFlightDAO searchFlightDAO;
-	@Autowired
-	FlightDAO flightDAO;
+//	@Autowired
+//	FlightDAO flightDAO;
 	
 	 public List<Flight> getByDeparture(String departure_airport) {
          return searchFlightDAO.getByDeparture(departure_airport);
     }
 	 
-	 public Flight getFlightById(int pid) {
-	        return flightDAO.getFlightById(pid);
-	    }
+//	 public Flight getFlightById(int pid) {
+//	        return flightDAO.getFlightById(pid);
+//	    }
 }
