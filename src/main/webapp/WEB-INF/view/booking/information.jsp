@@ -31,20 +31,25 @@
 
 						<form id="msform" action="/home/book/invoice" method="post">
 							<!-- progressbar -->
-							<ul id="progressbar">
-								<li class="active" id="account"><strong>Ticket</strong></li>
-								<li id="personal"><strong>Traveler</strong></li>
-								<li id="payment"><strong>Payment</strong></li>
-								<!--                                 <li id="confirm"><strong>Success</strong></li> -->
-							</ul>
+							<div style="padding-left: 175px;">
+								<ul id="progressbar">
+									<li class="active" id="account"><strong>Ticket</strong></li>
+									<li id="personal"><strong>Traveler</strong></li>
+									<li id="payment"><strong>Payment</strong></li>
+									<!--<li id="confirm"><strong>Success</strong></li> -->
+								</ul>
+							</div>
 							<!-- fieldsets -->
 							<fieldset>
 								<div class="form-card">
 									<h2 style="text-align: center">Flight Details</h2>
 									<h2 class="fs-title">Ticket Information</h2>
-									<input type="text" name="seat_no" class="form-control" id="from-place" placeholder="Seat No" />
+									<input type="text" name="seat_no" class="form-control"
+										id="seat_no" placeholder="Seat No" />
 									<!-- 				Button trigger modal -->
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Seat Select</button>
+									<button type="button" class="btn btn-primary"
+										data-toggle="modal" data-target="#exampleModal">Seat
+										Select</button>
 
 									<br /> <br />
 
@@ -52,7 +57,7 @@
 
 
 
-									<div class="col-xxs-12 col-xs-6 mt">
+									<div class="col-xxs-12 col-xs-6 mt" style="padding-left: 0px">
 										<section>
 
 
@@ -64,10 +69,9 @@
 											<!-- 						</select> -->
 
 
-											<label for="class">Class:</label>
-											 <select
+											<label for="class">Class:</label> <select
 												class="browser-default custom-select" name="seat_class">
-												
+
 												<option value="economy">Economy</option>
 												<option value="first">First</option>
 												<option value="business">Business</option>
@@ -113,38 +117,54 @@
 									<h2 class="fs-title">Traveler Information</h2>
 									<input type="text" name="fname" placeholder="First Name" /> 
 									<input type="text" name="lname" placeholder="Last Name" /> 
-										<input type="date" name="tdate"> 
-										<input type="text" name="tcontact_no" placeholder="Contact No." /> 
-										<input type="text" name="temail" placeholder="Email" /> 
-										<input type="text" name="tpassport_no" placeholder="passport no" />
+									<input type="date" name="tdate"> 
+									<input type="text" name="tcontact_no" placeholder="Contact No." /> 
+								
+									<input style="width: 50px;" type="radio" name="gender" value="Male" /> Male 
+									<input style="width: 50px;" type="radio" name="gender" value="Female" /> Female 
+									<input style="width: 50px;" type="radio" name="gender" value="Others" /> Others 
+								
+									<input type="text" name="temail" placeholder="Email" /> 
+									<input type="text" name="tpassport_no" placeholder="passport no" />
 								</div>
-								<input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
-								<input type="button" name="next" class="next action-button" value="Continue" />
+								<input type="button" name="previous"
+									class="previous action-button-previous" value="Previous" /> <input
+									type="button" name="next" class="next action-button"
+									value="Continue" />
 							</fieldset>
 							<fieldset>
 								<div class="form-card">
 									<h2 class="fs-title">Payment Information</h2>
 									<div class="radio-group">
 										<div class='radio' data-value="credit">
-											<img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px">
+											<img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px"
+												height="100px">
 										</div>
 										<div class='radio' data-value="paypal">
-											<img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px">
+											<img src="https://i.imgur.com/jXjwZlj.jpg" width="200px"
+												height="100px">
 										</div>
 										<br>
 									</div>
-									<label class="pay">Card Holder Name*</label> 
-									<input type="text" name="card_holder_name" placeholder="" />
-									<div class="row">
-										<div class="col-9">
-											<label class="pay">Card Number*</label> 
-											<input type="number" name="card_number" placeholder="" />
-										</div>
-										<div class="col-3">
-											<label class="pay">CVC*</label> 
-											<input type="number" name="cvc" placeholder="***" />
-										</div>
-									</div>
+									<label class="pay">Card Holder Name*</label> <input type="text"
+										name="card_holder_name" placeholder="" /> <label class="pay">Card
+										Number*</label> <input type="number" name="card_number" placeholder="" />
+
+									<label class="pay">CVC*</label> <input type="number" name="cvc"
+										placeholder="***" />
+										<label class="pay">Expiry Date</label>
+										<input type="date" name="p_date">
+
+									<!-- 									<div class="row"> -->
+									<!-- 										<div class="col-9"> -->
+									<!-- 											<label class="pay">Card Number*</label>  -->
+									<!-- 											<input type="number" name="card_number" placeholder="" /> -->
+									<!-- 										</div> -->
+									<!-- 										<div class="col-3"> -->
+									<!-- 											<label class="pay">CVC*</label>  -->
+									<!-- 											<input type="number" name="cvc" placeholder="***" /> -->
+									<!-- 										</div> -->
+									<!-- 									</div> -->
 									<!--                                     <div class="row"> -->
 									<!--                                         <div class="col-3"> <label class="pay">Expiry Date*</label> </div> -->
 									<!--                                         <div class="col-9"> <select class="list-dt" id="month" name="expmonth"> -->
@@ -216,63 +236,46 @@
 
 				<ul class="showcase">
 					<li>
-						<div class="seat"></div> 
-						<small>Available</small>
+						<div class="seat"></div> <small>Available</small>
 					</li>
 					<li>
-						<div class="seat selected"></div> 
-						<small>Selected</small>
+						<div class="seat selected"></div> <small>Selected</small>
 					</li>
 					<li>
-						<div class="seat sold"></div> 
-						<small>Sold</small>
+						<div class="seat sold"></div> <small>Sold</small>
 					</li>
 				</ul>
 				<div class="container">
 					<!-- <div class="screen"></div> -->
 
 					<div class="row">
-						<label for="">A1</label> 
-						<input class="seat" value="A1" id ="a1"></input> 
-						<label for="">A2</label> 
-						<input class="seat" value="A2" id ="a2"></input> 
-						<label for="">A3</label>
-						<input class="seat" value="A3" id ="a3"></input>
+						<label for="">A1</label> <input class="seat" value="A1" id="a1"></input>
+						<label for="">A2</label> <input class="seat" value="A2" id="a2"></input>
+						<label for="">A3</label> <input class="seat" value="A3" id="a3"></input>
 					</div>
 
 					<div class="row">
-						<label for="">B1</label> 
-						<input class="seat" value="B1" id ="b1"></input> 
-						<label for="" >B2</label> 
-						<input class="seat" value="B2" id ="b2"></input> 
-						<label for="" value="B1" id ="b1">B3</label>
-						<input class="seat" value="B3" id ="b3"></input>
+						<label for="">B1</label> <input class="seat" value="B1" id="b1"></input>
+						<label for="">B2</label> <input class="seat" value="B2" id="b2"></input>
+						<label for="" value="B1" id="b1">B3</label> <input class="seat"
+							value="B3" id="b3"></input>
 					</div>
 					<div class="row">
-						<label for="">C1</label> 
-						<input class="seat" value="C1" id ="c1"></input> 
-						<label for="">C2</label> 
-						<input class="seat" value="C2" id ="c2"></input> 
-						<label for="">C3</label>
-						<input class="seat" value="C3" id ="c3"></input>
+						<label for="">C1</label> <input class="seat" value="C1" id="c1"></input>
+						<label for="">C2</label> <input class="seat" value="C2" id="c2"></input>
+						<label for="">C3</label> <input class="seat" value="C3" id="c3"></input>
 						<!-- <div class="seat sold"></div> -->
 					</div>
 
 					<div class="row">
-						<label for="">D1</label> 
-						<input class="seat" value="D1" id ="d1"></input>
-						<label for="">D2</label> 
-						<input class="seat" value="D2" id ="d2">
-						</input> <label for="">D3</label>
-						<input class="seat" value="D3" id ="d3"></input>
+						<label for="">D1</label> <input class="seat" value="D1" id="d1"></input>
+						<label for="">D2</label> <input class="seat" value="D2" id="d2">
+						</input> <label for="">D3</label> <input class="seat" value="D3" id="d3"></input>
 					</div>
 					<div class="row">
-						<label for="">E1</label> 
-						<input class="seat" value="E1" id ="e1"></input> 
-						<label for="">E2</label> 
-						<input class="seat" value="E2" id ="e2"></input> 
-						<label for="">E3</label>
-						<input class="seat" value="E3" id ="e3"></input>
+						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input>
+						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input>
+						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input>
 					</div>
 
 
@@ -433,10 +436,12 @@ movieSelect.addEventListener("change", (e) => {
 
 // Seat click event
 container.addEventListener("click", (e) => {
+	console.log("enter")
   if (
-    e.target.classList.contains("seat") &&
-    !e.target.classList.contains("sold")
+    e.target.classList.contains("seat")
+    
   ) {
+	  console.log("clicked")
     e.target.classList.toggle("selected");
 
     updateSelectedCount();
@@ -446,7 +451,11 @@ container.addEventListener("click", (e) => {
 // Initial count and total set
 updateSelectedCount();
 
-
+$(".seat").on("click", function(e){
+	console.log($(this).closest(".seat").attr("value"));
+	$('#seat_no').val($(this).closest(".seat").attr("value"));
+	e.target.classList.toggle("selected");
+})
 
 </script>
 

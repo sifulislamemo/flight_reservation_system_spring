@@ -26,6 +26,7 @@ public class BookingInformation {
 //	Traveler Information
 	private String fname;
 	private String lname;
+	private String gender;
 	private Date tdate;
 	private String tcontact_no;
 	private String temail;
@@ -35,19 +36,15 @@ public class BookingInformation {
 	private String card_holder_name;
 	private int card_number;
 	private int cvc;
-//	private Date pdate;
+	private Date pdate;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getSeat_no() {
-		return seat_no;
-	}
-	public void setSeat_no(int seat_no) {
-		this.seat_no = seat_no;
-	}
+	
+	
 	
 	public String getAdult() {
 		return adult;
@@ -72,6 +69,14 @@ public class BookingInformation {
 	}
 	public void setLname(String lname) {
 		this.lname = lname;
+	}
+	
+	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public Date getTdate() {
 		return tdate;
@@ -114,6 +119,18 @@ public class BookingInformation {
 	}
 	public void setCvc(int cvc) {
 		this.cvc = cvc;
+	}
+	public int getSeat_no() {
+		return seat_no;
+	}
+	public void setSeat_no(int seat_no) {
+		this.seat_no = seat_no;
+	}
+	public Date getPdate() {
+		return pdate;
+	}
+	public void setPdate(Date pdate) {
+		this.pdate = pdate;
 	}
 
 	

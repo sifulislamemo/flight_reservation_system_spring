@@ -11,7 +11,7 @@
 
                     <div class="col-md-12 container">
 
-                        <h2 style="color: green; -fontweight: bold" class="text-center">Congratulation Successfully booked Your Ticket</h2>
+                        <h2 style="color: green; -fontweight: bold" class="text-center">Congratulation </h2>
                         <h2 style="color: #0066cc; font-weight: bold" class="text-center">Please take your invoice  </h2>
 
                     </div>
