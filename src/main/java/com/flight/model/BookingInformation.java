@@ -20,8 +20,8 @@ public class BookingInformation {
 
 	private int seat_no;
 //	private String seat_class;
-	private String adult;
-	private String children;
+	private int adult;
+	private int children;
 	
 //	Traveler Information
 	private String fname;
@@ -46,16 +46,17 @@ public class BookingInformation {
 	
 	
 	
-	public String getAdult() {
+	
+	public int getAdult() {
 		return adult;
 	}
-	public void setAdult(String adult) {
+	public void setAdult(int adult) {
 		this.adult = adult;
 	}
-	public String getChildren() {
+	public int getChildren() {
 		return children;
 	}
-	public void setChildren(String children) {
+	public void setChildren(int children) {
 		this.children = children;
 	}
 	public String getFname() {
