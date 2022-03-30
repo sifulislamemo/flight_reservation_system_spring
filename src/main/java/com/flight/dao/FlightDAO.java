@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.flight.model.Airplane;
+import com.flight.model.Airport;
 import com.flight.model.Flight;
 
 @Repository(value = "flightDAO")
@@ -39,6 +40,13 @@ public class FlightDAO {
 	        
 	        return flightList.get(0);
 
+	    }
+	    public Flight update(Flight f) {
+	        //String hql = "update airport set airport_code = "+a.getAirport_code()+", name = "+a.getName()+", country = "+a.getCountry()+", city = "+a.getCity()+" where id = "+a.getId();
+	        getSession().update(f);
+	   
+	        getSession().flush();
+	        return f;
 	    }
 	   
 }

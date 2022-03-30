@@ -321,7 +321,7 @@ $(document).ready(function(){
 
 
 $(".seat").on("click", function(e){
-	console.log($(this).closest(".seat").attr("value"));
+// 	console.log($(this).closest(".seat").attr("value"));
 	$('#seat_no').val($(this).closest(".seat").attr("value"));
 	e.target.classList.toggle("selected");
 })

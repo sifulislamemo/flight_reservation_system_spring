@@ -35,7 +35,7 @@ public class Flight {
 	@Column(name = "class_name")
     private String class_name;
 	@Column(name = "flight_charge")
-    private double flight_charge;
+    private Double flight_charge;
 	 @Column(name = "airpalne")
     private String airpalne;
     @Column(name = "flight_name")
@@ -43,7 +43,7 @@ public class Flight {
     @Column(name = "seatNo")
     private String seatNo;
     @Column(name = "discount")
-    private double discount;
+    private Double discount;
 	public int getId() {
 		return id;
 	}
