@@ -39,10 +39,8 @@
 
 	<!-- Modernizr JS -->
 	<script src="/resources/home/js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="/resources/home/js/respond.min.js"></script>
-	<![endif]-->
+	 <!-- datatable Show-->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
     </head>
     <body>
     <div id="fh5co-wrapper">

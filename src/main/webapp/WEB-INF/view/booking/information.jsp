@@ -28,6 +28,25 @@
 							<fieldset>
 								<div class="form-card">
 									<h2 style="text-align: center">Flight Details</h2>
+
+								
+                
+                        <h1>Flight details</h1>
+                        <h2>${flight.departure_airport} - ${flight.arrival_airport}</h2>
+                        <p>Airline<span>${flight.airline}</span></p>
+                        <p>Departing Date<span>${flight.departing_date}</span></p>
+<%--                         <p>Departing Time<span>${flight.departing_time}</span></p> --%>
+<%--                         <p>Arrival Date<span>${flight.arrival_date}</span></p> --%>
+<%--                         <p>Arrival Time<span>${flight.arrival_time}</span></p> --%>
+                        <p>Class Name<span>${flight.class_name}</span></p>
+                        <h1>Price<span>${flight.flight_charge}</span></h1>
+
+                                         <input type="hidden" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code">
+                 
+                 
+                 
+<!-- Ticket Information -->
+            
 									<h2 class="fs-title">Ticket Information</h2>
 									<input type="text" name="seat_no" class="form-control"
 										id="seat_no" placeholder="Seat No" />
@@ -172,9 +191,9 @@
 			<div class="seatss">
 				<div class="movie-container">
 					<label> Seat Class:</label> <select id="movie">
-						<option value="220">Economy</option>
-						<option value="320">First</option>
-						<option value="250">Business</option>
+						<option value="">Economy</option>
+						<option value="">First</option>
+						<option value="">Business</option>
 					</select>
 				</div>
 
@@ -320,9 +339,12 @@ $(document).ready(function(){
 
 
 
+// $(".seat").on("click", function(e){
+// // 	console.log($(this).closest(".seat").attr("value"));
+// 	$('#seat_no').val($(this).closest(".seat").attr("value"));
+
 $(".seat").on("click", function(e){
-// 	console.log($(this).closest(".seat").attr("value"));
-	$('#seat_no').val($(this).closest(".seat").attr("value"));
+        $("#seat_no").val($("#seat_no").val() + " " + this.value);
 	e.target.classList.toggle("selected");
 })
 

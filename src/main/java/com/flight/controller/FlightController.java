@@ -2,6 +2,8 @@ package com.flight.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,13 +32,18 @@ public class FlightController {
 public ModelAndView flightAdd() {
 	return new ModelAndView("admin/flight/add");
 }
-	
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public ModelAndView flightUpdate() {
+		return new ModelAndView("admin/flight/update");
+}
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute Flight flight){
     	
 		Flight p = flightService.save(flight);
 		return new ModelAndView("admin/flight/add");
     }
+	
+	
 	@RequestMapping(value = "/view", method = RequestMethod.GET) 
 	  public ModelAndView view(){ 
 		  List<Flight> flight = flightService.getAll();
@@ -51,6 +58,21 @@ public ModelAndView flightAdd() {
 	        return new ModelAndView("admin/flight/update", "flight", flight);
 	    }
 
+	 @RequestMapping(value = "/update", method = RequestMethod.POST)
+	    public ModelAndView update(HttpServletRequest request){
+		 Flight f = flightService.update(request);
+		  List<Flight> flight = flightService.getAll();
+			return new ModelAndView("admin/flight/view", "flight", flight);
+	    }
+	 
+	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	    public ModelAndView delete(@PathVariable String id){
+	        int pid = Integer.valueOf(id);
+	        Flight f = flightService.delete(pid);
+	        List<Flight> flight = flightService.getAll();
+	    	return new ModelAndView("admin/flight/view", "flight", flight);
+	    }
+	 
 		/* Departure Airport Drop-down */
 	 @RequestMapping(value = "/add", method = RequestMethod.GET) 
 	  public ModelAndView airportView(){ 

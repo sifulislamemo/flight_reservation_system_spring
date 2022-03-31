@@ -21,7 +21,9 @@
 
     <!-- Custom styles for this template-->
     <link href="/resources/admin/css/sb-admin-2.min.css" rel="stylesheet">
-    <!-- Save Show-->
+    <!-- datatable Show-->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <!-- confirm Show-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 </head>
 
@@ -85,7 +87,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/flight/add">Add Flight</a>
-                        <a class="collapse-item" href="cards.html">Edit Flight</a>
+                        <a class="collapse-item" href="/admin/flight/update">Edit Flight</a>
                         <a class="collapse-item" href="/admin/flight/view">View Flight</a>
                     </div>
                 </div>

@@ -7,6 +7,7 @@
   <h1 style="text-align:center">Flight List</h1>
 <table  class="table table-striped table-hover" >
             <tr>
+            <th>Flight Code</th>
                 <th>Airline</th>
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
@@ -27,6 +28,7 @@
             </tr>
             <c:forEach items="${flight.fList}" var="f">
                 <tr>
+                 <td>${f.flight_code}</td>
                     <td>${f.airline}</td>
                     <td>${f.departure_airport}</td>
                     <td>${f.arrival_airport}</td>

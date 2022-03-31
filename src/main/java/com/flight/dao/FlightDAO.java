@@ -48,5 +48,10 @@ public class FlightDAO {
 	        getSession().flush();
 	        return f;
 	    }
-	   
+	    public Flight delete(Flight flight) {
+	    	//String sql = "delete airport where id = '"+airport.getId()+"'";
+	        getSession().delete(flight);
+	        getSession().flush();
+	        return flight;
+	    }
 }

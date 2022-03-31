@@ -19,6 +19,8 @@ public class Flight {
 	@GeneratedValue
 	@Column(name = "id")
 	 private int id;
+	@Column(name = "flight_code")
+    private String flight_code;
 	@Column(name = "airline")
     private String airline;
 	@Column(name = "departure_airport")
@@ -41,7 +43,7 @@ public class Flight {
     @Column(name = "flight_name")
     private String flight_name;
     @Column(name = "seatNo")
-    private String seatNo;
+    private int seatNo;
     @Column(name = "discount")
     private Double discount;
 	public int getId() {
@@ -49,6 +51,13 @@ public class Flight {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getFlight_code() {
+		return flight_code;
+	}
+	public void setFlight_code(String flight_code) {
+		this.flight_code = flight_code;
 	}
 	public String getAirline() {
 		return airline;
@@ -100,11 +109,18 @@ public class Flight {
 	public void setFlight_name(String flight_name) {
 		this.flight_name = flight_name;
 	}
-	public String getSeatNo() {
+	
+	public int getSeatNo() {
 		return seatNo;
 	}
-	public void setSeatNo(String seatNo) {
+	public void setSeatNo(int seatNo) {
 		this.seatNo = seatNo;
+	}
+	public void setFlight_charge(Double flight_charge) {
+		this.flight_charge = flight_charge;
+	}
+	public void setDiscount(Double discount) {
+		this.discount = discount;
 	}
 	public double getDiscount() {
 		return discount;

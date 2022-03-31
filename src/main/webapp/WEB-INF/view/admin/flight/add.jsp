@@ -12,6 +12,9 @@
             <div class="panel-body">
                 <form method="post" action="/admin/flight/save">
                     <div class="form-group">
+                     <label for="name">Flight Code</label>
+                        <input type="text" class="form-control" id="flight_code" name="flight_code">
+                    </div>
                         <label for="name">Airline</label>
                         <input type="text" class="form-control" id="airplane" name="airline">
                     </div>
@@ -112,7 +115,7 @@
                     </div>
                     <div class="form-group">
                         <label for="area">Seat No</label>
-                        <input type="text" class="form-control" id="seatNo" name="seatNo">
+                        <input type="number" class="form-control" id="seatNo" name="seatNo">
                     </div>
                     
                     <div class="form-group">

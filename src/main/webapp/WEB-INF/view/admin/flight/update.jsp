@@ -11,6 +11,10 @@
             </header>
             <div class="panel-body">
                 <form method="post" action="/admin/flight/update">
+                <div class="form-group">
+                        <label for="flight_code">Flight Code</label>
+                        <input type="text" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code">
+                    </div>
                     <div class="form-group">
                         <label for="airline">Airline</label>
                         <input type="text" class="form-control"value="${flight.airline}" id="airline" name="airline">
@@ -94,7 +98,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="flight_charge">Flight charge:</label>
+                        <label for="flight_charge">Flight Charge:</label>
                         <input type="number" class="form-control"value="${flight.flight_charge}" id="flight_charge" name="flight_charge">
                     </div>
                     
@@ -108,14 +112,14 @@
                     </div>
                     <div class="form-group">
                         <label for="seatNo">Seat No</label>
-                        <input type="text" class="form-control"value="${flight.seatNo}" id="seatNo" name="seatNo">
+                        <input type="number" class="form-control"value="${flight.seatNo}" id="seatNo" name="seatNo">
                     </div>
                     
                     <div class="form-group">
                         <label for="discount">Discount</label>
                         <input type="text" class="form-control"value="${flight.discount}" id="discount" name="discount">
                     </div>
-                    
+                    <input type="hidden" name="id" value="${flight.id}"/><br/>
                     
                     <div class="container bg-light">
         <div class="col-md-12 text-center">

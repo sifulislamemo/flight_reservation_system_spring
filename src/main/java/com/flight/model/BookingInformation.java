@@ -19,7 +19,7 @@ public class BookingInformation {
 //	Ticket Information
 
 	private int seat_no;
-//	private String seat_class;
+	private String seat_class;
 	private int adult;
 	private int children;
 	
@@ -73,6 +73,12 @@ public class BookingInformation {
 	}
 	
 	
+	public String getSeat_class() {
+		return seat_class;
+	}
+	public void setSeat_class(String seat_class) {
+		this.seat_class = seat_class;
+	}
 	public String getGender() {
 		return gender;
 	}

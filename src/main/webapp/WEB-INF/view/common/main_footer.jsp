@@ -104,7 +104,8 @@
 	
 	<!-- Main JS -->
 	<script src="/resources/home/js/main.js"></script>
-
+<!-- datatable javascript -->
+<script type="text/javascript" src="/resources/vendor/datatable/jquery.dataTables.min.js"></script>
 <!-- <script src="/resources/vendor/js/jquery.js"></script>
     <script src="/resources/vendor/js/bootstrap.js"></script> -->
     </body>

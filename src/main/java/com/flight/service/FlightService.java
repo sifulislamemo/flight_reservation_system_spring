@@ -49,9 +49,14 @@ public class FlightService {
 		  flight.setDeparting_date(Date.valueOf(request.getParameter("departing_date")));
 		  flight.setClass_name(request.getParameter("class_name")); 
 		  flight.setFlight_charge(Double.valueOf(request.getParameter("flight_charge")));
-		  flight.setSeatNo(request.getParameter("seatNo"));
+		  flight.setAirpalne(request.getParameter("airpalne"));
+		  flight.setFlight_name(request.getParameter("flight_name"));
+		  flight.setSeatNo(Integer.parseInt(request.getParameter("seatNo")));
 		  flight.setDiscount(Double.valueOf(request.getParameter("discount")));
 		  return flightDAO.update(flight);
 	    }
-	
+	 public Flight delete(int pid) {
+		 Flight flight = flightDAO.getFlightById(pid);
+	        return flightDAO.delete(flight);
+	    }
 }

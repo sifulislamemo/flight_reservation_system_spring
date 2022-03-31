@@ -2,11 +2,14 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
+
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
   <h1 style="text-align:center">Flight List</h1>
-<table  class="table table-striped table-hover" >
+<table id="flightTable" class="table table-striped table-hover" >
+
             <tr>
+            <th>Flight Code</th>
                 <th>Airline</th>
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
@@ -15,7 +18,7 @@
 <!--                 <th>Arrival Date</th> -->
 <!--                 <th>Arrival Time</th> -->
                 <th>Class</th>
-                <th>Flight charge</th>
+                <th>Flight Charge</th>
                 <th>Airplane</th>
                 <th>Flight Name</th>
                 <th>Seat No</th>
@@ -27,6 +30,7 @@
             </tr>
             <c:forEach items="${flight}" var="f">
                 <tr>
+                <td>${f.flight_code}</td>
                     <td>${f.airline}</td>
                     <td>${f.departure_airport}</td>
                     <td>${f.arrival_airport}</td>
@@ -54,3 +58,12 @@
 </div>
 
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+ 
+ <script>
+    $('#flightTable').DataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    });
+</script>
+
