@@ -18,7 +18,7 @@ public class BookingInformation {
 	
 //	Ticket Information
 
-	private int seat_no;
+	private String seat_no;
 	private String seat_class;
 	private int adult;
 	private int children;
@@ -32,7 +32,11 @@ public class BookingInformation {
 	private String temail;
 	private String tpassport_no;
 	
-//	Payment Information
+	@Column(name = "flight_code")
+    private String flight_code;
+	
+
+	//	Payment Information
 	private String card_holder_name;
 	private int card_number;
 	private int cvc;
@@ -127,10 +131,11 @@ public class BookingInformation {
 	public void setCvc(int cvc) {
 		this.cvc = cvc;
 	}
-	public int getSeat_no() {
+	
+	public String getSeat_no() {
 		return seat_no;
 	}
-	public void setSeat_no(int seat_no) {
+	public void setSeat_no(String seat_no) {
 		this.seat_no = seat_no;
 	}
 	public Date getPdate() {
@@ -141,7 +146,12 @@ public class BookingInformation {
 	}
 
 	
-	
+	public String getFlight_code() {
+		return flight_code;
+	}
+	public void setFlight_code(String flight_code) {
+		this.flight_code = flight_code;
+	}
 	
 	
 	

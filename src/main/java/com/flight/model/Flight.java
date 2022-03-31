@@ -5,6 +5,7 @@ package com.flight.model;
 import java.sql.Date;
 import java.sql.Time;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,9 +30,18 @@ public class Flight {
     private String arrival_airport;
 	@Column(name = "departing_date")
     private Date departing_date;
-//	@Column(name = "departing_time")
-//	    private Time departing_time;
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+	
+	@Basic
+	@Column(name = "departing_time")
+	private Time departing_time;
+	
+public Time getDeparting_time() {
+		return departing_time;
+	}
+	public void setDeparting_time(Time departing_time) {
+		this.departing_time = departing_time;
+	}
+	//    @DateTimeFormat(pattern = "yyyy-MM-dd")
 //    private  Date arrival_date;
 //    private String arrival_time;
 	@Column(name = "class_name")

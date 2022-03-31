@@ -43,7 +43,10 @@
 
                                          <input type="hidden" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code">
                  
+  
+                                         <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
                  
+                                
                  
 <!-- Ticket Information -->
             

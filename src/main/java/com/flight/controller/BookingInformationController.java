@@ -2,6 +2,8 @@ package com.flight.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,9 +35,9 @@ public class BookingInformationController {
     }
 	
 	@RequestMapping(value = "/book/invoice", method = RequestMethod.POST)
-    public ModelAndView save(@ModelAttribute BookingInformation bookingInformation){
-    	
-		BookingInformation b = bookingInformationService.save(bookingInformation);
+    public ModelAndView save(HttpServletRequest r, @ModelAttribute BookingInformation bookingInformation){
+		
+		BookingInformation b = bookingInformationService.save(bookingInformation, r);
 //		System.out.println(bookingInformation.getAdult());
 		return new ModelAndView("/booking/searchInvoice");
     }

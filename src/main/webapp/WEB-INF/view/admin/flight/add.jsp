@@ -73,10 +73,10 @@
 
 
 
-<!--                     <div class="form-group"> -->
-<!--                         <label for="area">Departing Time</label> -->
-<!--                         <input type="time" class="form-control" id="departing_time" name="departing_time"> -->
-<!--                     </div> -->
+                    <div class="form-group">
+                        <label for="area">Departing Time</label>
+                        <input type="text" class="form-control" id="departing_time" name="departing_time">
+                    </div>
                     
                     
 <!--                     <div class="form-group" > -->
