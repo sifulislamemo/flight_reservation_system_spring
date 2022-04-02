@@ -25,7 +25,7 @@ public class SearchFlightDAO {
         Query query = getSession().createQuery(hqlQuery);
         query.setParameter("departure_airport", departure_airport);
         
-      System.out.println("search" +departure_airport);
+//      System.out.println("search" +departure_airport);
         List<Flight> flightList = query.list();
         getSession().flush();
       

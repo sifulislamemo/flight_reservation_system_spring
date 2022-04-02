@@ -1,6 +1,8 @@
 package com.flight.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,10 +18,13 @@ import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
 import com.flight.service.BookingInformationService;
 import com.flight.service.FlightService;
+import com.flight.service.InvoiceService;
 
 @RestController
 @RequestMapping(value = "/home")
 public class BookingInformationController {
+	@Autowired
+	InvoiceService invoiceService;
 	@Autowired
 	FlightService flightService;
 	@Autowired
@@ -40,7 +45,11 @@ public class BookingInformationController {
 		BookingInformation b = bookingInformationService.save(bookingInformation, r);
 		
 //		System.out.println(bookingInformation.getAdult());
-		return new ModelAndView("/booking/congratsBooking");
+		Map<String, Object> book = new HashMap<String, Object>();
+        List<BookingInformation> bList = invoiceService.getByEmail(b.getTemail());
+
+        book.put("bList", bList);
+		return new ModelAndView("/booking/congratsBooking", "book", book);
     }
 	
 

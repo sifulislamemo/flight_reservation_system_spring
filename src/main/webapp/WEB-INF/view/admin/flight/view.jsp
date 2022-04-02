@@ -60,7 +60,7 @@
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
  
  <script>
-    $('#flightTable').DataTable( {
+    $('#flightTable').( {
         "paging":   true,
         "ordering": true,
         "info":     true

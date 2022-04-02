@@ -17,10 +17,32 @@
 						take your invoice</h2>
 					<div class="container bg-light">
 						<div class="col-md-12 text-center">
-							<a class="btn btn-primary" href="/home/book/invoice/search">Invoice</a>
-
-
+							<button class="btn btn-primary" id="btnInvoice">Invoice</button>
 						</div>
+					</div>
+					<div id="invoiceDiv">
+						<h1 style="text-align: center">Invoice</h1>
+					<table class="table table-striped table-hover">
+
+						<tr>
+							<th>Flight Code</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Passport No</th>
+							<th>Capacity</th>
+							<th>Action</th>
+
+
+						</tr>
+						<c:forEach items="${book.bList}" var="b">
+							<tr>
+								<td>${b.flight_code}</td>
+
+
+							</tr>
+						</c:forEach>
+
+					</table>
 					</div>
 				</div>
 			</div>
@@ -30,3 +52,10 @@
 </div>
 
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>
+
+<script>
+$("#invoiceDiv").hide();
+$("#btnInvoice").on("click", function(){
+	$("#invoiceDiv").show();
+})
+</script>
