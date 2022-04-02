@@ -38,11 +38,12 @@ public class BookingInformationController {
     public ModelAndView save(HttpServletRequest r, @ModelAttribute BookingInformation bookingInformation){
 		
 		BookingInformation b = bookingInformationService.save(bookingInformation, r);
+		
 //		System.out.println(bookingInformation.getAdult());
-		return new ModelAndView("/booking/searchInvoice");
+		return new ModelAndView("/booking/congratsBooking");
     }
 	
-	
+
 	
 //	@RequestMapping(value = "/booking/information/", method = RequestMethod.GET) 
 //	  public ModelAndView view(){ 

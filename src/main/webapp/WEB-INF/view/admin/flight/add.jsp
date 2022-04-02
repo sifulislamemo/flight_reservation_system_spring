@@ -79,14 +79,14 @@
                     </div>
                     
                     
-<!--                     <div class="form-group" > -->
-<!--                         <label for="area">Arrival Date</label> -->
-<!--                         <input type="date" class="form-control" id="arrival_date" name="arrival_date"> -->
-<!--                     </div> -->
-<!--                     <div class="form-group"> -->
-<!--                         <label for="area">Arrival Time</label> -->
-<!--                         <input type="time" class="form-control" id="arrival_time" name="arrival_time"> -->
-<!--                     </div> -->
+                    <div class="form-group" >
+                        <label for="area">Arrival Date</label>
+                        <input type="date" class="form-control" id="arrival_date" name="arrival_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Arrival Time</label>
+                        <input type="text" class="form-control" id="arrival_time" name="arrival_time">
+                    </div>
 
               
 

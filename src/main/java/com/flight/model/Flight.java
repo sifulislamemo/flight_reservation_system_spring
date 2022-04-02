@@ -30,24 +30,22 @@ public class Flight {
     private String arrival_airport;
 	@Column(name = "departing_date")
     private Date departing_date;
-	
+	@Column(name = "flight_charge")
+    private Double flight_charge;
 	@Basic
 	@Column(name = "departing_time")
 	private Time departing_time;
 	
-public Time getDeparting_time() {
-		return departing_time;
-	}
-	public void setDeparting_time(Time departing_time) {
-		this.departing_time = departing_time;
-	}
+
 	//    @DateTimeFormat(pattern = "yyyy-MM-dd")
-//    private  Date arrival_date;
-//    private String arrival_time;
+	@Column(name = "arrival_date")
+    private  Date arrival_date;
+	@Basic
+	@Column(name = "arrival_time")
+    private Time arrival_time;
 	@Column(name = "class_name")
     private String class_name;
-	@Column(name = "flight_charge")
-    private Double flight_charge;
+	
 	 @Column(name = "airpalne")
     private String airpalne;
     @Column(name = "flight_name")
@@ -101,12 +99,7 @@ public Time getDeparting_time() {
 	public void setClass_name(String class_name) {
 		this.class_name = class_name;
 	}
-	public double getFlight_charge() {
-		return flight_charge;
-	}
-	public void setFlight_charge(double flight_charge) {
-		this.flight_charge = flight_charge;
-	}
+	
 	public String getAirpalne() {
 		return airpalne;
 	}
@@ -126,19 +119,41 @@ public Time getDeparting_time() {
 	public void setSeatNo(int seatNo) {
 		this.seatNo = seatNo;
 	}
+	
+	
+	
+	
+	public Time getDeparting_time() {
+		return departing_time;
+	}
+	public void setDeparting_time(Time departing_time) {
+		this.departing_time = departing_time;
+	}
+	public Date getArrival_date() {
+		return arrival_date;
+	}
+	public void setArrival_date(Date arrival_date) {
+		this.arrival_date = arrival_date;
+	}
+	public Double getFlight_charge() {
+		return flight_charge;
+	}
 	public void setFlight_charge(Double flight_charge) {
 		this.flight_charge = flight_charge;
+	}
+	public Double getDiscount() {
+		return discount;
 	}
 	public void setDiscount(Double discount) {
 		this.discount = discount;
 	}
-	public double getDiscount() {
-		return discount;
+	public Time getArrival_time() {
+		return arrival_time;
 	}
-	public void setDiscount(double discount) {
-		this.discount = discount;
+	public void setArrival_time(Time arrival_time) {
+		this.arrival_time = arrival_time;
 	}
 	
-    
+	
     
 }

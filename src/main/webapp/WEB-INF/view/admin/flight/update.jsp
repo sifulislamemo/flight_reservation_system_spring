@@ -70,20 +70,20 @@
                     
 
 
-<!--                     <div class="form-group"> -->
-<!--                         <label for="departing_time">Departing Time</label> -->
-<%--                         <input type="time" class="form-control"value="${flight.departing_time}" id="departing_time" name="departing_time"> --%>
-<!--                     </div> -->
+                    <div class="form-group">
+                        <label for="departing_time">Departing Time</label>
+                        <input type="time" class="form-control"value="${flight.departing_time}" id="departing_time" name="departing_time">
+                    </div>
                     
                     
-<!--                     <div class="form-group" > -->
-<!--                         <label for="arrival_date">Arrival Date</label> -->
-<%--                         <input type="date" class="form-control"value="${flight.arrival_date}" id="arrival_date" name="arrival_date"> --%>
-<!--                     </div> -->
-<!--                     <div class="form-group"> -->
-<!--                         <label for="arrival_time">Arrival Time</label> -->
-<%--                         <input type="time" class="form-control"value="${flight.arrival_time}" id="arrival_time" name="arrival_time"> --%>
-<!--                     </div> -->
+                    <div class="form-group" >
+                        <label for="arrival_date">Arrival Date</label>
+                        <input type="date" class="form-control"value="${flight.arrival_date}" id="arrival_date" name="arrival_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival_time">Arrival Time</label>
+                        <input type="time" class="form-control"value="${flight.arrival_time}" id="arrival_time" name="arrival_time">
+                    </div>
 
 
 

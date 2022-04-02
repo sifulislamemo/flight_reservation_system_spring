@@ -14,9 +14,9 @@
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
                 <th>Departing Date</th>
-<!--                 <th>Departing Time</th> -->
-<!--                 <th>Arrival Date</th> -->
-<!--                 <th>Arrival Time</th> -->
+                <th>Departing Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
                 <th>Class</th>
                 <th>Flight Charge</th>
                 <th>Airplane</th>
@@ -35,9 +35,9 @@
                     <td>${f.departure_airport}</td>
                     <td>${f.arrival_airport}</td>
                     <td>${f.departing_date}</td>
-<%--                     <td>${f.departing_time}</td> --%>
-<%--                     <td>${f.arrival_date}</td> --%>
-<%--                     <td>${f.arrival_time}</td> --%>
+                    <td>${f.departing_time}</td>
+                    <td>${f.arrival_date}</td>
+                    <td>${f.arrival_time}</td>
                     <td>${f.class_name}</td>
                     <td>${f.flight_charge}</td>
                     <td>${f.airpalne}</td>

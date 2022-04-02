@@ -7,8 +7,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping(value = "/home")
 public class InvoiceController {
-	@RequestMapping(value = "/book/invoice")
-	public ModelAndView airplaneAdd() {
-		return new ModelAndView("invoice/invoice");
+	@RequestMapping(value = "/book/invoice/search")
+	public ModelAndView invoiceSearch() {
+		return new ModelAndView("invoice/search");
 		}
 }

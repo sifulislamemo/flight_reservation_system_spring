@@ -11,7 +11,7 @@
                 <th>Owner</th>
                 <th>Model</th>
                 <th>Engine</th>
-                <th>Capacity</th>
+                <th>Flight Charge</th>
                 <th>Action</th>
                 
                

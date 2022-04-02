@@ -41,7 +41,7 @@
                         <p>Class Name<span>${flight.class_name}</span></p>
                         <h1>Price<span>${flight.flight_charge}</span></h1>
 
-                                         <input type="hidden" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code">
+<%--                                          <input type="hidden" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code"> --%>
                  
   
                                          <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">

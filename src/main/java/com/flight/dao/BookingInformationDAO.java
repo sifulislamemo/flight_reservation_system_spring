@@ -37,4 +37,10 @@ public class BookingInformationDAO {
     	getSession().flush();
         return bookingInformation;
     }
+    
+    public List<BookingInformation> getAll(){ 
+    	
+		 List<BookingInformation> booking = getSession().createCriteria(BookingInformation.class).list();
+		 return booking; 
+		  }
 }
