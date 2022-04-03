@@ -14,9 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.flight.model.Airplane;
 import com.flight.model.Airport;
+import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
 import com.flight.model.Traveller;
 import com.flight.service.AirportService;
+import com.flight.service.BookingInformationService;
 import com.flight.service.FlightService;
 import com.flight.service.TravellerService;
 
@@ -27,6 +29,9 @@ public class FlightController {
 	FlightService flightService;
 	@Autowired
 	AirportService airportService;
+	
+	@Autowired
+	BookingInformationService bookingInformationService;
 	
 	@RequestMapping(value = "/add")
 public ModelAndView flightAdd() {
@@ -80,6 +85,14 @@ public ModelAndView flightAdd() {
 	return new ModelAndView("admin/flight/add", "airport", airport); 
 	}
 	 
-	 
+		@RequestMapping(value = "/booking/getBySeat", method = RequestMethod.POST)
+	    public Flight getBySeat(HttpServletRequest request){
+	        BookingInformation binfo = bookingInformationService.getFlightBySeat(request.getParameter("seat_no"));
+	        System.out.println(binfo.getFlight_code());
+	        
+	        Flight flight = flightService.getFlightByCode(binfo.getFlight_code());
+
+	        return flight;
+	    }
 	 
 }

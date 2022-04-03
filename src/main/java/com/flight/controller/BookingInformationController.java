@@ -59,4 +59,7 @@ public class BookingInformationController {
 //		  List<Flight> flight = flightService.getAll();
 //	return new ModelAndView("/booking/information", "flight", flight); 
 //	}
+	
+
+
 }

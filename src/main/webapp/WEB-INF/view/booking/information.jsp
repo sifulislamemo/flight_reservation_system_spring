@@ -35,19 +35,16 @@
                         <h2>${flight.departure_airport} - ${flight.arrival_airport}</h2>
                         <p>Airline<span>${flight.airline}</span></p>
                         <p>Departing Date<span>${flight.departing_date}</span></p>
-<%--                         <p>Departing Time<span>${flight.departing_time}</span></p> --%>
-<%--                         <p>Arrival Date<span>${flight.arrival_date}</span></p> --%>
-<%--                         <p>Arrival Time<span>${flight.arrival_time}</span></p> --%>
+                        <p>Departing Time<span>${flight.departing_time}</span></p>
+                        <p>Arrival Date<span>${flight.arrival_date}</span></p>
+                        <p>Arrival Time<span>${flight.arrival_time}</span></p>
                         <p>Class Name<span>${flight.class_name}</span></p>
                         <h1>Price<span>${flight.flight_charge}</span></h1>
 
-<%--                                          <input type="hidden" class="form-control"value="${flight.flight_code}" id="flight_code" name="flight_code"> --%>
-                 
-  
+
                                          <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
                  
-                                
-                 
+
 <!-- Ticket Information -->
             
 									<h2 class="fs-title">Ticket Information</h2>
@@ -108,9 +105,7 @@
 										</select>
 									</section>
 
-									<!-- 			<div class="col-xs-12"> -->
-									<!-- 				<a href="/traveler_information" class="btn btn-primary btn-block">Book</a> -->
-									<!-- 			</div> -->
+									
 								</div>
 								<input type="button" name="next" class="next action-button"
 									value="Continue" />
@@ -341,20 +336,24 @@ $(document).ready(function(){
 // 	seat plan
 
 
-
-// $(".seat").on("click", function(e){
-// // 	console.log($(this).closest(".seat").attr("value"));
-// 	$('#seat_no').val($(this).closest(".seat").attr("value"));
-
 $(".seat").on("click", function(e){
-        $("#seat_no").val($("#seat_no").val() + " " + this.value);
-	e.target.classList.toggle("selected");
-});
+	console.log($(this).val())
 
-// $.sweetModal({
-//     content: 'This is a success.',
-//     icon: $.sweetModal.ICON_SUCCESS
-// });
+    $("#seat_no").val($("#seat_no").val() + " " + this.value);
+	e.target.classList.toggle("selected");
+	$.ajax({
+		type : "POST",
+		url : "/admin/flight/booking/getBySeat",
+		data : {seat_no : $(this).val()},
+		success : function(data, status) {
+				console.log(data);	
+		}
+	});
+});
+	
+	
+ 
+
 
 </script>
 

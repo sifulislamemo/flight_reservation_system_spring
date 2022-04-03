@@ -195,12 +195,7 @@
 
         <div class="toolbar hidden-print">
             <div class="text-center">
-
-                <a href="/index"><button class="btn btn-info"><i class="fa fa-print"></i> HOME</button></a>
-                
                 <button id="printInvoice" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
-                <button class="btn btn-info"><i class="fa fa-file-pdf-o"></i> Export as PDF</button>
-        
             </div>
             <hr>
         </div>
@@ -241,7 +236,6 @@
                                 <th><h5>To</h5></th>
                                 <th><h5>Departure time</h5></th>
                                 <th><h5>Arrival time</h5></th>
-                                
                                 <th><h5>Class name</h5></th>
                                 <th><h5>Flight Charge</h5></th>
                              </tr>
@@ -307,6 +301,10 @@
  <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                         <div class="py-3 px-5 text-right">
                             <div class="mb-2">Flight Charge:</div>
+                            <div class="h2 font-weight-light">${b.flight_charge}</div>
+                        </div>
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Number of Site:</div>
                             <div class="h2 font-weight-light">${b.flight_charge}</div>
                         </div>
 
