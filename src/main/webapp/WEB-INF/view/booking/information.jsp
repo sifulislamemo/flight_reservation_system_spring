@@ -192,8 +192,8 @@
 			</div>
 			<!-- 							seat plan -->
 			<div class="seatss">
-				<div class="movie-container">
-					<label> Seat Class:</label> <select id="movie">
+				<div class="">
+					<label> Seat Class:</label> <select id="">
 						<option value="">Economy</option>
 						<option value="">First</option>
 						<option value="">Business</option>
@@ -249,15 +249,15 @@
 				</div>
 
 				<p class="text">
-					You have selected <span id="count">0</span> seat for a price of TK.<span
-						id="total">0</span>
+<!-- 					You have selected <span id="count">0</span> seat for a price of TK.<span -->
+<!-- 						id="total">0</span> -->
 				</p>
 			</div>
 
 			<!--   end seat plan -->
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+<!-- 				<button type="button" class="btn btn-primary">Save changes</button> -->
 			</div>
 		</div>
 	</div>
@@ -349,7 +349,12 @@ $(document).ready(function(){
 $(".seat").on("click", function(e){
         $("#seat_no").val($("#seat_no").val() + " " + this.value);
 	e.target.classList.toggle("selected");
-})
+});
+
+// $.sweetModal({
+//     content: 'This is a success.',
+//     icon: $.sweetModal.ICON_SUCCESS
+// });
 
 </script>
 
