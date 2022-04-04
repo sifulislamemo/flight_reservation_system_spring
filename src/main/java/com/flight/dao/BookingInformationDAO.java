@@ -44,11 +44,11 @@ public class BookingInformationDAO {
 		 return booking; 
 		  }
 
-	public BookingInformation getFlightBySeat(String parameter) {
-		String sql = "from bookingInformation where seat_no = '" + parameter + "'";
-        List<BookingInformation> flightList = getSession().createQuery(sql).list();
-        
-        return flightList.get(0);
-
-	}
+//	public BookingInformation getFlightBySeat(String parameter) {
+//		String sql = "from bookingInformation where seat_no = '" + parameter + "'";
+//        List<BookingInformation> flightList = getSession().createQuery(sql).list();
+//        
+//        return flightList.get(0);
+//
+//	}
 }

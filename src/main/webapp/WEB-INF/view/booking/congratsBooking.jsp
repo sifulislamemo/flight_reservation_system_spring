@@ -218,7 +218,7 @@
                         </div>
                         <div class="col invoice-details">
                             <h2 class="invoice-id">INVOICE - ${b.id}</h2>
-                            <div class="date">Date of Invoice: 01/02/2021</div>
+                            <div class="date">Date of Invoice: 04/04/2022</div>
                         </div>
                     </div>
 

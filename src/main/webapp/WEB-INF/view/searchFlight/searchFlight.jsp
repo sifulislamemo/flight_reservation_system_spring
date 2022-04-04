@@ -2,10 +2,11 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="/WEB-INF/view/common/main_header.jsp"%>
+<div class="container-fluid">
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
   <h1 style="text-align:center">Flight List</h1>
-<table  class="table table-striped table-hover" >
+<table id="flightTable" class="table table-striped table-hover" >
             <tr>
             <th>Flight Code</th>
                 <th>Airline</th>
@@ -54,5 +55,5 @@
         </table> 
         </div>
 </div>
-
+</div>
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>

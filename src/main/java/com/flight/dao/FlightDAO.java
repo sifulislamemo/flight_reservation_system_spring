@@ -55,10 +55,10 @@ public class FlightDAO {
 	        return flight;
 	    }
 
-		public Flight getFlightBySeat(String parameter) {
-			String sql = "from flight where flight_code = '" + parameter + "'";
-	        List<Flight> flightList = getSession().createQuery(sql).list();
-	        
-	        return flightList.get(0);
-		}
+//		public Flight getFlightBySeat(String parameter) {
+//			String sql = "from flight where flight_code = '" + parameter + "'";
+//	        List<Flight> flightList = getSession().createQuery(sql).list();
+//	        
+//	        return flightList.get(0);
+//		}
 }

@@ -59,16 +59,16 @@ public class FlightService {
 		 Flight flight = flightDAO.getFlightById(pid);
 	        return flightDAO.delete(flight);
 	    }
-	public Flight getFlightBySeat(String parameter) {
-		Flight flight = flightDAO.getFlightBySeat(parameter);
-
-        return flight;
-	}
-	public Flight getFlightByCode(String flight_code) {
-		Flight flight = flightDAO.getFlightBySeat(flight_code);
-
-        return flight;
-	}
+//	public Flight getFlightBySeat(String parameter) {
+//		Flight flight = flightDAO.getFlightBySeat(parameter);
+//
+//        return flight;
+//	}
+//	public Flight getFlightByCode(String flight_code) {
+//		Flight flight = flightDAO.getFlightBySeat(flight_code);
+//
+//        return flight;
+//	}
 	
 
 }

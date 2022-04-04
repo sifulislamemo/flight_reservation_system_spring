@@ -85,14 +85,14 @@ public ModelAndView flightAdd() {
 	return new ModelAndView("admin/flight/add", "airport", airport); 
 	}
 	 
-		@RequestMapping(value = "/booking/getBySeat", method = RequestMethod.POST)
-	    public Flight getBySeat(HttpServletRequest request){
-	        BookingInformation binfo = bookingInformationService.getFlightBySeat(request.getParameter("seat_no"));
-	        System.out.println(binfo.getFlight_code());
-	        
-	        Flight flight = flightService.getFlightByCode(binfo.getFlight_code());
-
-	        return flight;
-	    }
+//		@RequestMapping(value = "/booking/getBySeat", method = RequestMethod.POST)
+//	    public Flight getBySeat(HttpServletRequest request){
+//	        BookingInformation binfo = bookingInformationService.getFlightBySeat(request.getParameter("seat_no"));
+//	        System.out.println(binfo.getFlight_code());
+//	        
+//	        Flight flight = flightService.getFlightByCode(binfo.getFlight_code());
+//
+//	        return flight;
+//	    }
 	 
 }
