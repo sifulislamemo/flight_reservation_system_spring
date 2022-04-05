@@ -5,10 +5,12 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.flight.model.Airport;
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
 @Repository(value = "bookingInformationDAO")
@@ -44,6 +46,13 @@ public class BookingInformationDAO {
 		 return booking; 
 		  }
 
+    
+    public List<BookingInformation> getBySeat()
+	 { 
+    	String sql = "from bookingInformation where seat_no"; 
+	 List<BookingInformation> booking = getSession().createQuery(sql).list(); 
+	 return booking; 
+	  }
 //	public BookingInformation getFlightBySeat(String parameter) {
 //		String sql = "from bookingInformation where seat_no = '" + parameter + "'";
 //        List<BookingInformation> flightList = getSession().createQuery(sql).list();

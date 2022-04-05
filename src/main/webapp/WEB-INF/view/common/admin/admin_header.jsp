@@ -125,6 +125,24 @@
 <!--                 </div> -->
 <!--             </li> -->
             <!-- Nav Item - Country -->
+            
+<!--              seat -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#passenger"
+                    aria-expanded="true" aria-controls="passenger">
+                    <i class="fas fa-fw fa-cog"></i> 
+                    <span>Seat</span>
+                </a>
+                <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header"></h6>
+                        <a class="collapse-item" href="/admin/seat_booking/add">Traveller Add </a>
+<!--                         <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a> -->
+<!--                         <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a> -->
+                    </div>
+                </div>
+            </li>
+<!--             seat -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#country"
                     aria-expanded="true" aria-controls="country">

@@ -44,6 +44,10 @@ public class BookingInformationService {
 	  { 
 		  return bookingInformationDAO.getAll(); 
 	  }
+	
+	public List<BookingInformation> getBySeat() {
+        return bookingInformationDAO.getBySeat();
+   }
 
 //	public BookingInformation getFlightBySeat(String parameter) {
 //		// TODO Auto-generated method stub

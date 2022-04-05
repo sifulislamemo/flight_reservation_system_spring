@@ -109,19 +109,19 @@
                         <label for="area">Airplane:</label>
                         <input type="text" class="form-control" id="airpalne" name="airpalne">
                     </div>
-                    <div class="form-group">
-                        <label for="area">Flight Name</label>
-                        <input type="text" class="form-control" id="flight_name" name="flight_name">
-                    </div>
-                    <div class="form-group">
-                        <label for="area">Seat No</label>
-                        <input type="number" class="form-control" id="seatNo" name="seatNo">
-                    </div>
+<!--                     <div class="form-group"> -->
+<!--                         <label for="area">Flight Name</label> -->
+<!--                         <input type="text" class="form-control" id="flight_name" name="flight_name"> -->
+<!--                     </div> -->
+<!--                     <div class="form-group"> -->
+<!--                         <label for="area">Seat No</label> -->
+<!--                         <input type="number" class="form-control" id="seatNo" name="seatNo"> -->
+<!--                     </div> -->
                     
-                    <div class="form-group">
-                        <label for="area">Discount</label>
-                        <input type="text" class="form-control" id="discount" name="discount">
-                    </div>
+<!--                     <div class="form-group"> -->
+<!--                         <label for="area">Discount</label> -->
+<!--                         <input type="text" class="form-control" id="discount" name="discount"> -->
+<!--                     </div> -->
                     
                     
                     <div class="container bg-light">

@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-public class PaymentController {
-	@RequestMapping(value = "/payment")
+@RequestMapping(value = "/admin/seat")
+public class SeatController {
+	@RequestMapping(value = "/add")
 public ModelAndView signUp() {
-	return new ModelAndView("payment/payment");
+	return new ModelAndView("admin/seat_booking/add");
 }
 }

@@ -21,8 +21,8 @@
                 <th>Flight Charge</th>
                 <th>Airplane</th>
 <!--                 <th>Flight Name</th> -->
-                <th>Seat No</th>
-                <th>Discount</th>
+<!--                 <th>Seat No</th> -->
+<!--                 <th>Discount</th> -->
                 <th>Action</th>
                 
                
@@ -41,8 +41,8 @@
                     <td>${f.flight_charge}</td>
                     <td>${f.airpalne}</td>
 <%--                     <td>${f.flight_name}</td> --%>
-                    <td>${f.seatNo}</td>
-                    <td>${f.discount}</td>
+<%--                     <td>${f.seatNo}</td> --%>
+<%--                     <td>${f.discount}</td> --%>
                   
                     <td>
                         <a class="btn btn-primary" href="/admin/flight/update/${f.id}">Edit</a> &nbsp; &nbsp;
