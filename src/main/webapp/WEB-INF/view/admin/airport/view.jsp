@@ -24,9 +24,9 @@
                     <td>${airport.city}</td>
                     
                     <td>
-                        <a href="/admin/airport/update/${airport.id}">Edit</a> &nbsp; &nbsp;
+                        <a class="btn btn-primary" href="/admin/airport/update/${airport.id}">Edit</a> &nbsp; &nbsp;
                     
-                        <a href="/admin/airport/delete/${airport.id}">Delete</a>
+                        <a class="btn btn-danger" href="/admin/airport/delete/${airport.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

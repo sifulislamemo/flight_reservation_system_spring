@@ -171,7 +171,8 @@
         }
 
     </style>
-
+<br/>
+<br/>
 <div class="container-fluid">
 
 	<div class="col-lg-12">
@@ -208,17 +209,17 @@
                     <div class="row contacts">
                         <div class="col invoice-to">
 
-                            <div class="text-gray-light"><h3>INVOICE TO-${b.fname}</h3></div> 
-                            <div class="email">${b.departure_airport} - ${b.arrival_airport}</div>
-                            <div class="date">FLIGHT CODE- ${b.flight_code}</div>
-                            <div class="address">RESERVATION - ${b.airpalne}</div>
+                            <div class="text-gray-light"><h3>INVOICE TO:&nbsp &nbsp ${b.fname}</h3></div> 
+                            <div class="email">${b.departure_airport} -- ${b.arrival_airport}</div>
+                            <div class="date">FLIGHT CODE:&nbsp &nbsp ${b.flight_code}</div>
+                            <div class="address">RESERVATION:&nbsp &nbsp ${b.airpalne}</div>
 
-                            <div class="date">FLIGHT DATE- ${b.departing_date}</div>
-                            <div class="date">SEAT NO- ${b.seat_no}</div>
+                            <div class="date">FLIGHT DATE:&nbsp &nbsp ${b.departing_date}</div>
+                            <div class="date">SEAT NO:&nbsp &nbsp ${b.seat_no}</div>
                         </div>
                         <div class="col invoice-details">
-                            <h2 class="invoice-id">INVOICE - ${b.id}</h2>
-                            <div class="date">Date of Invoice: 04/04/2022</div>
+                            <h2 class="invoice-id">INVOICE: &nbsp #F${b.id}</h2>
+                            <div class="date">Date of Invoice: 05/04/2022</div>
                         </div>
                     </div>
 
@@ -234,10 +235,12 @@
                                 <th><h5>Airplane</h5></th>
                                 <th><h5>From</h5></th>
                                 <th><h5>To</h5></th>
+                                <th><h5>Departure Date</h5></th>
                                 <th><h5>Departure time</h5></th>
+                                <th><h5>Arrival Date</h5></th>
                                 <th><h5>Arrival time</h5></th>
                                 <th><h5>Class name</h5></th>
-                                <th><h5>Flight Charge</h5></th>
+<!--                                 <th><h5>Flight Charge</h5></th> -->
                              </tr>
 
                                 <tr>
@@ -245,10 +248,12 @@
                                     <td>${b.airpalne}</td>
                                     <td>${b.departure_airport}</td>
                                     <td>${b.arrival_airport}</td>
+                                    <td>${b.departing_date}</td>
                                     <td>${b.departing_time}</td>
+                                    <td>${b.arrival_date}</td>
                                     <td>${b.arrival_time}</td>
                                     <td>${b.seat_class}</td>
-                                    <td>${b.flight_charge}</td>
+<%--                                     <td>${b.flight_charge}</td> --%>
                      
                                 </tr>
 
@@ -300,24 +305,24 @@
 
  <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                         <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Flight Charge:</div>
-                            <div class="h2 font-weight-light">${b.flight_charge}</div>
+                            <div class="mb-2">Total Charge:</div>
+                            <div class="h4 font-weight-light">${b.flight_charge}</div>
                         </div>
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Number of Site:</div>
-                            <div class="h2 font-weight-light">${b.flight_charge}</div>
-                        </div>
+<!--                         <div class="py-3 px-5 text-right"> -->
+<!--                             <div class="mb-2">Number of Site:</div> -->
+<%--                             <div class="h2 font-weight-light">${b.flight_charge}</div> --%>
+<!--                         </div> -->
 
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Discount</div>
-                            <div class="h2 font-weight-light">10%</div>
-                        </div>
+<!--                         <div class="py-3 px-5 text-right"> -->
+<!--                             <div class="mb-2">Discount</div> -->
+<!--                             <div class="h2 font-weight-light">10%</div> -->
+<!--                         </div> -->
 
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Sub - Total amount</div>
-                            <div class="h2 font-weight-light">$32,432</div>
-                        </div>
-                    </div>
+<!--                         <div class="py-3 px-5 text-right"> -->
+<!--                             <div class="mb-2">Sub - Total amount</div> -->
+<!--                             <div class="h2 font-weight-light">$32,432</div> -->
+<!--                         </div> -->
+<!--                     </div> -->
 
                 </main>
                 <footer>
@@ -338,7 +343,8 @@
 		</div>
 	</div>
 </div>
-
+<br/>
+<br/>
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>
 
 <script>

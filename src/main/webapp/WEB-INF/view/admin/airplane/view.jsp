@@ -24,9 +24,9 @@
                     <td>${airplan.engine}</td>
                     <td>${airplan.capacity}</td>
                     <td>
-                        <a href="/admin/airplane/update/${airplan.id}">Edit</a> &nbsp; &nbsp;
+                        <a class="btn btn-primary" href="/admin/airplane/update/${airplan.id}">Edit</a> &nbsp; &nbsp;
                    
-                        <a href="/admin/airplane/delete/${airplan.id}">Delete</a>
+                        <a  class="btn btn-danger" href="/admin/airplane/delete/${airplan.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

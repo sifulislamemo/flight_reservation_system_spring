@@ -2,6 +2,8 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@include file="/WEB-INF/view/common/main_header.jsp"%>
+<br/>
+<br/>
 <div class="container-fluid">
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
@@ -12,16 +14,16 @@
                 <th>Airline</th>
                 <th>Departure Airport</th>
                 <th>Arrival Airport</th>
-<!--                 <th>Departing Date</th> -->
-<!--                 <th>Departing Time</th> -->
-<!--                 <th>Arrival Date</th> -->
-<!--                 <th>Arrival Time</th> -->
+                <th>Departing Date</th>
+                <th>Departing Time</th>
+                <th>Arrival Date</th>
+                <th>Arrival Time</th>
                 <th>Class</th>
                 <th>Flight charge</th>
-                <th>Airplane</th>
-                <th>Flight Name</th>
-                <th>Seat No</th>
-                <th>Discount</th>
+<!--                 <th>Airplane</th> -->
+<!--                 <th>Flight Name</th> -->
+<!--                 <th>Seat No</th> -->
+<!--                 <th>Discount</th> -->
                 
                 <th>Action</th>
                 
@@ -33,16 +35,16 @@
                     <td>${f.airline}</td>
                     <td>${f.departure_airport}</td>
                     <td>${f.arrival_airport}</td>
-<%--                     <td>${f.departing_date}</td> --%>
-<%--                     <td>${f.departing_time}</td> --%>
-<%--                     <td>${f.arrival_date}</td> --%>
-<%--                     <td>${f.arrival_time}</td> --%>
+                    <td>${f.departing_date}</td>
+                    <td>${f.departing_time}</td>
+                    <td>${f.arrival_date}</td>
+                    <td>${f.arrival_time}</td>
                     <td>${f.class_name}</td>
                     <td>${f.flight_charge}</td>
-                    <td>${f.airpalne}</td>
-                    <td>${f.flight_name}</td>
-                    <td>${f.seatNo}</td>
-                    <td>${f.discount}</td>
+<%--                     <td>${f.airpalne}</td> --%>
+<%--                     <td>${f.flight_name}</td> --%>
+<%--                     <td>${f.seatNo}</td> --%>
+<%--                     <td>${f.discount}</td> --%>
                   
                     <td>
                         <a class="btn btn-primary" href="/home/booking/information/${f.id}">Book Now</a> &nbsp; &nbsp;
@@ -56,4 +58,6 @@
         </div>
 </div>
 </div>
+<br/>
+<br/>
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>

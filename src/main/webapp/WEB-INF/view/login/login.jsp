@@ -22,13 +22,16 @@
 </head>
 
 <body >
+<br/>
+
 <div class="container">
 				<div class="nav-header" >
-					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+<!-- 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a> -->
 					<h1 id="fh5co-logo" >
 						<a href="/"><i class="icon-airplane"></i>S I TRAVEL</a>
 					</h1>
-
+<br/>
+<br/>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">

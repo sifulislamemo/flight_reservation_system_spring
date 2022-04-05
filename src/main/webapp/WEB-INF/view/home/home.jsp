@@ -106,13 +106,13 @@
 													</div>
 												</div>
 												
-												<div class="col-xxs-12 col-xs-6 mt alternate">
-													<div class="input-field">
-														<label for="date-end">Returning:</label> <input
-															type="text" class="form-control" id="date-end"
-															placeholder="mm/dd/yyyy" />
-													</div>
-												</div>
+<!-- 												<div class="col-xxs-12 col-xs-6 mt alternate"> -->
+<!-- 													<div class="input-field"> -->
+<!-- 														<label for="date-end">Returning:</label> <input -->
+<!-- 															type="text" class="form-control" id="date-end" -->
+<!-- 															placeholder="mm/dd/yyyy" /> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
 												<!-- <div class="col-xxs-12 col-xs-6 mt alternate">
 													<section>
 														<label for="class">Class:</label> <select
@@ -306,9 +306,9 @@
 							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
 									
-									<h1>Fly S I TRAVEL and get a
+									<h1>Fly S I TRAVEL And Get 
 </h1>
-									<h2>Fly the Friendly Skies</h2>
+									<h2>The Friendly Skies</h2>
 									
 									<span class="price"></span>
 									<!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->

@@ -36,7 +36,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
 
                 <div class="sidebar-brand-text mx-3">Admin </div>
             </a>
@@ -46,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -109,21 +109,21 @@
                 </div>
             </li>
             <!-- Nav Item - Passenger -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#passenger"
-                    aria-expanded="true" aria-controls="passenger">
-                    <i class="fas fa-fw fa-cog"></i> 
-                    <span>Traveller</span>
-                </a>
-                <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/traveller/add">Traveller Add </a>
-                        <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a>
-                        <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a>
-                    </div>
-                </div>
-            </li>
+<!--             <li class="nav-item"> -->
+<!--                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#passenger" -->
+<!--                     aria-expanded="true" aria-controls="passenger"> -->
+<!--                     <i class="fas fa-fw fa-cog"></i>  -->
+<!--                     <span>Traveller</span> -->
+<!--                 </a> -->
+<!--                 <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar"> -->
+<!--                     <div class="bg-white py-2 collapse-inner rounded"> -->
+<!--                         <h6 class="collapse-header"></h6> -->
+<!--                         <a class="collapse-item" href="/admin/traveller/add">Traveller Add </a> -->
+<!--                         <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a> -->
+<!--                         <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </li> -->
             <!-- Nav Item - Country -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#country"

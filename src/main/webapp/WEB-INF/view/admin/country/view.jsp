@@ -13,8 +13,8 @@
                 <th>Longitude</th>
                 <th>Country</th>
                 <th>City Code</th>
-                <th >Edit Action</th>
-                <th >Delete Action</th>
+                <th > Action</th>
+              
                
             </tr>
             <c:forEach items="${country}" var="country">
@@ -25,10 +25,9 @@
                     <td>${country.country}</td>
                     <td>${country.city_code}</td>
                     <td>
-                        <a href="/admin/country/update/${country.id}">Edit</a>
-                    </td>
-                    <td>
-                        <a href="/admin/country/delete/${country.id}">Delete</a>
+                        <a class="btn btn-primary" href="/admin/country/update/${country.id}">Edit</a>
+                    
+                        <a class="btn btn-danger" href="/admin/country/delete/${country.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

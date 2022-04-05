@@ -4,6 +4,8 @@
 <%@include file="/WEB-INF/view/common/main_header.jsp"%>
 <link rel="stylesheet" href="/resources/home/css/wizard.css">
 <link rel="stylesheet" href="/resources/ticket_information/seat.css">
+<br/>
+<br/>
 <div class="container-fluid" id="">
 	<div class="row justify-content-center mt-0">
 
@@ -27,29 +29,31 @@
 							<!-- fieldsets -->
 							<fieldset>
 								<div class="form-card">
-									<h2 style="text-align: center">Flight Details</h2>
+								<div class="col-xxs-12 col-xs-6 mt border border-dark" style="padding-left: 0px">
+<!-- 									<h2 style="text-align: center">Flight Details</h2> -->
 
 								
                 
-                        <h1>Flight details</h1>
-                        <h2>${flight.departure_airport} - ${flight.arrival_airport}</h2>
-                        <p>Airline<span>${flight.airline}</span></p>
-                        <p>Departing Date<span>${flight.departing_date}</span></p>
-                        <p>Departing Time<span>${flight.departing_time}</span></p>
-                        <p>Arrival Date<span>${flight.arrival_date}</span></p>
-                        <p>Arrival Time<span>${flight.arrival_time}</span></p>
-                        <p>Class Name<span>${flight.class_name}</span></p>
-                        <h1>Price<span>${flight.flight_charge}</span></h1>
+                        									<h2 class="fs-title">Flight Details</h2>
+                        <br/>
+                        <h3><b>${flight.departure_airport} - ${flight.arrival_airport}</b></h3>
+                        <p><b>Airline Name:&nbsp &nbsp</b><span >${flight.airline}</span></p>
+                        <p><b>Departing Date:&nbsp &nbsp</b><span>${flight.departing_date}</span></p>
+                        <p><b>Departing Time:&nbsp &nbsp</b><span>${flight.departing_time}</span></p>
+                        <p><b>Arrival Date:&nbsp &nbsp</b><span>${flight.arrival_date}</span></p>
+                        <p><b>Arrival Time:&nbsp &nbsp</b><span>${flight.arrival_time}</span></p>
+<%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
+<%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
 
-
+</div>
                                          <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
                  
 
 <!-- Ticket Information -->
-            
+            <div class="col-xxs-12 col-xs-6 mt border" style="padding-left: 0px">
 									<h2 class="fs-title">Ticket Information</h2>
 									<input type="text" name="seat_no" class="form-control"
-										id="seat_no" placeholder="Seat No" />
+										id="seat_no" placeholder="Seat No" readonly/>
 									<!-- 				Button trigger modal -->
 									<button type="button" class="btn btn-primary"
 										data-toggle="modal" data-target="#exampleModal">Seat
@@ -105,7 +109,7 @@
 										</select>
 									</section>
 
-									
+									</div>
 								</div>
 								<input type="button" name="next" class="next action-button"
 									value="Continue" />
@@ -139,11 +143,11 @@
 									<h2 class="fs-title">Payment Information</h2>
 									<div class="radio-group">
 										<div class='radio' data-value="credit">
-											<img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px"
+											<img src="/resources/assets/payment/visa.jpg" width="200px"
 												height="100px">
 										</div>
 										<div class='radio' data-value="paypal">
-											<img src="https://i.imgur.com/jXjwZlj.jpg" width="200px"
+											<img src="/resources/assets/payment/paypal.jpg" width="200px"
 												height="100px">
 										</div>
 										<br>
@@ -258,7 +262,8 @@
 	</div>
 </div>
 <!-- 				end modal -->
-
+<br/>
+<br/>
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>
 
 
