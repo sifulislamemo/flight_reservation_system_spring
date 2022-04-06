@@ -90,29 +90,29 @@
 
               
 
-<div class="form-group">
-                        <label for="economy">Class</label><br/>
-                          <input type="checkbox" id="economy" name="class_name" value="economy"/>    
-                 <label>Economy</label>     
-              <input type="checkbox" id="first" name="class_name" value="first" />    
-                 <label>First</label>     
-              <input type="checkbox" id="business" name="class_name" value="business"/>    
-                 <label>Business</label>   
-                    </div>
+<!-- <div class="form-group"> -->
+<!--                         <label for="economy">Class</label><br/> -->
+<!--                           <input type="checkbox" id="economy" name="class_name" value="economy"/>     -->
+<!--                  <label>Economy</label>      -->
+<!--               <input type="checkbox" id="first" name="class_name" value="first" />     -->
+<!--                  <label>First</label>      -->
+<!--               <input type="checkbox" id="business" name="class_name" value="business"/>     -->
+<!--                  <label>Business</label>    -->
+<!--                     </div> -->
 
-                    <div class="form-group">
-                        <label for="area">Flight charge:</label>
-                        <input type="number" class="form-control" id="flight_charge" name="flight_charge">
-                    </div>
+<!--                     <div class="form-group"> -->
+<!--                         <label for="area">Flight charge:</label> -->
+<!--                         <input type="number" class="form-control" id="flight_charge" name="flight_charge"> -->
+<!--                     </div> -->
                     
                     <div class="form-group">
                         <label for="area">Airplane:</label>
                         <input type="text" class="form-control" id="airpalne" name="airpalne">
                     </div>
-<!--                     <div class="form-group"> -->
-<!--                         <label for="area">Flight Name</label> -->
-<!--                         <input type="text" class="form-control" id="flight_name" name="flight_name"> -->
-<!--                     </div> -->
+                    <div class="form-group">
+                        <label for="area">Flight Name</label>
+                        <input type="text" class="form-control" id="flight_name" name="flight_name">
+                    </div>
 <!--                     <div class="form-group"> -->
 <!--                         <label for="area">Seat No</label> -->
 <!--                         <input type="number" class="form-control" id="seatNo" name="seatNo"> -->

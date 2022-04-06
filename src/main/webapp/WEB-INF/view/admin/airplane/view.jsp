@@ -5,7 +5,7 @@
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
   <h1 style="text-align:center">Airplane List</h1>
-<table  class="table table-striped table-hover" >
+<table id="airplane" class="table table-striped table-hover" >
             <tr>
                 <th>Airplane Name</th>
                 <th>Owner</th>
@@ -35,3 +35,10 @@
         </div>
 </div>
   <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+  <script>
+    $('#airplane').( {
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    });
+</script>

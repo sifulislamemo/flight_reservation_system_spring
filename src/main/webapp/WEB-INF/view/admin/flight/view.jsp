@@ -7,7 +7,7 @@
 	<div class="col-lg-12">
   <h1 style="text-align:center">Flight List</h1>
 <table id="flightTable" class="table table-striped table-hover" >
-
+<thead>
             <tr>
             <th>Flight Code</th>
                 <th>Airline</th>
@@ -24,9 +24,9 @@
 <!--                 <th>Seat No</th> -->
 <!--                 <th>Discount</th> -->
                 <th>Action</th>
-                
-               
             </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${flight}" var="f">
                 <tr>
                 <td>${f.flight_code}</td>
@@ -51,7 +51,7 @@
                     </td>
                 </tr>
             </c:forEach>
-             
+             </tbody>
         </table> 
         </div>
 </div>

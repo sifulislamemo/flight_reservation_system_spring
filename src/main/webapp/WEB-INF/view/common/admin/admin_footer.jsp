@@ -39,7 +39,7 @@
     <!-- Save Show -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 <!-- datatable javascript -->
-<script type="text/javascript" src="/resources/vendor/datatable/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>

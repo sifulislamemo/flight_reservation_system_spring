@@ -22,7 +22,9 @@
     <!-- Custom styles for this template-->
     <link href="/resources/admin/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- datatable Show-->
-    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+<!--     <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"> -->
+<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
     <!-- confirm Show-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 </head>
@@ -136,7 +138,7 @@
                 <div id="passenger" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/seat_booking/add">Traveller Add </a>
+                        <a class="collapse-item" href="/admin/seat/add">Seat Add </a>
 <!--                         <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a> -->
 <!--                         <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a> -->
                     </div>
