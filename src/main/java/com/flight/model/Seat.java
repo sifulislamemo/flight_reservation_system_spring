@@ -6,9 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity(name = "seatBook")
-@Table(name = "seatBook")
-public class SeatBook {
+@Entity(name = "seat")
+@Table(name = "seat")
+public class Seat {
 	@Id
 	@GeneratedValue
 	@Column(name = "id")

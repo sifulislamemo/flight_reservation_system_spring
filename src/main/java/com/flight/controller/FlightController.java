@@ -43,7 +43,7 @@ public ModelAndView flightAdd() {
 }
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute Flight flight){
-    	System.out.println(flight.getDeparting_time() + " ...");
+//    	System.out.println(flight.getDeparting_time() + " ...");
 		Flight p = flightService.save(flight);
 		return new ModelAndView("admin/flight/add");
     }

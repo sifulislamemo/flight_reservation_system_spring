@@ -24,7 +24,7 @@ public class HomeController {
 //	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET) 
-	  public ModelAndView airportView(){ 
+	  public ModelAndView flightView(){ 
 		  List<Flight> flight = flightService.getAll();
 	return new ModelAndView("home/home", "flight", flight); 
 	}
