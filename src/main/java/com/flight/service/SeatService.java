@@ -19,6 +19,7 @@ public class SeatService {
 	@Autowired
 	FlightDAO flightDAO;
 	public Seat save(Seat s){
+		
         return seatDAO.save(s);
     }
 	public Seat save(Seat s, HttpServletRequest request){
@@ -35,7 +36,9 @@ public class SeatService {
 		return seatDAO.save(s);
     }
 	
-	public Flight getFlightById(int pid) {
-        return flightDAO.getFlightById(pid);
+	public Flight getFlightByName(String fname) {
+        return seatDAO.getFlightByName(fname);
     }
+	
+	
 }

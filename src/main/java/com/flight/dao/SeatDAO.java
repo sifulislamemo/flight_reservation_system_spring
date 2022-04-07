@@ -27,8 +27,8 @@ public class SeatDAO {
 	        return seat;
 	    }
 	    
-	    public Flight getFlightById(int pid) {
-	        String sql = "from flight where id = '" + pid + "'";
+	    public Flight getFlightByName(String fname) {
+	        String sql = "from flight where flight_name = '" + fname + "'";
 	        List<Flight> flightList = getSession().createQuery(sql).list();
 	        
 	        return flightList.get(0);

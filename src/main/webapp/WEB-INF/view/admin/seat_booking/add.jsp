@@ -42,7 +42,7 @@
         
         </div>
     </div>
-    									                                         <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
+<%--     									                                         <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id"> --%>
     
 									</form>
 									</div>

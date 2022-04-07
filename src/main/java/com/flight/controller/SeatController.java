@@ -28,8 +28,11 @@ public ModelAndView signUp() {
 	return new ModelAndView("admin/seat_booking/add");
 }
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-    public ModelAndView save(HttpServletRequest r, @ModelAttribute Seat seat){
-		Seat s = seatService.save(seat, r);
+    public ModelAndView save( @ModelAttribute Seat seat){
+		
+//		Flight f = seatService.getFlightByName(seat.getFlight_name());
+		Seat s = seatService.save(seat);
+		
 		return new ModelAndView("admin/seat_booking/add");
     }
 	
