@@ -51,8 +51,6 @@ public class FlightService {
 		  flight.setFlight_charge(Double.valueOf(request.getParameter("flight_charge")));
 		  flight.setAirpalne(request.getParameter("airpalne"));
 		  flight.setFlight_name(request.getParameter("flight_name"));
-		  flight.setSeatNo(Integer.parseInt(request.getParameter("seatNo")));
-		  flight.setDiscount(Double.valueOf(request.getParameter("discount")));
 		  return flightDAO.update(flight);
 	    }
 	 public Flight delete(int pid) {

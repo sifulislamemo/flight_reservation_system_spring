@@ -2,6 +2,8 @@ package com.flight.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +28,8 @@ public ModelAndView signUp() {
 	return new ModelAndView("admin/seat_booking/add");
 }
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-    public ModelAndView save(@ModelAttribute Seat seat){
-		Seat s = seatService.save(seat);
+    public ModelAndView save(HttpServletRequest r, @ModelAttribute Seat seat){
+		Seat s = seatService.save(seat, r);
 		return new ModelAndView("admin/seat_booking/add");
     }
 	
@@ -35,9 +37,9 @@ public ModelAndView signUp() {
 	 @RequestMapping(value = "/add", method = RequestMethod.GET) 
 	  public ModelAndView flightView(){ 
 		  List<Flight> flight = flightService.getAll();
-		  for (int i = 0; i < flight.size(); i++) {
-			System.out.println(flight);
-		}
+//		  for (int i = 0; i < flight.size(); i++) {
+//			System.out.println(flight);
+//		}
 	return new ModelAndView("admin/seat_booking/add", "flight", flight); 
 	}
 	

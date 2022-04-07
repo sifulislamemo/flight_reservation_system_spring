@@ -37,7 +37,6 @@ public class Flight {
 	private Time departing_time;
 	
 
-	//    @DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "arrival_date")
     private  Date arrival_date;
 	@Basic
@@ -50,10 +49,7 @@ public class Flight {
     private String airpalne;
     @Column(name = "flight_name")
     private String flight_name;
-    @Column(name = "seatNo")
-    private int seatNo;
-    @Column(name = "discount")
-    private Double discount;
+
 	public int getId() {
 		return id;
 	}
@@ -113,12 +109,6 @@ public class Flight {
 		this.flight_name = flight_name;
 	}
 	
-	public int getSeatNo() {
-		return seatNo;
-	}
-	public void setSeatNo(int seatNo) {
-		this.seatNo = seatNo;
-	}
 	
 	
 	
@@ -141,12 +131,7 @@ public class Flight {
 	public void setFlight_charge(Double flight_charge) {
 		this.flight_charge = flight_charge;
 	}
-	public Double getDiscount() {
-		return discount;
-	}
-	public void setDiscount(Double discount) {
-		this.discount = discount;
-	}
+
 	public Time getArrival_time() {
 		return arrival_time;
 	}

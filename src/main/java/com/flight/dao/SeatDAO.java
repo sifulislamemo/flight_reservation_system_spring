@@ -1,5 +1,7 @@
 package com.flight.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
@@ -23,6 +25,14 @@ public class SeatDAO {
 	    	getSession().save(seat);
 	    	getSession().flush();
 	        return seat;
+	    }
+	    
+	    public Flight getFlightById(int pid) {
+	        String sql = "from flight where id = '" + pid + "'";
+	        List<Flight> flightList = getSession().createQuery(sql).list();
+	        
+	        return flightList.get(0);
+
 	    }
 
 }

@@ -8,18 +8,20 @@
             </header>
 		<div role="tabpanel" class="tab-pane active container" id="flights">
 		<form method="post" action="/admin/seat/save">
-		<div class="form-group">
-					<label for="" >Flight Code:</label>
+<!-- 		flight -->
 
-						<select id="inputState" class="form-control" name="flight_code">
+
+		<div class="form-group">
+					<label for="" >Flight Name:</label>
+
+						<select id="inputState" class="form-control" name="flight_name">
 							<c:forEach items="${flight}" var="flight">
-								<option value="${flight.flight_code}">${flight.flight_code}</option>
+								<option value="${flight.flight_name}">${flight.flight_name}</option>
 							</c:forEach>
 						</select>
 
 				</div>
-<!-- <input type="text" name="flight_code" class="form-control" -->
-<!-- 										id="flight_code" placeholder="Flight Code" /><br/> -->
+
 										<input type="text" name="seat_no" class="form-control"
 										id="seat_no" placeholder="Seat No" /><br/>
 										<input type="number" name="seat_code" class="form-control"
@@ -40,6 +42,8 @@
         
         </div>
     </div>
+    									                                         <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
+    
 									</form>
 									</div>
 	
