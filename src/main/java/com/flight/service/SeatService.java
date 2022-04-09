@@ -47,6 +47,10 @@ public class SeatService {
 		 Seat seat = seatDAO.getSeatById(pid);
 	        return seatDAO.delete(seat);
 	    }
+	public Seat getSeatByCode(String parameter) {
+		// TODO Auto-generated method stub
+		return seatDAO.getSeatByCode(parameter);
+	}
 	
 	
 }

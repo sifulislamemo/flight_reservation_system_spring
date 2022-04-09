@@ -46,6 +46,8 @@ public class SeatController {
 	 @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
 	    public ModelAndView getSeatById(@PathVariable String id){
 	        int pid = Integer.valueOf(id);
+//			List<Flight> flight = flightService.getAll();
+
 	        Seat seat = seatService.getSeatById(pid);
 
 	        return new ModelAndView("admin/seat/update", "seat", seat);
@@ -72,5 +74,18 @@ public class SeatController {
 		List<Flight> flight = flightService.getAll();
 		return new ModelAndView("admin/seat/add", "flight", flight);
 	}
+	
+//	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+//	public ModelAndView flightUpdate(@PathVariable String id) {
+//		List<Flight> flight = flightService.getAll();
+//		return new ModelAndView("admin/seat/update", "flight", flight);
+//	}
 
+	
+	 @RequestMapping(value = "/getSeatByCode", method = RequestMethod.POST)
+	    public Seat getSeatByCode(HttpServletRequest request){
+	        Seat seat = seatService.getSeatByCode(request.getParameter("seat_no"));
+
+	        return seat;
+	    }
 }

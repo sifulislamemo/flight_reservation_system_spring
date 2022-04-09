@@ -45,6 +45,8 @@
 <%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
 <%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
 
+<p id="seat_charge" name="seat_charge"></p>
+
 </div>
                                          <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
                  
@@ -340,20 +342,25 @@ $(document).ready(function(){
 	
 // 	seat plan
 
-
+var price = 0;
 $(".seat").on("click", function(e){
 	console.log($(this).val())
-
     $("#seat_no").val($("#seat_no").val() + " " + this.value);
 	e.target.classList.toggle("selected");
+	
 	$.ajax({
 		type : "POST",
-		url : "/admin/flight/booking/getBySeat",
+		url : "/admin/seat/getSeatByCode",
 		data : {seat_no : $(this).val()},
 		success : function(data, status) {
-				console.log(data);	
+				console.log(data);
+				price += data.seat_charge;
+				console.log(price);
+				$("#seat_charge").text(price);
 		}
 	});
+	
+	
 });
 	
 	

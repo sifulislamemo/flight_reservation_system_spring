@@ -25,7 +25,7 @@
 										<input type="text" name="seat_no" class="form-control"
 										id="seat_no" placeholder="Seat No" /><br/>
 										<input type="number" name="seat_code" class="form-control"
-										id="seat_code" placeholder="seat code" /><br/>
+										id="seat_code" placeholder="Seat Code" /><br/>
 										<label for="class">Class:</label> <select
 												class="browser-default custom-select" name="seat_class">
 												<option value="Economy">Economy</option>
@@ -34,7 +34,7 @@
 											</select><br/><br/>
 											
 											<input type="number" name="seat_charge" class="form-control"
-									id="seat_charge" placeholder="seat_charge" /><br/>
+									id="seat_charge" placeholder="Seat Charge" /><br/>
 									
 									        <div class="container bg-light">
         <div class="col-md-12 text-center">

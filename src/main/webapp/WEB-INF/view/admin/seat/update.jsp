@@ -14,8 +14,8 @@
 <!-- 		<div class="form-group"> -->
 <!-- 			<label for="">Flight Name:</label> <select id="inputState" -->
 <!-- 				class="form-control" name="flight_name"> -->
-<%-- 				<c:forEach items="${seat}" var="seat"> --%>
-<%-- 					<option value="${seat.flight_name}">${seat.flight_name}</option> --%>
+<%-- 				<c:forEach items="${flight}" var="fs"> --%>
+<%-- 					<option value="${fs.flight_name}">${fs.flight_name}</option> --%>
 <%-- 				</c:forEach> --%>
 <!-- 			</select> -->
 

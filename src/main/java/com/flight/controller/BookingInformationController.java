@@ -16,9 +16,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
+import com.flight.model.Seat;
 import com.flight.service.BookingInformationService;
 import com.flight.service.FlightService;
 import com.flight.service.InvoiceService;
+import com.flight.service.SeatService;
 
 @RestController
 @RequestMapping(value = "/home")
@@ -27,6 +29,11 @@ public class BookingInformationController {
 	InvoiceService invoiceService;
 	@Autowired
 	FlightService flightService;
+	
+	@Autowired
+	SeatService seatService;
+	
+	
 	@Autowired
 	BookingInformationService bookingInformationService;
 	
@@ -35,6 +42,7 @@ public class BookingInformationController {
     public ModelAndView edit(@PathVariable String id){
         int pid = Integer.valueOf(id);
         Flight flight = flightService.getFlightById(pid);
+        List<Seat> seat = seatService.getAll();
 
         return new ModelAndView("booking/information", "flight", flight);
     }

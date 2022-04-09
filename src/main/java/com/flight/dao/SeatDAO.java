@@ -54,4 +54,10 @@ public class SeatDAO {
 	        getSession().flush();
 	        return seat;
 	    }
+		public Seat getSeatByCode(String parameter) {
+			 String sql = "from seat where seat_no = '" + parameter + "'";
+		        List<Seat> seatList = getSession().createQuery(sql).list();
+		        
+		        return seatList.get(0);
+		}
 }

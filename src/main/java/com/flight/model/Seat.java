@@ -22,6 +22,15 @@ public class Seat {
 	private int seat_code;
 	private String seat_class;
 	private Double seat_charge;
+	private int seat_status;
+	
+	
+	public int getSeat_status() {
+		return seat_status;
+	}
+	public void setSeat_status(int seat_status) {
+		this.seat_status = seat_status;
+	}
 	public int getId() {
 		return id;
 	}
