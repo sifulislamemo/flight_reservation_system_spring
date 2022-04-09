@@ -6,7 +6,8 @@
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
   <h1 style="text-align:center">Airport List</h1>
-<table  class="table table-striped table-hover" >
+<table id="airportTable" class="table table-striped table-hover" >
+           <thead>
             <tr>
                 <th>Airport Code</th>
                 <th>Airport Name</th>
@@ -16,6 +17,8 @@
                 
                
             </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${airport}" var="airport">
                 <tr>
                     <td>${airport.airport_code}</td>
@@ -30,9 +33,17 @@
                     </td>
                 </tr>
             </c:forEach>
-             
+             </tbody>
         </table> 
         </div>
 </div>
 
 <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+
+<script>
+    $('#airportTable').DataTable({
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    });
+</script>

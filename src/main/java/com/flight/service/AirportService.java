@@ -30,8 +30,7 @@ public class AirportService {
     }
     
 	
-	  public List<Airport> getAll() 
-	  { 
+	  public List<Airport> getAll(){ 
 		  return airportDAO.getAll(); 
 	  }
 	  

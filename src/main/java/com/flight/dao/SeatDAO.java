@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.flight.model.Airport;
 import com.flight.model.Flight;
 import com.flight.model.Seat;
 
@@ -27,12 +28,30 @@ public class SeatDAO {
 	        return seat;
 	    }
 	    
-	    public Flight getFlightByName(String fname) {
-	        String sql = "from flight where flight_name = '" + fname + "'";
-	        List<Flight> flightList = getSession().createQuery(sql).list();
+
+	    public List<Seat> getAll(){ 
+	   	 String sql = "from seat"; 
+	   	 List<Seat> seat = getSession().createQuery(sql).list(); 
+	   	 return seat; 
+	   	  }  
+	    
+	    public Seat getSeatById(int pid) {
+	        String sql = "from seat where id = '" + pid + "'";
+	        List<Seat> seatList = getSession().createQuery(sql).list();
 	        
-	        return flightList.get(0);
+	        return seatList.get(0);
 
 	    }
+	    
+	    public Seat update(Seat s) {
+	        getSession().update(s);
+	        getSession().flush();
+	        return s;
+	    }
 
+	    public Seat delete(Seat seat) {
+	        getSession().delete(seat);
+	        getSession().flush();
+	        return seat;
+	    }
 }

@@ -1,5 +1,7 @@
 package com.flight.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.flight.dao.FlightDAO;
 import com.flight.dao.SeatDAO;
+import com.flight.model.Airplane;
+import com.flight.model.Airport;
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
 import com.flight.model.Seat;
@@ -14,31 +18,35 @@ import com.flight.model.Seat;
 public class SeatService {
 	@Autowired
 	SeatDAO seatDAO;
-	@Autowired
-	FlightService flightService;
-	@Autowired
-	FlightDAO flightDAO;
+	
+	
 	public Seat save(Seat s){
 		
         return seatDAO.save(s);
     }
-	public Seat save(Seat s, HttpServletRequest request){
-		Flight flight = flightService.getFlightById(Integer.valueOf(request.getParameter("flight_id")));
-        s.setFlight_code(flight.getFlight_code());
-        s.setAirpalne(flight.getAirline());
-        s.setDeparture_airport(flight.getDeparture_airport());
-        s.setArrival_airport(flight.getArrival_airport());
-        s.setDeparting_date(flight.getDeparting_date());
-        s.setDeparting_time(flight.getDeparting_time());
-        s.setArrival_date(flight.getArrival_date());
-        s.setArrival_time(flight.getArrival_time());
-        s.setAirpalne(flight.getAirpalne());
-		return seatDAO.save(s);
-    }
+	 public List<Seat> getAll(){ 
+		  return seatDAO.getAll(); 
+	  }
 	
-	public Flight getFlightByName(String fname) {
-        return seatDAO.getFlightByName(fname);
-    }
+	 public Seat getSeatById(int pid) {
+	        return seatDAO.getSeatById(pid);
+	    }
+	 
+	 public Seat update(HttpServletRequest request) {
+		  String seat_no = request.getParameter("seat_no");
+		  Seat seat = new Seat();
+		  seat.setId(Integer.valueOf(request.getParameter("id")));
+		  seat.setSeat_no(seat_no);
+		  seat.setSeat_code(Integer.valueOf(request.getParameter("seat_code")));
+		  seat.setSeat_class(request.getParameter("seat_class"));
+		  seat.setSeat_charge(Double.valueOf(request.getParameter("seat_charge")));
+	        return seatDAO.update(seat);
+	    }
+	 
+	 public Seat delete(int pid) {
+		 Seat seat = seatDAO.getSeatById(pid);
+	        return seatDAO.delete(seat);
+	    }
 	
 	
 }

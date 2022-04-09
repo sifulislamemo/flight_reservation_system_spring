@@ -62,6 +62,11 @@ public class BookingInformation {
 	  private Time arrival_time;
 	@Column(name = "flight_charge")
     private Double flight_charge;
+	@Column(name = "flight_name")
+    private String flight_name;
+	
+	@Column(name = "status")
+    private String status="pending";
 	
 	public int getId() {
 		return id;
@@ -221,6 +226,18 @@ public class BookingInformation {
 	}
 	public void setFlight_charge(Double flight_charge) {
 		this.flight_charge = flight_charge;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getFlight_name() {
+		return flight_name;
+	}
+	public void setFlight_name(String flight_name) {
+		this.flight_name = flight_name;
 	}
 	
 

@@ -29,8 +29,8 @@ public class AirportDAO {
     }
     
 	
-	 public List<Airport> getAll()
-	 { String sql = "from airport"; 
+	 public List<Airport> getAll(){ 
+	 String sql = "from airport"; 
 	 List<Airport> airport = getSession().createQuery(sql).list(); 
 	 return airport; 
 	  }

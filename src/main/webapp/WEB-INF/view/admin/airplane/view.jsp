@@ -6,6 +6,7 @@
 	<div class="col-lg-12">
   <h1 style="text-align:center">Airplane List</h1>
 <table id="airplane" class="table table-striped table-hover" >
+            <thead>
             <tr>
                 <th>Airplane Name</th>
                 <th>Owner</th>
@@ -16,6 +17,8 @@
                 
                
             </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${airplanes}" var="airplan">
                 <tr>
                     <td>${airplan.airplane_name}</td>
@@ -30,13 +33,13 @@
                     </td>
                 </tr>
             </c:forEach>
-             
+             </tbody>
         </table> 
         </div>
 </div>
   <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
   <script>
-    $('#airplane').( {
+    $('#airplane').DataTable( {
         "paging":   true,
         "ordering": true,
         "info":     true

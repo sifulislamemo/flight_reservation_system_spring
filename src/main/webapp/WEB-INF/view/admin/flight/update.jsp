@@ -99,7 +99,7 @@
 
                     <div class="form-group">
                         <label for="flight_charge">Flight Charge:</label>
-                        <input type="number" class="form-control"value="${flight.flight_charge}" id="flight_charge" name="flight_charge">
+                        <input type="number" class="form-control" value="${flight.flight_charge}" id="flight_charge" name="flight_charge">
                     </div>
                     
                     <div class="form-group">

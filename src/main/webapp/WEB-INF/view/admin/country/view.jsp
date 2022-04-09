@@ -6,7 +6,8 @@
 <div role="tabpanel" class="tab-pane active " id="">
 	<div class="col-lg-12">
   <h1 style="text-align:center">Country List</h1>
-<table  class="table table-striped table-hover" >
+<table id="countryTable" class="table table-striped table-hover" >
+         <thead>
             <tr>
                 <th>City Name</th>
                 <th>Latitude</th>
@@ -17,6 +18,8 @@
               
                
             </tr>
+            </thead>
+            <tbody>
             <c:forEach items="${country}" var="country">
                 <tr>
                     <td>${country.city_name}</td>
@@ -31,8 +34,15 @@
                     </td>
                 </tr>
             </c:forEach>
-             
+             </tbody>
         </table> 
         </div>
 </div>
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+ <script>
+    $('#countryTable').DataTable({
+        "paging":   true,
+        "ordering": true,
+        "info":     true
+    });
+</script>

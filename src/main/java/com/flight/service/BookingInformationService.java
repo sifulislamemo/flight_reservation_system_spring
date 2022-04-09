@@ -37,6 +37,7 @@ public class BookingInformationService {
         b.setArrival_date(flight.getArrival_date());
         b.setArrival_time(flight.getArrival_time());
         b.setFlight_charge(flight.getFlight_charge());
+        b.setFlight_name(flight.getFlight_name());
 		return bookingInformationDAO.save(b);
     }
 	

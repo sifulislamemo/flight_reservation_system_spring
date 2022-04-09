@@ -28,7 +28,7 @@ public class InvoiceDAO {
         Query query = getSession().createQuery(hqlQuery);
         query.setParameter("temail", temail);
         
-      System.out.println("search" +temail);
+//      System.out.println("search" +temail);
         List<BookingInformation> bookingList = query.list();
         getSession().flush();
       

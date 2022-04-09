@@ -17,10 +17,10 @@
                 <th>Departing Time</th>
                 <th>Arrival Date</th>
                 <th>Arrival Time</th>
-                <th>Class</th>
-                <th>Flight Charge</th>
+<!--                 <th>Class</th> -->
+<!--                 <th>Flight Charge</th> -->
                 <th>Airplane</th>
-<!--                 <th>Flight Name</th> -->
+                <th>Flight Name</th>
 <!--                 <th>Seat No</th> -->
 <!--                 <th>Discount</th> -->
                 <th>Action</th>
@@ -37,10 +37,10 @@
                     <td>${f.departing_time}</td>
                     <td>${f.arrival_date}</td>
                     <td>${f.arrival_time}</td>
-                    <td>${f.class_name}</td>
-                    <td>${f.flight_charge}</td>
+<%--                     <td>${f.class_name}</td> --%>
+<%--                     <td>${f.flight_charge}</td> --%>
                     <td>${f.airpalne}</td>
-<%--                     <td>${f.flight_name}</td> --%>
+                    <td>${f.flight_name}</td>
 <%--                     <td>${f.seatNo}</td> --%>
 <%--                     <td>${f.discount}</td> --%>
                   
@@ -59,7 +59,7 @@
  <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
  
  <script>
-    $('#flightTable').( {
+    $('#flightTable').DataTable({
         "paging":   true,
         "ordering": true,
         "info":     true

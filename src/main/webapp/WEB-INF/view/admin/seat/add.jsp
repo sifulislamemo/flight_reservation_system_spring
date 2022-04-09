@@ -28,9 +28,9 @@
 										id="seat_code" placeholder="seat code" /><br/>
 										<label for="class">Class:</label> <select
 												class="browser-default custom-select" name="seat_class">
-												<option value="economy">Economy</option>
-												<option value="first">First</option>
-												<option value="business">Business</option>
+												<option value="Economy">Economy</option>
+												<option value="First">First</option>
+												<option value="Business">Business</option>
 											</select><br/><br/>
 											
 											<input type="number" name="seat_charge" class="form-control"

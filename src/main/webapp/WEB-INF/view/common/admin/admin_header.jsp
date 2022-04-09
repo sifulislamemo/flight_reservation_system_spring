@@ -139,8 +139,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/seat/add">Seat Add </a>
-<!--                         <a class="collapse-item" href="/admin/traveller/edit">Traveller Edit</a> -->
-<!--                         <a class="collapse-item" id="btnShow" href="/admin/traveller/view">Traveller Details</a> -->
+                        <a class="collapse-item" href="/admin/seat/edit">Seat Edit</a>
+                        <a class="collapse-item" id="btnShow" href="/admin/seat/view">Seat View</a>
                     </div>
                 </div>
             </li>
@@ -171,8 +171,8 @@
                 <div id="ticket" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="buttons.html">Book Requests</a>
-                        <a class="collapse-item" href="cards.html">Book Confirm</a>
+                        <a class="collapse-item" href="/admin/book/request">Book Requests</a>
+                        <a class="collapse-item" href="/admin/book/confirm">Book Confirm</a>
                     </div>
                 </div>
             </li>
