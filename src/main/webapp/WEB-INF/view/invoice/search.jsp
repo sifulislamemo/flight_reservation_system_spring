@@ -8,15 +8,18 @@
 
 				<div class="col-md-12 container">
 
-					<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
-						Search your Invoice</h2>
+					
 
 
 					<div id="invoice_code_div">
+					<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
+						Search your Invoice</h2>
 					<input type="text" name="temail" id="temail"/> 
 					<input type="button" value="Search" class="btn btn-primary" id="btnInvoice"/>
 					</div>
 					<div id="otp_div">
+					<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
+						Search your OTP</h2>
 					<input type="text" name="otp" id="otp"/> 
 					<input type="button" value="OTP" class="btn btn-primary" id="btnOtp"/>
 					</div>

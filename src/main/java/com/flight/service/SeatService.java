@@ -48,7 +48,6 @@ public class SeatService {
 	        return seatDAO.delete(seat);
 	    }
 	public Seat getSeatByCode(String parameter) {
-		// TODO Auto-generated method stub
 		return seatDAO.getSeatByCode(parameter);
 	}
 	

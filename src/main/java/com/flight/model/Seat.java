@@ -1,9 +1,6 @@
 package com.flight.model;
 
-import java.sql.Date;
-import java.sql.Time;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +19,7 @@ public class Seat {
 	private int seat_code;
 	private String seat_class;
 	private Double seat_charge;
-	private int seat_status;
+	private int seat_status = 1;
 	
 	
 	public int getSeat_status() {

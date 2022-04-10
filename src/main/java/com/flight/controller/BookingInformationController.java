@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
 import com.flight.model.Seat;
@@ -41,10 +43,23 @@ public class BookingInformationController {
 	@RequestMapping(value = "/booking/information/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable String id){
         int pid = Integer.valueOf(id);
-        Flight flight = flightService.getFlightById(pid);
-        List<Seat> seat = seatService.getAll();
+//        Flight flight = flightService.getFlightById(pid);
+        List<Flight> flight = flightService.getAll();
+		Map<String, Object> flightSeat = new HashMap<String, Object>();
 
-        return new ModelAndView("booking/information", "flight", flight);
+        List<Seat> seat = seatService.getAll();
+        
+        ObjectMapper mapper = new ObjectMapper();
+        
+        
+        try {
+			flightSeat.put("seat", mapper.writeValueAsString(seat));
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        flightSeat.put("flight", flight);
+        return new ModelAndView("booking/information", "flightSeat", flightSeat);
     }
 	
 	@RequestMapping(value = "/book/invoice", method = RequestMethod.POST)

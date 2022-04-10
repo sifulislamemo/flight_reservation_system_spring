@@ -36,15 +36,16 @@
                 
                         									<h2 class="fs-title">Flight Details</h2>
                         <br/>
-                        <h3><b>${flight.departure_airport} - ${flight.arrival_airport}</b></h3>
-                        <p><b>Airline Name:&nbsp &nbsp</b><span >${flight.airline}</span></p>
-                        <p><b>Departing Date:&nbsp &nbsp</b><span>${flight.departing_date}</span></p>
-                        <p><b>Departing Time:&nbsp &nbsp</b><span>${flight.departing_time}</span></p>
-                        <p><b>Arrival Date:&nbsp &nbsp</b><span>${flight.arrival_date}</span></p>
-                        <p><b>Arrival Time:&nbsp &nbsp</b><span>${flight.arrival_time}</span></p>
+                        <c:forEach items="${flightSeat.flight}" var="f">
+                        <h3><b>${f.departure_airport} - ${f.arrival_airport}</b></h3>
+                        <p><b>Airline Name:&nbsp &nbsp</b><span >${f.airline}</span></p>
+                        <p><b>Departing Date:&nbsp &nbsp</b><span>${f.departing_date}</span></p>
+                        <p><b>Departing Time:&nbsp &nbsp</b><span>${f.departing_time}</span></p>
+                        <p><b>Arrival Date:&nbsp &nbsp</b><span>${f.arrival_date}</span></p>
+                        <p><b>Arrival Time:&nbsp &nbsp</b><span>${f.arrival_time}</span></p>
 <%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
 <%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
-
+</c:forEach>
 <p id="seat_charge" name="seat_charge"></p>
 
 </div>
@@ -212,34 +213,40 @@
 						<div class="seat sold"></div> <small>Sold</small>
 					</li>
 				</ul>
+				<c:forEach items="${flightSeat.seat}" var="b">
 				<div class="container">
 					<!-- <div class="screen"></div> -->
 
-					<div class="row">
-						<label for="">A1</label> <input class="seat" value="A1" id="a1"></input>
-						<label for="">A2</label> <input class="seat" value="A2" id="a2"></input>
-						<label for="">A3</label> <input class="seat" value="A3" id="a3"></input>
+				<%-- 	<div class="row">
+						<label for="">${b.seat_no}</label> <input class="seat" value="A1" id="a1"></input>
+						<label for="">${b.seat_no}</label> <input class="seat" value="A2" id="a2"></input>
+						<label for="">${b.seat_no}</label> <input class="seat" value="A3" id="a3"></input>
+					</div> --%>
+					<div class="row" id="a">
+<!-- 						<label for="">A1</label> <input class="seat" value="A1" id="a1"></input> -->
+<!-- 						<label for="">A2</label> <input class="seat" value="A2" id="a2"></input> -->
+<!-- 						<label for="">A3</label> <input class="seat" value="A3" id="a3"></input> -->
 					</div>
 
-					<div class="row">
+					<div class="row" id="b">
 						<label for="">B1</label> <input class="seat" value="B1" id="b1"></input>
 						<label for="">B2</label> <input class="seat" value="B2" id="b2"></input>
 						<label for="" value="B1" id="b1">B3</label> <input class="seat"
 							value="B3" id="b3"></input>
 					</div>
-					<div class="row">
+					<div class="row" id="c">
 						<label for="">C1</label> <input class="seat" value="C1" id="c1"></input>
 						<label for="">C2</label> <input class="seat" value="C2" id="c2"></input>
 						<label for="">C3</label> <input class="seat" value="C3" id="c3"></input>
 						<!-- <div class="seat sold"></div> -->
 					</div>
 
-					<div class="row">
+					<div class="row" id="d">
 						<label for="">D1</label> <input class="seat" value="D1" id="d1"></input>
 						<label for="">D2</label> <input class="seat" value="D2" id="d2">
 						</input> <label for="">D3</label> <input class="seat" value="D3" id="d3"></input>
 					</div>
-					<div class="row">
+					<div class="row" id="e">
 						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input>
 						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input>
 						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input>
@@ -248,7 +255,7 @@
 
 
 				</div>
-
+</c:forEach>
 				<p class="text">
 <!-- 					You have selected <span id="count">0</span> seat for a price of TK.<span -->
 <!-- 						id="total">0</span> -->
@@ -364,9 +371,13 @@ $(".seat").on("click", function(e){
 });
 	
 	
- 
-
-
+ var test = ${flightSeat.seat};
+ console.log(test)
+for(i=0; i<3; i++){
+	$("#a").append(test[i])
+	console.log(test[2])
+}
+// $("#a").append("hello")
 </script>
 
 

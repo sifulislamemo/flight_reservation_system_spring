@@ -229,7 +229,7 @@
                         <div class="col-md-12">
 
                             <table class="table table-striped table-hover">
-                                <tbody>
+                                <thead class="thead-dark">
                               <tr>
                                 <th><h5>Flight Code</h5></th>
                                 <th><h5>Airplane</h5></th>
@@ -242,7 +242,8 @@
                                 <th><h5>Class name</h5></th>
 <!--                                 <th><h5>Flight Charge</h5></th> -->
                              </tr>
-
+                             </thead>
+<tbody>
                                 <tr>
                                     <td>${b.flight_code}</td>
                                     <td>${b.airpalne}</td>
