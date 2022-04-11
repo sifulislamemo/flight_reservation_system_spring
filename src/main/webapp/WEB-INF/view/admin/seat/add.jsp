@@ -14,11 +14,13 @@
 		<div class="form-group">
 					<label for="" >Flight Name:</label>
 
-						<select id="inputState" class="form-control" name="flight_name">
+						<select id="flight_code" class="form-control" name="flight_code">
 							<c:forEach items="${flight}" var="flight">
-								<option value="${flight.flight_name}">${flight.flight_name}</option>
+								<option value="${flight.flight_code}">${flight.flight_name}</option>
 							</c:forEach>
 						</select>
+						<input type="hidden" name="flight_name" id="flight_name"/>
+						<input type="hidden" name="seat_status" id="seat_status" value="0"/>
 
 				</div>
 
@@ -49,3 +51,11 @@
 	
 <br/><br/>						
 <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+
+<script>
+	$("#flight_name").val($("#flight_code :selected").text());
+	$("#flight_code").on("change", function(){
+		$("#flight_name").val($("#flight_code :selected").text());
+	})
+
+</script>

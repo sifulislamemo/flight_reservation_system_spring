@@ -60,4 +60,11 @@ public class SeatDAO {
 		        
 		        return seatList.get(0);
 		}
+		
+		public  List<Seat> getSeatByFlightCode(String parameter) {
+			 String sql = "from seat where flight_code = '" + parameter + "'";
+		        List<Seat> seatList = getSession().createQuery(sql).list();
+		        
+		        return seatList;
+		}
 }

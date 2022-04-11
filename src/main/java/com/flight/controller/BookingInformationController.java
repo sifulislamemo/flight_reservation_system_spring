@@ -42,9 +42,10 @@ public class BookingInformationController {
 	
 	@RequestMapping(value = "/booking/information/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable String id){
+		System.out.println(id + "   ///");
         int pid = Integer.valueOf(id);
-//        Flight flight = flightService.getFlightById(pid);
-        List<Flight> flight = flightService.getAll();
+        
+        List<Flight> flights = flightService.getAll();
 		Map<String, Object> flightSeat = new HashMap<String, Object>();
 
         List<Seat> seat = seatService.getAll();
@@ -58,7 +59,8 @@ public class BookingInformationController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        flightSeat.put("flight", flight);
+        flightSeat.put("flight", flights);
+        flightSeat.put("f", id);
         return new ModelAndView("booking/information", "flightSeat", flightSeat);
     }
 	

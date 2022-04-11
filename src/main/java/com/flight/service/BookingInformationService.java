@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 
 import com.flight.dao.BookingInformationDAO;
 import com.flight.dao.FlightDAO;
+import com.flight.dao.SeatDAO;
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
+import com.flight.model.Seat;
 
 @Service(value = "bookingInformationService")
 public class BookingInformationService {
@@ -18,7 +20,8 @@ public class BookingInformationService {
 	FlightDAO flightDAO;
 	@Autowired
 	BookingInformationDAO bookingInformationDAO;
-	
+	@Autowired
+	SeatDAO seatDAO;
 	@Autowired
 	FlightService flightService;
 	
@@ -27,6 +30,8 @@ public class BookingInformationService {
     }
 	
 	public BookingInformation save(BookingInformation b, HttpServletRequest request){
+		
+		System.out.println(request.getParameter("flight_id"));
 		Flight flight = flightService.getFlightById(Integer.valueOf(request.getParameter("flight_id")));
         b.setFlight_code(flight.getFlight_code());
         b.setAirpalne(flight.getAirline());
@@ -38,6 +43,15 @@ public class BookingInformationService {
         b.setArrival_time(flight.getArrival_time());
         b.setFlight_charge(flight.getFlight_charge());
         b.setFlight_name(flight.getFlight_name());
+//        System.out.println(b.getSeat_no());
+        List<Seat> seats= seatDAO.getSeatByFlightCode(flight.getFlight_code());
+        for (int i = 0; i < seats.size(); i++) {
+			if(b.getSeat_no().contains(seats.get(i).getSeat_no())) {
+				Seat seat = seatDAO.getSeatByCode(seats.get(i).getSeat_no());
+				seat.setSeat_status(1);
+				seatDAO.update(seat);
+			}
+		}
 		return bookingInformationDAO.save(b);
     }
 	

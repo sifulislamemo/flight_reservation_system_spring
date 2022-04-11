@@ -49,7 +49,7 @@
 <p id="seat_charge" name="seat_charge"></p>
 
 </div>
-                                         <input type="hidden" class="form-control"value="${flight.id}" id="flight_id" name="flight_id">
+                                         <input type="hidden" class="form-control"value="${flightSeat.f}" id="flight_id" name="flight_id">
                  
 
 <!-- Ticket Information -->
@@ -229,28 +229,28 @@
 					</div>
 
 					<div class="row" id="b">
-						<label for="">B1</label> <input class="seat" value="B1" id="b1"></input>
+						<!-- <label for="">B1</label> <input class="seat" value="B1" id="b1"></input>
 						<label for="">B2</label> <input class="seat" value="B2" id="b2"></input>
 						<label for="" value="B1" id="b1">B3</label> <input class="seat"
-							value="B3" id="b3"></input>
+							value="B3" id="b3"></input> -->
 					</div>
 					<div class="row" id="c">
-						<label for="">C1</label> <input class="seat" value="C1" id="c1"></input>
+						<!-- <label for="">C1</label> <input class="seat" value="C1" id="c1"></input>
 						<label for="">C2</label> <input class="seat" value="C2" id="c2"></input>
-						<label for="">C3</label> <input class="seat" value="C3" id="c3"></input>
+						<label for="">C3</label> <input class="seat" value="C3" id="c3"></input> -->
 						<!-- <div class="seat sold"></div> -->
 					</div>
 
-					<div class="row" id="d">
-						<label for="">D1</label> <input class="seat" value="D1" id="d1"></input>
-						<label for="">D2</label> <input class="seat" value="D2" id="d2">
-						</input> <label for="">D3</label> <input class="seat" value="D3" id="d3"></input>
-					</div>
-					<div class="row" id="e">
-						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input>
-						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input>
-						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input>
-					</div>
+<!-- 					<div class="row" id="d"> -->
+<!-- 						<label for="">D1</label> <input class="seat" value="D1" id="d1"></input> -->
+<!-- 						<label for="">D2</label> <input class="seat" value="D2" id="d2"> -->
+<!-- 						</input> <label for="">D3</label> <input class="seat" value="D3" id="d3"></input> -->
+<!-- 					</div> -->
+<!-- 					<div class="row" id="e"> -->
+<!-- 						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input> -->
+<!-- 						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input> -->
+<!-- 						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input> -->
+<!-- 					</div> -->
 
 
 
@@ -349,6 +349,31 @@ $(document).ready(function(){
 	
 // 	seat plan
 
+
+	
+	
+var test = ${flightSeat.seat};
+
+ console.log(test.length)
+ var html = '';
+ var html1 = '';
+ 
+ for(i=0; i<test.length; i++){
+	 if(i<6){
+		 html += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+	 if(i>6 && i< 13){
+		 html1 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+
+	 
+ }
+$("#a").append(html);	
+$("#b").append(html1);
+
+
+
+
 var price = 0;
 $(".seat").on("click", function(e){
 	console.log($(this).val())
@@ -369,18 +394,13 @@ $(".seat").on("click", function(e){
 	
 	
 });
-	
-	
- var test = ${flightSeat.seat};
- console.log(test)
-for(i=0; i<3; i++){
+for(i=0; i<test.length; i++){
 
-	test += "test"
-		console.log(test[1])
-		$("#a").append(test[0])
+	if(test[i].seat_status == 1){
+		console.log(test[i].seat_no);
+		$("#"+test[i].seat_no+"").addClass("selected");
+	}
 }
-
-
 
 </script>
 

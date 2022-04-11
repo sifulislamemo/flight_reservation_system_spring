@@ -14,14 +14,21 @@ public class Seat {
 	@GeneratedValue
 	@Column(name = "id")
 	private int id;
+	private String flight_code;
     private String flight_name;
 	private String seat_no;
 	private int seat_code;
 	private String seat_class;
 	private Double seat_charge;
-	private int seat_status = 1;
+	private int seat_status;
 	
 	
+	public String getFlight_code() {
+		return flight_code;
+	}
+	public void setFlight_code(String flight_code) {
+		this.flight_code = flight_code;
+	}
 	public int getSeat_status() {
 		return seat_status;
 	}
