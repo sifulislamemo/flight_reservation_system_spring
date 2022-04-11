@@ -374,10 +374,14 @@ $(".seat").on("click", function(e){
  var test = ${flightSeat.seat};
  console.log(test)
 for(i=0; i<3; i++){
-	$("#a").append(test[i])
-	console.log(test[2])
+
+	test += "test"
+		console.log(test[1])
+		$("#a").append(test[0])
 }
-// $("#a").append("hello")
+
+
+
 </script>
 
 
