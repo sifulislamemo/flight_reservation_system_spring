@@ -29,7 +29,9 @@
 							<!-- fieldsets -->
 							<fieldset>
 								<div class="form-card">
-								<div class="col-xxs-12 col-xs-6 mt border border-dark" style="padding-left: 0px">
+								
+								<div class="col-xxs-12 col-xs-6 mt border border-dark" >
+								<div class="flight-boder">
 <!-- 									<h2 style="text-align: center">Flight Details</h2> -->
 
 								
@@ -46,14 +48,17 @@
 <%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
 <%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
 </c:forEach>
-<p id="seat_charge" name="seat_charge"></p>
+<p id="seat_charge" name="seat_charge">Seat Charge</p>
 
+
+</div>
 </div>
                                          <input type="hidden" class="form-control"value="${flightSeat.f}" id="flight_id" name="flight_id">
                  
 
 <!-- Ticket Information -->
-            <div class="col-xxs-12 col-xs-6 mt border" style="padding-left: 0px">
+            <div class="col-xxs-12 col-xs-6 mt border" >
+            <div class="ticket-boder">
 									<h2 class="fs-title">Ticket Information</h2>
 									<input type="text" name="seat_no" class="form-control"
 										id="seat_no" placeholder="Seat No" readonly/>
@@ -112,6 +117,7 @@
 										</select>
 									</section>
 
+									</div>
 									</div>
 								</div>
 								<input type="button" name="next" class="next action-button"
@@ -398,7 +404,7 @@ for(i=0; i<test.length; i++){
 
 	if(test[i].seat_status == 1){
 		console.log(test[i].seat_no);
-		$("#"+test[i].seat_no+"").addClass("selected");
+		$("#"+test[i].seat_no+"").addClass("sold");
 	}
 }
 
