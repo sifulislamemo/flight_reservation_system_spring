@@ -53,6 +53,7 @@
 
 .seat.sold {
   background-color: red;
+  pointer-events: none;        
 }
 
 .seat:nth-of-type(2) {

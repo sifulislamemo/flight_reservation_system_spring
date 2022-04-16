@@ -23,6 +23,8 @@ public class BookingInformation {
 	private String seat_class;
 	private int adult;
 	private int children;
+	private Double seat_charge;
+	
 	
 //	Traveler Information
 	private String fname;
@@ -239,13 +241,14 @@ public class BookingInformation {
 	public void setFlight_name(String flight_name) {
 		this.flight_name = flight_name;
 	}
-	
+	public Double getSeat_charge() {
+		return seat_charge;
+	}
+	public void setSeat_charge(Double seat_charge) {
+		this.seat_charge = seat_charge;
+	}
 
 	
-	
-	
-	
-	
-	
+
 	
 }

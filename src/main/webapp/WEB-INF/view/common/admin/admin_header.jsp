@@ -22,7 +22,6 @@
     <!-- Custom styles for this template-->
     <link href="/resources/admin/css/sb-admin-2.min.css" rel="stylesheet">
     <!-- datatable Show-->
-<!--     <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"> -->
 <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 
     <!-- confirm Show-->

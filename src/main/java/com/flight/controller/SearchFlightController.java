@@ -30,11 +30,13 @@ public class SearchFlightController {
 	
 	@RequestMapping(value = "/available/flight", method = RequestMethod.POST)
     public ModelAndView serachFlight(HttpServletRequest request) {
-//		System.out.println(request.getParameter("departure_airport"));
+		System.out.println(request.getParameter("departure_airport"));
+		System.out.println(request.getParameter("arrival_airport"));
         Map<String, Object> flight = new HashMap<String, Object>();
-        List<Flight> fList = searchFlightService.getByDeparture(request.getParameter("departure_airport"));
-
+//        List<Flight> fList = searchFlightService.searchFlight(request.getParameter("departure_airport", "arrival_airport"));
+        List<Flight> fList = searchFlightService.searchFlight(request.getParameter("departure_airport"),request.getParameter("arrival_airport"));
         flight.put("fList", fList);
+        
         return new ModelAndView("searchFlight/searchFlight", "flight", flight);
     }
 	

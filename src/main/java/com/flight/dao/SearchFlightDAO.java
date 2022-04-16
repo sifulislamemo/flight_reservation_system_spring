@@ -1,5 +1,6 @@
 package com.flight.dao;
 
+import java.sql.Date;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -20,12 +21,12 @@ public class SearchFlightDAO {
     private Session getSession() {
         return entityManager.unwrap(Session.class);
     }
-    public List<Flight> getByDeparture(String departure_airport) {
-        String hqlQuery = "from flight where departure_airport = :departure_airport";
+    public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
+        String hqlQuery = "from flight where departure_airport = :departure_airport and arrival_airport = :arrival_airport";
         Query query = getSession().createQuery(hqlQuery);
         query.setParameter("departure_airport", departure_airport);
-        
-//      System.out.println("search" +departure_airport);
+        query.setParameter("arrival_airport", arrival_airport);
+      System.out.println("search" +departure_airport+ "searchairport" +arrival_airport);
         List<Flight> flightList = query.list();
         getSession().flush();
       

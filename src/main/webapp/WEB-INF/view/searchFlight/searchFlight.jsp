@@ -18,8 +18,8 @@
                 <th>Departing Time</th>
                 <th>Arrival Date</th>
                 <th>Arrival Time</th>
-                <th>Class</th>
-                <th>Flight charge</th>
+<!--                 <th>Class</th> -->
+<!--                 <th>Flight charge</th> -->
 <!--                 <th>Airplane</th> -->
 <!--                 <th>Flight Name</th> -->
 <!--                 <th>Seat No</th> -->
@@ -39,8 +39,8 @@
                     <td>${f.departing_time}</td>
                     <td>${f.arrival_date}</td>
                     <td>${f.arrival_time}</td>
-                    <td>${f.class_name}</td>
-                    <td>${f.flight_charge}</td>
+<%--                     <td>${f.class_name}</td> --%>
+<%--                     <td>${f.flight_charge}</td> --%>
 <%--                     <td>${f.airpalne}</td> --%>
 <%--                     <td>${f.flight_name}</td> --%>
 <%--                     <td>${f.seatNo}</td> --%>

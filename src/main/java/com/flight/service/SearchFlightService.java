@@ -1,5 +1,6 @@
 package com.flight.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,9 @@ public class SearchFlightService {
 //	@Autowired
 //	FlightDAO flightDAO;
 	
-	 public List<Flight> getByDeparture(String departure_airport) {
-         return searchFlightDAO.getByDeparture(departure_airport);
+	 public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
+	      System.out.println("search" +departure_airport+ "searchairportser" +arrival_airport);
+         return searchFlightDAO.searchFlight(departure_airport, arrival_airport);
     }
 	 
 //	 public Flight getFlightById(int pid) {

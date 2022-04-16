@@ -37,7 +37,9 @@
 								
                 
                         									<h2 class="fs-title">Flight Details</h2>
-                        <br/>
+                        									<p style="font-weight: bold; font-size: 20px;">Seat Charge :</p>
+<p id="seat_charge" name="seat_charge" style="color: red; font-weight: bold; font-size: 20px;"></p>
+                        
                         <c:forEach items="${flightSeat.flight}" var="f">
                         <h3><b>${f.departure_airport} - ${f.arrival_airport}</b></h3>
                         <p><b>Airline Name:&nbsp &nbsp</b><span >${f.airline}</span></p>
@@ -48,13 +50,13 @@
 <%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
 <%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
 </c:forEach>
-<p id="seat_charge" name="seat_charge">Seat Charge</p>
+
 
 
 </div>
 </div>
                                          <input type="hidden" class="form-control"value="${flightSeat.f}" id="flight_id" name="flight_id">
-                 
+<%--                  <input type="hidden" class="form-control"value="${flightSeat.f}" id="seat_id" name="seat_id"> --%>
 
 <!-- Ticket Information -->
             <div class="col-xxs-12 col-xs-6 mt border" >
@@ -385,6 +387,8 @@ $(".seat").on("click", function(e){
 	console.log($(this).val())
     $("#seat_no").val($("#seat_no").val() + " " + this.value);
 	e.target.classList.toggle("selected");
+	
+	
 	
 	$.ajax({
 		type : "POST",

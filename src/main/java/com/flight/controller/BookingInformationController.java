@@ -42,7 +42,7 @@ public class BookingInformationController {
 	
 	@RequestMapping(value = "/booking/information/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable String id){
-		System.out.println(id + "   ///");
+//		System.out.println(id + "   ///");
         int pid = Integer.valueOf(id);
         
         List<Flight> flights = flightService.getAll();
@@ -56,7 +56,6 @@ public class BookingInformationController {
         try {
 			flightSeat.put("seat", mapper.writeValueAsString(seat));
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         flightSeat.put("flight", flights);

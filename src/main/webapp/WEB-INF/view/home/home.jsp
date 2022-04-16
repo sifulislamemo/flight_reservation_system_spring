@@ -82,7 +82,8 @@
 					<div class="col-sm-9">
 						<select id="inputState" class="form-control" name="departure_airport">
 							<c:forEach items="${flight}" var="flight">
-								<option value="${flight.departure_airport}">${flight.departure_airport}</option>
+							<option selected>Select A Country</option>
+							<option value="${flight.departure_airport}">${flight.departure_airport}</option>
 							</c:forEach>
 						</select>
 					</div>
@@ -91,18 +92,19 @@
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Arrival Airport:</label>
 					<div class="col-sm-9">
-						<select id="inputState" class="form-control" name="departure_airport">
+						<select id="inputState" class="form-control" name="arrival_airport">
 							<c:forEach items="${flight}" var="flight">
-								<option value="${flight.departure_airport}">${flight.departure_airport}</option>
+							<option selected>Select A Country</option>
+								<option value="${flight.arrival_airport}">${flight.arrival_airport}</option>
 							</c:forEach>
 						</select>
 					</div>
 				</div>
 												<div class="col-xxs-12 col-xs-6 mt alternate">
 													<div class="input-field">
-														<label for="date-start">Departing:</label> <input
-															type="text" class="form-control" id="date-start"
-															placeholder="mm/dd/yyyy" />
+														<label for="date-start">Departing Date:</label> <input
+															type="Date" class="form-control" id="date-start"
+															 name="departing_date"/>
 													</div>
 												</div>
 												

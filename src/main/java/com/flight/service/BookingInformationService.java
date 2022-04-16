@@ -23,6 +23,8 @@ public class BookingInformationService {
 	@Autowired
 	SeatDAO seatDAO;
 	@Autowired
+	SeatService seatService;
+	@Autowired
 	FlightService flightService;
 	
 	public Flight getFlightById(int pid) {
@@ -31,7 +33,7 @@ public class BookingInformationService {
 	
 	public BookingInformation save(BookingInformation b, HttpServletRequest request){
 		
-		System.out.println(request.getParameter("flight_id"));
+//		System.out.println(request.getParameter("flight_id"));
 		Flight flight = flightService.getFlightById(Integer.valueOf(request.getParameter("flight_id")));
         b.setFlight_code(flight.getFlight_code());
         b.setAirpalne(flight.getAirline());
@@ -43,6 +45,8 @@ public class BookingInformationService {
         b.setArrival_time(flight.getArrival_time());
         b.setFlight_charge(flight.getFlight_charge());
         b.setFlight_name(flight.getFlight_name());
+//        Seat seat1 = seatService.getSeatById(Integer.valueOf(request.getParameter("seat_id")));
+//        b.setSeat_charge(Double.valueOf(seat1.getSeat_charge()));
 //        System.out.println(b.getSeat_no());
         List<Seat> seats= seatDAO.getSeatByFlightCode(flight.getFlight_code());
         for (int i = 0; i < seats.size(); i++) {
