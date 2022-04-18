@@ -30,8 +30,7 @@
                     <td>${bookRequest.temail}</td>
                     <td>${bookRequest.tpassport_no}</td>
                     <td>
-                        <a class="btn btn-primary" href="/admin/book/approved/${bookRequest.id}">Approve</a> &nbsp; &nbsp;
-                    
+                        <a class="btn btn-primary" href="/admin/book/approved/${bookRequest.id}">Approve</a> 
                     </td>
                 </tr>
             </c:forEach>

@@ -21,8 +21,6 @@ public class BookingInformation {
 
 	private String seat_no;
 	private String seat_class;
-	private int adult;
-	private int children;
 	private Double seat_charge;
 	
 	
@@ -69,6 +67,8 @@ public class BookingInformation {
 	
 	@Column(name = "status")
     private String status="pending";
+	@Column(name = "cancel_status")
+    private String cancel_status="book";
 	
 	public int getId() {
 		return id;
@@ -77,21 +77,6 @@ public class BookingInformation {
 		this.id = id;
 	}
 	
-	
-	
-	
-	public int getAdult() {
-		return adult;
-	}
-	public void setAdult(int adult) {
-		this.adult = adult;
-	}
-	public int getChildren() {
-		return children;
-	}
-	public void setChildren(int children) {
-		this.children = children;
-	}
 	public String getFname() {
 		return fname;
 	}
@@ -104,8 +89,7 @@ public class BookingInformation {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	
-	
+
 	public String getSeat_class() {
 		return seat_class;
 	}
@@ -246,6 +230,12 @@ public class BookingInformation {
 	}
 	public void setSeat_charge(Double seat_charge) {
 		this.seat_charge = seat_charge;
+	}
+	public String getCancel_status() {
+		return cancel_status;
+	}
+	public void setCancel_status(String cancel_status) {
+		this.cancel_status = cancel_status;
 	}
 
 	

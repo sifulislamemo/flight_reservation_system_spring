@@ -26,22 +26,17 @@ public class BookController {
 	@RequestMapping(value = "/request", method = RequestMethod.GET)
 	public ModelAndView bookRequest() {
 		  List<BookingInformation> bookRequest = bookService.getByPending(null);
-
 		return new ModelAndView("admin/book/request", "bookRequest", bookRequest);
 }
 	
+	
 	@RequestMapping(value = "/approved/{id}", method = RequestMethod.GET)
 	public ModelAndView update(HttpServletRequest request, @PathVariable("id") int id) {
-		//System.out.println(id +"....................");
 		BookingInformation bookingInformation = bookService.getById(id);
-//		System.out.println(applyjob.getId());
-		
 		BookingInformation p = bookService.approvedStatus(bookingInformation);
-		return new ModelAndView("admin/book/request");
-//		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
-//		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);
-
+		return new ModelAndView("redirect:/admin/book/request");
 	}
+	
 	
 	@RequestMapping(value = "/confirm", method = RequestMethod.GET)
 	public ModelAndView bookConfirm() {

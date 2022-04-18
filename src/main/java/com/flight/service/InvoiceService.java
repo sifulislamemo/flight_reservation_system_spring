@@ -13,8 +13,17 @@ import com.flight.model.Flight;
 public class InvoiceService {
 	@Autowired
 	InvoiceDAO invoiceDAO;
-	
+	@Autowired
+	BookingInformationService bookingInformationService;
 	public List<BookingInformation> getByEmail(String temail) {
         return invoiceDAO.getByEmail(temail);
    }
+	
+	public BookingInformation cancelStatus(BookingInformation bookingInformation) {
+		return invoiceDAO.cancelStatus(bookingInformation);
+	}
+	
+	public BookingInformation getById(int pid) {
+		return invoiceDAO.getById(pid);
+	}
 }

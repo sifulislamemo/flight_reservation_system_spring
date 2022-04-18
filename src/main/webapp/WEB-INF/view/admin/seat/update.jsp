@@ -12,7 +12,7 @@
 	<form method="post" action="/admin/seat/update">
 
 <!-- 		<div class="form-group"> -->
-<!-- 			<label for="">Flight Name:</label> <select id="inputState" -->
+<!-- 			<label for="">Flight Name:</label> <select id="flight_name" -->
 <!-- 				class="form-control" name="flight_name"> -->
 <%-- 				<c:forEach items="${flight}" var="fs"> --%>
 <%-- 					<option value="${fs.flight_name}">${fs.flight_name}</option> --%>
@@ -48,3 +48,8 @@
 <br />
 
 <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%>
+<script>
+// var flname =  "${data.flight_name}";
+// $("#flight_name option[value='"+flname+"']").attr("selected", true);
+
+</script>

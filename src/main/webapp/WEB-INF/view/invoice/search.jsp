@@ -1,669 +1,432 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@include file="/WEB-INF/view/common/main_header.jsp"%>
+<br />
+<br />
+<style>
+#invoice {
+	padding: 30px;
+}
+
+.invoice {
+	position: relative;
+	/*             background-color: #FFF; */
+	min-height: 680px;
+	padding: 5px 90px;
+}
+
+.invoice header {
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #3989c6
+}
+
+.invoice .company-details {
+	text-align: right
+}
+
+.invoice .company-details .name {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.invoice .contacts {
+	margin-bottom: 20px;
+}
+
+.invoice .invoice-to {
+	text-align: left;
+	margin: 14px;
+}
+
+.invoice .invoice-to .to {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.invoice .invoice-details {
+	text-align: center;
+}
+
+.invoice .invoice-details .invoice-id {
+	margin-top: 8px;
+	color: #3989FB;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.invoice main {
+	padding-bottom: 50px;
+}
+
+.invoice main .thanks {
+	margin-top: -100px;
+	font-size: 2em;
+	margin-bottom: 50px;
+}
+
+.invoice main .notices {
+	padding-left: 6px;
+	border-left: 6px solid #3989c6;
+}
+
+.invoice main .notices .notice {
+	font-size: 1.2em;
+}
+
+.invoice table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+
+.invoice table td, .invoice table th {
+	padding: 15px;
+	background: #eee;
+	border-bottom: 1px solid #fff;
+}
+
+.invoice table th {
+	/*             white-space: nowrap; */
+	font-weight: bold;
+	/*             font-size: 16px; */
+	background-color: lightblue;
+}
+
+.invoice table td h3 {
+	margin: 0;
+	font-weight: 400;
+	color: #3989c6;
+	font-size: 1.2em
+}
+
+.invoice table .qty, .invoice table .total, .invoice table .unit {
+	text-align: right;
+	font-size: 1.2em;
+}
+
+.invoice table .no {
+	color: #fff;
+	font-size: 1.6em;
+	background: #3989c6;
+}
+
+.invoice table .unit {
+	background: #ddd;
+}
+
+.invoice table .total {
+	background: #3989c6;
+	color: #fff;
+}
+
+.invoice table tbody tr:last-child td {
+	border: none;
+	background: aliceblue;
+}
+
+.invoice table tfoot td {
+	background: 0 0;
+	border-bottom: none;
+	white-space: nowrap;
+	text-align: right;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	border-top: 1px solid #aaa;
+}
+
+.invoice table tfoot tr:first-child td {
+	border-top: none;
+}
+
+.invoice table tfoot tr:last-child td {
+	color: #3989c6;
+	font-size: 1.4em;
+	border-top: 1px solid #3989c6;
+}
+
+.invoice table tfoot tr td:first-child {
+	border: none;
+}
+
+.invoice footer {
+	width: 100%;
+	text-align: center;
+	color: #777;
+	border-top: 1px solid #aaa;
+	padding: 8px 0
+}
+
+@media print {
+	.invoice {
+		font-size: 11px !important;
+		overflow: hidden !important
+	}
+	.invoice footer {
+		position: absolute;
+		bottom: 10px;
+		page-break-after: always
+	}
+	.invoice>div:last-child {
+		page-break-before: always;
+	}
+}
+</style>
 <div class="container-fluid">
 	<div class="col-lg-12">
 		<div class="checkout-inner">
 			<div class="billing-address">
 
 				<div class="col-md-12 container">
-
-					
-
-
-					<div id="invoice_code_div">
-					<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
-						Search your Invoice</h2>
-					<input type="text" name="temail" id="temail"/> 
-					<input type="button" value="Search" class="btn btn-primary" id="btnInvoice"/>
+					<div id="invoice_code_div" class="text-center">
+						<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
+							Search your Invoice</h2>
+						<input type="text" name="temail" id="temail" /> <input
+							type="button" value="Search" class="btn btn-primary"
+							id="btnInvoice" />
 					</div>
-					<div id="otp_div">
-					<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
-						Enter your OTP</h2>
-					<input type="text" name="otp" id="otp"/> 
-					<input type="button" value="OTP" class="btn btn-primary" id="btnOtp"/>
+					<div id="otp_div" class="text-center">
+						<h2 style="color: #0066cc; font-weight: bold" class="text-center">Please
+							Enter your OTP</h2>
+						<input type="text" name="otp" id="otp" /> <input type="button"
+							value="OTP" class="btn btn-primary" id="btnOtp" />
 					</div>
 
+					<br /> <br />
+					<div id="invoice" class="container-fluid">
+						<div class="toolbar hidden-print">
+							<div class="text-center">
+								<button id="printInvoice" class="btn btn-info">
+									<i class="fa fa-print"></i> Print
+								</button>
+							</div>
+							<hr>
+						</div>
 
-<div id="invoice">
-<!-- 	<div class="container invoice"> -->
-<!--   <div class="invoice-header"> -->
-<!--     <div class="row"> -->
-<!--       <div class="col-xs-8"> -->
-<!--         <h1>Invoice <small>With Credit</small></h1> -->
-<!--         <h4 class="text-muted" id="seat_code"></h4> -->
-<!--         <h4 class="text-muted" id="flight_code"></h4> -->
-<!--       </div> -->
-<!--       <div class="col-xs-4"> -->
-<!--         <div class="media"> -->
-<!--           <div class="media-left"> -->
-<!--             <img class="media-object logo" src="https://dummyimage.com/70x70/000/fff&text=ACME" /> -->
-<!--           </div> -->
-<!--           <ul class="media-body list-unstyled"> -->
-<!--             <li><strong>Acme Corporation</strong></li> -->
-<!--             <li>Software Development</li> -->
-<!--             <li>Field 3, Moon</li> -->
-<!--             <li>info@acme.com</li> -->
-<!--           </ul> -->
-<!--         </div> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--   </div> -->
-<!--   <div class="invoice-body"> -->
-<!--     <div class="row"> -->
-<!--       <div class="col-xs-5"> -->
-<!--         <div class="panel panel-default"> -->
-<!--           <div class="panel-heading"> -->
-<!--             <h3 class="panel-title">Company Details</h3> -->
-<!--           </div> -->
-<!--           <div class="panel-body"> -->
-<!--             <dl class="dl-horizontal"> -->
-<!--               <dt>Name</dt> -->
-<!--               <dd><strong>Acme Corporation</strong></dd> -->
-<!--               <dt>Industry</dt> -->
-<!--               <dd>Software Development</dd> -->
-<!--               <dt>Address</dt> -->
-<!--               <dd>Field 3, Moon</dd> -->
-<!--               <dt>Phone</dt> -->
-<!--               <dd>123.4456.4567</dd> -->
-<!--               <dt>Email</dt> -->
-<!--               <dd>mainl@acme.com</dd> -->
-<!--               <dt>Tax NO</dt> -->
-<!--               <dd class="mono">123456789</dd> -->
-<!--               <dt>Tax Office</dt> -->
-<!--               <dd>A' Moon</dd> -->
-<!--           </div> -->
-<!--         </div> -->
-<!--       </div> -->
-<!--       <div class="col-xs-7"> -->
-<!--         <div class="panel panel-default"> -->
-<!--           <div class="panel-heading"> -->
-<!--             <h3 class="panel-title">Customer Details</h3> -->
-<!--           </div> -->
-<!--           <div class="panel-body"> -->
-<!--             <dl class="dl-horizontal"> -->
-<!--               <dt>Name</dt> -->
-<!--               <dd>Microsoft Corporation</dd> -->
-<!--               <dt>Industry</dt> -->
-<!--               <dd>Software Development</dd> -->
-<!--               <dt>Address</dt> -->
-<!--               <dd>One Microsoft Way Redmond, WA 98052-7329, USA</dd> -->
-<!--               <dt>Phone</dt> -->
-<!--               <dd>(425) 882-8080</dd> -->
-<!--               <dt>Email</dt> -->
-<!--               <dd>contact@microsoft.com</dd> -->
-<!--               <dt>Tax NO</dt> -->
-<!--               <dd class="mono">123456789</dd> -->
-<!--               <dt>&nbsp;</dt> -->
-<!--               <dd>&nbsp;</dd> -->
-<!--           </div> -->
-<!--         </div> -->
-<!--       </div> -->
-<!--     </div> -->
-<!--     <div class="panel panel-default"> -->
-<!--       <div class="panel-heading"> -->
-<!--         <h3 class="panel-title">Services / Products</h3> -->
-<!--       </div> -->
-<!--       <table class="table table-bordered table-condensed"> -->
-<!--         <thead> -->
-<!--           <tr> -->
-<!--             <th>Item / Details</th> -->
-<!--             <th class="text-center colfix">Unit Cost</th> -->
-<!--             <th class="text-center colfix">Sum Cost</th> -->
-<!--             <th class="text-center colfix">Discount</th> -->
-<!--             <th class="text-center colfix">Tax</th> -->
-<!--             <th class="text-center colfix">Total</th> -->
-<!--           </tr> -->
-<!--         </thead> -->
-<!--         <tbody> -->
-<!--           <tr> -->
-<!--             <td> -->
-<!--               Lorem Ipsum Dolor -->
-<!--               <br> -->
-<!--               <small class="text-muted">The best lorem in town, try it now or leave forever</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">$1,000.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">Before Tax</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">$18,000.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">18 Units</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">- $1,800.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">Special -10%</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">+ $3,240.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">VAT 20%</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <strong class="mono">$19,440.00</strong> -->
-<!--               <br> -->
-<!--               <small class="text-muted mono">$16,200.00</small> -->
-<!--             </td> -->
-<!--           </tr> -->
 
-<!--           <tr> -->
-<!--             <td> -->
-<!--               Sit Amet Dolo -->
-<!--               <br> -->
-<!--               <small class="text-muted">Now you may sit</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">$120.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">Before Tax</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">$240.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">2 Units</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">- $0.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">-</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <span class="mono">+ $72.00</span> -->
-<!--               <br> -->
-<!--               <small class="text-muted">VAT:20% S:10%</small> -->
-<!--             </td> -->
-<!--             <td class="text-right"> -->
-<!--               <strong class="mono">$312.00</strong> -->
-<!--               <br> -->
-<!--               <small class="text-muted mono">$240.00</small> -->
-<!--             </td> -->
-<!--           </tr> -->
-<!--         </tbody> -->
-<!--       </table> -->
-<!--     </div> -->
-<!--     <div class="panel panel-default"> -->
-<!--       <table class="table table-bordered table-condensed"> -->
-<!--         <thead> -->
-<!--           <tr> -->
-<!--             <td class="text-center col-xs-1">Sub Total</td> -->
-<!--             <td class="text-center col-xs-1">Discount</td> -->
-<!--             <td class="text-center col-xs-1">Total</td> -->
-<!--             <td class="text-center col-xs-1">Tax</td> -->
-<!--             <td class="text-center col-xs-1">Final</td> -->
-<!--           </tr> -->
-<!--         </thead> -->
-<!--         <tbody> -->
-<!--           <tr> -->
-<!--             <th class="text-center rowtotal mono">$18,240.00</th> -->
-<!--             <th class="text-center rowtotal mono">-$1,800.00</th> -->
-<!--             <th class="text-center rowtotal mono">$16,440.00</th> -->
-<!--             <th class="text-center rowtotal mono">$3,312.00</th> -->
-<!--             <th class="text-center rowtotal mono">$19,752.00</th> -->
-<!--           </tr> -->
-<!--         </tbody> -->
-<!--       </table> -->
-<!--     </div> -->
-<!--     <div class="row"> -->
-<!--       <div class="col-xs-7"> -->
-<!--         <div class="panel panel-default"> -->
-<!--           <div class="panel-body"> -->
-<!--             <i>Comments / Notes</i> -->
-<!--             <hr style="margin:3px 0 5px" /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repudiandae numquam sit facere blanditiis, quasi distinctio ipsam? Libero odit ex expedita, facere sunt, possimus consectetur dolore, nobis iure amet vero. -->
-<!--           </div> -->
-<!--         </div> -->
-<!--       </div> -->
-<!--       <div class="col-xs-5"> -->
-<!--         <div class="panel panel-default"> -->
-<!--           <div class="panel-heading"> -->
-<!--             <h3 class="panel-title">Payment Method</h3> -->
-<!--           </div> -->
-<!--           <div class="panel-body"> -->
-<!--             <p>For your convenience, you may deposite the final ammount at one of our banks</p> -->
-<!--             <ul class="list-unstyled"> -->
-<!--               <li>Alpha Bank - <span class="mono">MO123456789456123</span></li> -->
-<!--               <li>Beta Bank - <span class="mono">MO123456789456123</span></li> -->
-<!--               <li>Gamma Bank - <span class="mono">MO123456789456123</span></li> -->
-<!--             </ul> -->
-<!--           </div> -->
-<!--         </div> -->
-<!--       </div> -->
-<!--     </div> -->
+						<div class="invoice overflow-auto">
+							<div style="min-width: 600px">
+								<div class="row p-5">
+									<div class="col-md-6">
+										<h1 id="fh5co-logo">S I Travel</h1>
+									</div>
 
-<!--   </div> -->
-<!--   <div class="invoice-footer"> -->
-<!--     Thank you for choosing our services. -->
-<!--     <br/> We hope to see you again soon -->
-<!--     <br/> -->
-<!--     <strong>~ACME~</strong> -->
-<!--   </div> -->
-<!-- </div> -->
+
+								</div>
+
+								<hr class="my-5">
+
+								<main>
+
+									<div class="row contacts">
+										<div class="col invoice-details">
+											<div class="invoice-id">INVOICE NO: </div>
+											<div class="invoice-id" id="id"></div>
+											<div class="date">Date of Invoice: 05/04/2022</div>
+										</div>
+										<div class="col invoice-to">
+											<div style="font-size: 20px; font-weight: bold;">INVOICE
+												TO:</div>
+											<div id="fname"></div>
+											<div style="font-weight: bold;">FORM:</div>
+											<div id="departure_airport"></div>
+
+											<div style="font-weight: bold;">TO:</div>
+
+											<div id="arrival_airport"></div>
+											<div style="font-weight: bold;">FLIGHT CODE:</div>
+											<div id="flight_code"></div>
+
+											<div style="font-weight: bold;">RESERVATION:</div>
+											<div id="airpalne"></div>
+
+											<div style="font-weight: bold;">FLIGHT DATE:</div>
+											<div  id="departing_date"></div>
+
+											<div style="font-weight: bold;">SEAT NO:</div>
+											<div id="seat_no"></div>
+
+
+										</div>
+
+									</div>
+
+
+									<h4 class="text-center" style="font-weight: bold;">FLIGHT
+										DETAILS</h4>
+									<div class="row">
+										<div class="col-md-12">
+
+											<table>
+												<thead class="thead-dark">
+													<tr>
+														<th><h5>Flight Code</h5></th>
+														<th><h5>Airplane</h5></th>
+														<th><h5>From</h5></th>
+														<th><h5>To</h5></th>
+														<th><h5>Departure Date</h5></th>
+														<th><h5>Departure time</h5></th>
+														<th><h5>Arrival Date</h5></th>
+														<th><h5>Arrival time</h5></th>
+														<th><h5>Class name</h5></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td id="tflight_code"></td>
+														<td id="tairpalne"></td>
+														<td id="tdeparture_airport"></td>
+														<td id="tarrival_airport"></td>
+														<td id="tdeparting_date"></td>
+														<td id="departing_time"></td>
+														<td id="arrival_date"></td>
+														<td id="arrival_time"></td>
+														<td id="seat_class"></td>
+
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<br>
 
 
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
+									<h4 class="text-center" style="font-weight: bold;">PASSENGER
+										DETAILS</h4>
+									<div class="row">
+										<div class="col-md-12">
 
-        :root {
-            --primary: #0000ff;
-            --secondary: #3d3d3d;
-            --white: #fff;
-        }
+											<table class="table table-striped table-hover">
 
-/*         * { */
-/*             margin: 0; */
-/*             padding: 0; */
-/*             box-sizing: border-box; */
-/*             font-family: 'Lato', sans-serif; */
-/*         } */
+												<tbody>
+													<tr>
 
-/*         body { */
-/*             background: var(--secondary); */
-/*             padding: 50px; */
-/*             color: var(--secondary); */
-/*             display: flex; */
-/*             align-items: center; */
-/*             justify-content: center; */
-/*             font-size: 14px; */
-/*         } */
-
-        .bold {
-            font-weight: 900;
-        }
-
-        .light {
-            font-weight: 100;
-        }
-
-        .wrapper {
-            background: var(--white);
-            padding: 30px;
-        }
-
-        .invoice_wrapper {
-            border: 3px solid var(--primary);
-            width: 700px;
-            max-width: 100%;
-        }
-
-        .invoice_wrapper .header .logo_invoice_wrap,
-        .invoice_wrapper .header .bill_total_wrap {
-            display: flex;
-            justify-content: space-between;
-            padding: 30px;
-        }
-
-        .invoice_wrapper .header .logo_sec {
-            display: flex;
-            align-items: center;
-        }
-
-        .invoice_wrapper .header .logo_sec .title_wrap {
-            margin-left: 5px;
-        }
-
-        .invoice_wrapper .header .logo_sec .title_wrap .title {
-            text-transform: uppercase;
-            font-size: 18px;
-            color: var(--primary);
-        }
-
-        .invoice_wrapper .header .logo_sec .title_wrap .sub_title {
-            font-size: 12px;
-        }
-
-        .invoice_wrapper .header .invoice_sec,
-        .invoice_wrapper .header .bill_total_wrap .total_wrap {
-            text-align: right;
-        }
-
-        .invoice_wrapper .header .invoice_sec .invoice {
-            font-size: 28px;
-            color: var(--primary);
-        }
-
-        .invoice_wrapper .header .invoice_sec .invoice_no,
-        .invoice_wrapper .header .invoice_sec .date {
-            display: flex;
-            width: 100%;
-        }
-
-        .invoice_wrapper .header .invoice_sec .invoice_no span:first-child,
-        .invoice_wrapper .header .invoice_sec .date span:first-child {
-            width: 70px;
-            text-align: left;
-        }
-
-        .invoice_wrapper .header .invoice_sec .invoice_no span:last-child,
-        .invoice_wrapper .header .invoice_sec .date span:last-child {
-            width: calc(100% - 70px);
-        }
-
-        .invoice_wrapper .header .bill_total_wrap .total_wrap .price,
-        .invoice_wrapper .header .bill_total_wrap .bill_sec .name {
-            color: var(--primary);
-            font-size: 20px;
-        }
-
-        .invoice_wrapper .body .main_table .table_header {
-            background: var(--primary);
-        }
-
-        .invoice_wrapper .body .main_table .table_header .row {
-            color: var(--white);
-            font-size: 18px;
-            border-bottom: 0px;
-        }
-
-        .invoice_wrapper .body .main_table .row {
-            display: flex;
-            border-bottom: 1px solid var(--secondary);
-        }
-
-        .invoice_wrapper .body .main_table .row .col {
-            padding: 10px;
-        }
-
-        .invoice_wrapper .body .main_table .row .col_no {
-            width: 5%;
-        }
-
-        .invoice_wrapper .body .main_table .row .col_des {
-            width: 45%;
-        }
-
-        .invoice_wrapper .body .main_table .row .col_price {
-            width: 20%;
-            text-align: center;
-        }
-
-        .invoice_wrapper .body .main_table .row .col_qty {
-            width: 10%;
-            text-align: center;
-        }
-
-        .invoice_wrapper .body .main_table .row .col_total {
-            width: 20%;
-            text-align: right;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap {
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 0 30px;
-            align-items: flex-end;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .paymethod_sec {
-            padding-left: 30px;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec {
-            width: 30%;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec p {
-            display: flex;
-            width: 100%;
-            padding-bottom: 5px;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec p span {
-            padding: 0 10px;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec p span:first-child {
-            width: 60%;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec p span:last-child {
-            width: 40%;
-            text-align: right;
-        }
-
-        .invoice_wrapper .body .paymethod_grandtotal_wrap .grandtotal_sec p:last-child span {
-            background: var(--primary);
-            padding: 10px;
-            color: #fff;
-        }
-
-        .invoice_wrapper .footer {
-            padding: 30px;
-        }
-
-        .invoice_wrapper .footer>p {
-            color: var(--primary);
-            text-decoration: underline;
-            font-size: 18px;
-            padding-bottom: 5px;
-        }
-
-        .invoice_wrapper .footer .terms .tc {
-            font-size: 16px;
-        }
-    </style>
+														<th><h5>First Name</h5></th>
+														<th><h5>Last Name</h5></th>
+														<th><h5>Passport Id</h5></th>
+														<th><h5>Gender</h5></th>
+														<th><h5>Contact</h5></th>
+														<th><h5>Email</h5></th>
+													</tr>
 
 
+													<tr>
+
+														<td id="tfname"></td>
+														<td id="lname"></td>
+														<td id="tpassport_no"></td>
+														<td id="gender"></td>
+														<td id="tcontact_no"></td>
+														<td id="email"></td>
+
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+
+									</div>
+									<br>
 
 
-    <div class="wrapper">
-        <div class="invoice_wrapper">
-            <div class="header">
-                <div class="logo_invoice_wrap">
-                    <div class="logo_sec">
-                        <img src="codingboss.png" alt="code logo">
-                        <div class="title_wrap">
-                            <p class="title bold">Coding Boss</p>
-                            <p class="sub_title">Privite Limited</p>
-                        </div>
-                    </div>
-                    <div class="invoice_sec">
-                        <p class="invoice bold">INVOICE</p>
-                        <p class="invoice_no">
-                            <span class="bold">Invoice</span>
-                            <span>#3488</span>
-                        </p>
-                        <p class="date">
-                            <span class="bold">Date</span>
-                            <span>08/Jan/2022</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="bill_total_wrap">
-                    <div class="bill_sec">
-                        <p>Bill To</p>
-                        <p class="bold name">Alex Deo</p>
-                        <span>
-                            123 walls street, Townhall<br />
-                            +111 222345667
-                        </span>
-                    </div>
-                    <div class="total_wrap">
-                        <p>Total Due</p>
-                        <p class="bold price">USD: $1200</p>
-                    </div>
-                </div>
-            </div>
-            <div class="body">
-                <div class="main_table">
-                    <div class="table_header">
-                        <div class="row">
-                            <div class="col col_no">NO.</div>
-                            <div class="col col_des">ITEM DESCRIPTION</div>
-                            <div class="col col_price">PRICE</div>
-                            <div class="col col_qty">QTY</div>
-                            <div class="col col_total">TOTAL</div>
-                        </div>
-                    </div>
-                    <div class="table_body">
-                        <div class="row">
-                            <div class="col col_no">
-                                <p>01</p>
-                            </div>
-                            <div class="col col_des">
-                                <p class="bold">Web Design</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                            <div class="col col_price">
-                                <p>$350</p>
-                            </div>
-                            <div class="col col_qty">
-                                <p>2</p>
-                            </div>
-                            <div class="col col_total">
-                                <p>$700.00</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col col_no">
-                                <p>02</p>
-                            </div>
-                            <div class="col col_des">
-                                <p class="bold">Web Development</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                            <div class="col col_price">
-                                <p>$350</p>
-                            </div>
-                            <div class="col col_qty">
-                                <p>2</p>
-                            </div>
-                            <div class="col col_total">
-                                <p>$700.00</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col col_no">
-                                <p>03</p>
-                            </div>
-                            <div class="col col_des">
-                                <p class="bold">GitHub</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                            <div class="col col_price">
-                                <p>$120</p>
-                            </div>
-                            <div class="col col_qty">
-                                <p>1</p>
-                            </div>
-                            <div class="col col_total">
-                                <p>$700.00</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col col_no">
-                                <p>04</p>
-                            </div>
-                            <div class="col col_des">
-                                <p class="bold">Backend Design</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                            <div class="col col_price">
-                                <p>$350</p>
-                            </div>
-                            <div class="col col_qty">
-                                <p>2</p>
-                            </div>
-                            <div class="col col_total">
-                                <p>$700.00</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col col_no">
-                                <p>05</p>
-                            </div>
-                            <div class="col col_des">
-                                <p class="bold">Backend Development</p>
-                                <p>Lorem ipsum dolor sit.</p>
-                            </div>
-                            <div class="col col_price">
-                                <p>$150</p>
-                            </div>
-                            <div class="col col_qty">
-                                <p>1</p>
-                            </div>
-                            <div class="col col_total">
-                                <p>$700.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="paymethod_grandtotal_wrap">
-                    <div class="paymethod_sec">
-                        <p class="bold">Payment Method</p>
-                        <p>Visa, master Card and We accept Cheque</p>
-                    </div>
-                    <div class="grandtotal_sec">
-                        <p class="bold">
-                            <span>SUB TOTAL</span>
-                            <span>$7500</span>
-                        </p>
-                        <p>
-                            <span>Tax Vat 18%</span>
-                            <span>$200</span>
-                        </p>
-                        <p>
-                            <span>Discount 10%</span>
-                            <span>-$700</span>
-                        </p>
-                        <p class="bold">
-                            <span>Grand Total</span>
-                            <span>$7000.0</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <p>Thank you and Best Wishes</p>
-                <div class="terms">
-                    <p class="tc bold">Terms & Coditions</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit non praesentium doloribus. Quaerat
-                        vero iure itaque odio numquam, debitis illo quasi consequuntur velit, explicabo esse nesciunt
-                        error aliquid quis eius!</p>
-                </div>
-            </div>
-        </div>
-    </div>
+									<div class="d-flex flex-row-reverse bg-dark text-white p-4">
+										<div class="py-3 px-5 text-right">
+											<div class="mb-2">Seat Charge:</div>
+											<div class="h2 font-weight-light" id="seat_charge"></div>
+										</div>
+										<div class="py-3 px-5 text-right">
+											<div class="mb-2">Tax(%):</div>
+											<div class="h2 font-weight-light">0.0%</div>
+										</div>
 
+										<div class="py-3 px-5 text-right">
+											<div class="mb-2">Discount(%):</div>
+											<div class="h2 font-weight-light">0.0%</div>
+										</div>
 
+										<div class="py-3 px-5 text-right">
+											<div class="mb-2">Total Charge</div>
+											<div class="h2 font-weight-light" id="tseat_charge"></div>
+										</div>
+									</div>
 
-
-</div>
+								</main>
+							</div>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-</div>
+
 
 <%@include file="/WEB-INF/view/common/main_footer.jsp"%>
 
 <script>
-$("#otp_div").hide();
-$("#invoice").hide();
-$("#btnInvoice").click(function(){
-	$("#invoice_code_div").hide();
-	$("#otp_div").show();
-});
-$("#btnOtp").click(function(){
-	if($("#otp").val() == "123"){
-		$.ajax({
-			type : "POST",
-			url : "/home/book/invoice/usersearch",
-			data : {temail : $("#temail").val()},
-			success : function(data, status) {
+	$("#otp_div").hide();
+	$("#invoice").hide();
+	$("#btnInvoice").click(function() {
+		$("#invoice_code_div").hide();
+		$("#otp_div").show();
+	});
+	$("#btnOtp").click(function() {
+		if ($("#otp").val() == "123") {
+			$.ajax({
+				type : "POST",
+				url : "/home/book/invoice/usersearch",
+				data : {
+					temail : $("#temail").val()
+				},
+				success : function(data, status) {
 					console.log(data[0].seat_no);
 					$("#otp_div").hide();
-					$("#seat_code").text(data[0].seat_no);
-					$("#flight_code").text(data[0].flight_code);
-					$("#invoice").show();
-			}
 
-		});
-	}else{
-		alert("Wrong OTP");
-	}
-})
+					$("#id").text(data[0].id);
+					$("#lname").text(data[0].lname);
+					$("#fname").text(data[0].fname);
+					$("#lname").text(data[0].lname);
+					$("#departure_airport").text(data[0].departure_airport);
+					$("#arrival_airport").text(data[0].arrival_airport);
+					$("#flight_code").text(data[0].flight_code);
+					$("#airpalne").text(data[0].airpalne);
+					$("#departing_date").text(data[0].departing_date);
+					$("#seat_no").text(data[0].seat_no);
+					$("#tflight_code").text(data[0].flight_code);
+					$("#tairpalne").text(data[0].airpalne);
+					$("#tdeparture_airport").text(data[0].departure_airport);
+					$("#tarrival_airport").text(data[0].arrival_airport);
+					$("#tdeparting_date").text(data[0].departing_date);
+					$("#departing_time").text(data[0].departing_time);
+					$("#arrival_date").text(data[0].arrival_date);
+					$("#arrival_time").text(data[0].arrival_time);
+					$("#seat_class").text(data[0].seat_class);
+					$("#tfname").text(data[0].fname);
+					$("#tpassport_no").text(data[0].tpassport_no);
+					$("#gender").text(data[0].gender);
+					$("#tcontact_no").text(data[0].tcontact_no);
+					$("#email").text(data[0].temail);
+					$("#seat_charge").text(data[0].seat_charge);
+					$("#tseat_charge").text(data[0].seat_charge);
+
+					$("#invoice").show();
+				}
+
+			});
+		} else {
+			alert("Wrong OTP");
+		}
+	});
+
+	$('#printInvoice').click(function() {
+		Popup($('.invoice')[0].innerHTML);
+		function Popup(data) {
+			window.print();
+			return true;
+		}
+	});
 </script>

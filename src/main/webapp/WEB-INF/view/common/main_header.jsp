@@ -59,11 +59,12 @@
 							<li><a href="#" class="active">Flight Reservation</a>
 								<ul class="fh5co-sub-menu">
 									<li><a href="/home/book/invoice/search">Search Invoice</a></li>
+									<li><a href="/home/book/invoice/cancel">Cancel Invoice</a></li>
 								</ul></li>
-							<li><a href="flight.html">Flights</a></li>
-							<li><a href="hotel.html">Hotel</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><a href="/">Flights</a></li>
+							<li><a href="/">Hotel</a></li>
+							<li><a href="/">Blog</a></li>
+							<li><a href="/">Contact</a></li>
 							<li class="nav-item book-btn">
                         <a class="nav-link" href="/login">Login</a>
                     </li>

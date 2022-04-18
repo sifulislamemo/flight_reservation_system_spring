@@ -10,9 +10,9 @@
 
         .invoice {
             position: relative;
-            background-color: #FFF;
+/*             background-color: #FFF; */
             min-height: 680px;
-            padding: 15px
+            padding: 5px 90px;
         }
 
         .invoice header {
@@ -27,67 +27,71 @@
 
         .invoice .company-details .name {
             margin-top: 0;
-            margin-bottom: 0
+            margin-bottom: 0;
         }
 
         .invoice .contacts {
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         .invoice .invoice-to {
-            text-align: left
+            text-align: left;
+            margin: 14px;
         }
 
         .invoice .invoice-to .to {
             margin-top: 0;
-            margin-bottom: 0
+            margin-bottom: 0;
         }
 
         .invoice .invoice-details {
-            text-align: right
+            text-align: center;
         }
 
         .invoice .invoice-details .invoice-id {
-            margin-top: 0;
-            color: #3989c6
+            margin-top: 8px;
+            color: #3989FB;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .invoice main {
-            padding-bottom: 50px
+            padding-bottom: 50px;
         }
 
         .invoice main .thanks {
             margin-top: -100px;
             font-size: 2em;
-            margin-bottom: 50px
+            margin-bottom: 50px;
         }
 
         .invoice main .notices {
             padding-left: 6px;
-            border-left: 6px solid #3989c6
+            border-left: 6px solid #3989c6;
         }
 
         .invoice main .notices .notice {
-            font-size: 1.2em
+            font-size: 1.2em;
         }
 
         .invoice table {
             width: 100%;
             border-collapse: collapse;
             border-spacing: 0;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         .invoice table td,.invoice table th {
             padding: 15px;
             background: #eee;
-            border-bottom: 1px solid #fff
+            border-bottom: 1px solid #fff;
         }
 
         .invoice table th {
-            white-space: nowrap;
-            font-weight: 400;
-            font-size: 16px
+/*             white-space: nowrap; */
+            font-weight: bold;
+/*             font-size: 16px; */
+    background-color: lightblue;
         }
 
         .invoice table td h3 {
@@ -99,26 +103,27 @@
 
         .invoice table .qty,.invoice table .total,.invoice table .unit {
             text-align: right;
-            font-size: 1.2em
+            font-size: 1.2em;
         }
 
         .invoice table .no {
             color: #fff;
             font-size: 1.6em;
-            background: #3989c6
+            background: #3989c6;
         }
 
         .invoice table .unit {
-            background: #ddd
+            background: #ddd;
         }
 
         .invoice table .total {
             background: #3989c6;
-            color: #fff
+            color: #fff;
         }
 
         .invoice table tbody tr:last-child td {
-            border: none
+            border: none;
+                background: aliceblue;
         }
 
         .invoice table tfoot td {
@@ -128,21 +133,21 @@
             text-align: right;
             padding: 10px 20px;
             font-size: 1.2em;
-            border-top: 1px solid #aaa
+            border-top: 1px solid #aaa;
         }
 
         .invoice table tfoot tr:first-child td {
-            border-top: none
+            border-top: none;
         }
 
         .invoice table tfoot tr:last-child td {
             color: #3989c6;
             font-size: 1.4em;
-            border-top: 1px solid #3989c6
+            border-top: 1px solid #3989c6;
         }
 
         .invoice table tfoot tr td:first-child {
-            border: none
+            border: none;
         }
 
         .invoice footer {
@@ -166,7 +171,7 @@
             }
 
             .invoice>div:last-child {
-                page-break-before: always
+                page-break-before: always;
             }
         }
 
@@ -192,7 +197,7 @@
 					</div>
 					<div id="invoiceDiv">
 
-<div id="invoice">
+<div id="invoice" class="container-fluid">
 
         <div class="toolbar hidden-print">
             <div class="text-center">
@@ -200,37 +205,50 @@
             </div>
             <hr>
         </div>
+        
+                    <br>
         <div class="invoice overflow-auto">
             <div style="min-width: 600px">
+            <div class="row p-5">
+                        <div class="col-md-6">
+                            <h1 id="fh5co-logo">
+						S I Travel
+					</h1>
+                        </div>
+
+                        
+                    </div>
+
+                    <hr class="my-5">
 <c:forEach items="${book.bList}" var="b">
                 <main>
 
 
                     <div class="row contacts">
-                        <div class="col invoice-to">
-
-                            <div class="text-gray-light"><h3>INVOICE TO:&nbsp &nbsp ${b.fname}</h3></div> 
-                            <div class="email">${b.departure_airport} -- ${b.arrival_airport}</div>
-                            <div class="date">FLIGHT CODE:&nbsp &nbsp ${b.flight_code}</div>
-                            <div class="address">RESERVATION:&nbsp &nbsp ${b.airpalne}</div>
-
-                            <div class="date">FLIGHT DATE:&nbsp &nbsp ${b.departing_date}</div>
-                            <div class="date">SEAT NO:&nbsp &nbsp ${b.seat_no}</div>
-                        </div>
-                        <div class="col invoice-details">
-                            <h2 class="invoice-id">INVOICE: &nbsp #F${b.id}</h2>
+                     <div class="col invoice-details">
+                            <div class="invoice-id">INVOICE NO: &nbsp #F${b.id}</div>
                             <div class="date">Date of Invoice: 05/04/2022</div>
                         </div>
+                        <div class="col invoice-to">
+
+                            <div style="font-size: 20px;font-weight: bold;">INVOICE TO:&nbsp ${b.lname}/${b.fname}</div> 
+                            <div  style="font-weight: bold;">FORM:&nbsp${b.departure_airport} &nbsp TO:&nbsp${b.arrival_airport}</div>
+                            <div  style="font-weight: bold;">FLIGHT CODE:&nbsp &nbsp ${b.flight_code}</div>
+                            <div  style="font-weight: bold;">RESERVATION:&nbsp &nbsp ${b.airpalne}</div>
+                            <div  style="font-weight: bold;">FLIGHT DATE:&nbsp &nbsp ${b.departing_date}</div>
+                            <div  style="font-weight: bold;">SEAT NO:&nbsp &nbsp ${b.seat_no}</div>
+                        </div>
+                       
                     </div>
 
 
-                    <h4 class="text-center">FLIGHT DETAILS</h4>  
+                    <h4 class="text-center" style="font-weight: bold;">FLIGHT DETAILS</h4>  
                     <div class="row">
                         <div class="col-md-12">
 
-                            <table class="table table-striped table-hover">
+                            <table>
                                 <thead class="thead-dark">
-                              <tr>
+                              <tr >
                                 <th><h5>Flight Code</h5></th>
                                 <th><h5>Airplane</h5></th>
                                 <th><h5>From</h5></th>
@@ -240,7 +258,6 @@
                                 <th><h5>Arrival Date</h5></th>
                                 <th><h5>Arrival time</h5></th>
                                 <th><h5>Class name</h5></th>
-<!--                                 <th><h5>Flight Charge</h5></th> -->
                              </tr>
                              </thead>
 <tbody>
@@ -254,7 +271,6 @@
                                     <td>${b.arrival_date}</td>
                                     <td>${b.arrival_time}</td>
                                     <td>${b.seat_class}</td>
-<%--                                     <td>${b.flight_charge}</td> --%>
                      
                                 </tr>
 
@@ -266,7 +282,7 @@
 
 
 
-                    <h4 class="text-center">PASSENGER DETAILS</h4>
+                    <h4 class="text-center" style="font-weight: bold;">PASSENGER DETAILS</h4>
                     <div class="row">
                         <div class="col-md-12">
 
@@ -277,7 +293,6 @@
 
                                 <th><h5>First Name</h5></th>
                                 <th><h5>Last Name</h5></th>
-                          
                                 <th><h5>Passport Id </h5></th>
                                 <th><h5>Gender</h5></th>
                                 <th><h5>Contact</h5></th>
@@ -306,24 +321,24 @@
 
  <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                         <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Total Charge:</div>
-                            <div class="h4 font-weight-light">${b.flight_charge}</div>
+                            <div class="mb-2">Seat Charge:</div>
+                            <div class="h2 font-weight-light">${b.seat_charge}</div>
                         </div>
-<!--                         <div class="py-3 px-5 text-right"> -->
-<!--                             <div class="mb-2">Number of Site:</div> -->
-<%--                             <div class="h2 font-weight-light">${b.flight_charge}</div> --%>
-<!--                         </div> -->
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Tax(%):</div>
+                            <div class="h2 font-weight-light">0.0%</div>
+                        </div>
 
-<!--                         <div class="py-3 px-5 text-right"> -->
-<!--                             <div class="mb-2">Discount</div> -->
-<!--                             <div class="h2 font-weight-light">10%</div> -->
-<!--                         </div> -->
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Discount(%):</div>
+                            <div class="h2 font-weight-light">0.0%</div>
+                        </div>
 
-<!--                         <div class="py-3 px-5 text-right"> -->
-<!--                             <div class="mb-2">Sub - Total amount</div> -->
-<!--                             <div class="h2 font-weight-light">$32,432</div> -->
-<!--                         </div> -->
-<!--                     </div> -->
+                        <div class="py-3 px-5 text-right">
+                            <div class="mb-2">Total Charge</div>
+                            <div class="h2 font-weight-light">${b.seat_charge}</div>
+                        </div>
+                    </div>
 
                 </main>
                 <footer>
@@ -354,7 +369,6 @@ $("#btnInvoice").on("click", function(){
 	$("#invoiceDiv").show();
 })
 
-
   $('#printInvoice').click(function () {
             Popup($('.invoice')[0].innerHTML);
             function Popup(data)
@@ -363,4 +377,5 @@ $("#btnInvoice").on("click", function(){
                 return true;
             }
         });
+
 </script>

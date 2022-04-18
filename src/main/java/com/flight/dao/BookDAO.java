@@ -53,5 +53,15 @@ public class BookDAO {
 		return bookApproveList;
 
 	}
+    
+//    cancel book
+    
+//    public BookingInformation cancelStatus(BookingInformation bookingInformation) {
+//		String hql = "update bookingInformation set cancel_status ='cancelbook' where id = '" + bookingInformation.getId() + "'";
+//		Query q = getSession().createQuery(hql);
+//		q.executeUpdate();
+//		getSession().flush();
+//		return bookingInformation;
+//	}
 
 }

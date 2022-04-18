@@ -28,4 +28,8 @@ public class BookService {
 		return bookDAO.getByApprove(status);
 	}
 	
+//	public BookingInformation cancelStatus(BookingInformation bookingInformation) {
+//		return bookDAO.cancelStatus(bookingInformation);
+//	}
+	
 }

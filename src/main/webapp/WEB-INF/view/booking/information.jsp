@@ -38,7 +38,7 @@
                 
                         									<h2 class="fs-title">Flight Details</h2>
                         									<p style="font-weight: bold; font-size: 20px;">Seat Charge :</p>
-<p id="seat_charge" name="seat_charge" style="color: red; font-weight: bold; font-size: 20px;"></p>
+<input id="seat_charge" name="seat_charge" style="color: red; font-weight: bold; font-size: 20px; border:none;" readonly></input>
                         
                         <c:forEach items="${flightSeat.flight}" var="f">
                         <h3><b>${f.departure_airport} - ${f.arrival_airport}</b></h3>
@@ -71,21 +71,8 @@
 
 									<br /> <br />
 
-
-
-
-
 									<div class="col-xxs-12 col-xs-6 mt" style="padding-left: 0px">
 										<section>
-
-
-
-											<!-- 						<select id="inputState" class="form-control" name="departure_airport"> -->
-											<%-- 							<c:forEach items="${flight}" var="flight"> --%>
-											<%-- 								<option value="${flight.class_name}">${flight.class_name}</option> --%>
-											<%-- 							</c:forEach> --%>
-											<!-- 						</select> -->
-
 
 											<label for="class">Class:</label> <select
 												class="browser-default custom-select" name="seat_class">
@@ -96,29 +83,6 @@
 											</select>
 										</section>
 									</div>
-									<div class="col-xxs-12 col-xs-6 mt">
-										<section>
-											<label for="class">Adult:</label> <select
-												class="browser-default custom-select" name="adult">
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-											</select>
-										</section>
-									</div>
-
-									<section>
-										<label for="class">Children:</label> <select
-											class="browser-default custom-select" name="children">
-
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-										</select>
-									</section>
-
 									</div>
 									</div>
 								</div>
@@ -398,7 +362,7 @@ $(".seat").on("click", function(e){
 				console.log(data);
 				price += data.seat_charge;
 				console.log(price);
-				$("#seat_charge").text(price);
+				$("#seat_charge").val(price);
 		}
 	});
 	

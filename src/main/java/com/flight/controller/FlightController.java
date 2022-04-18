@@ -1,6 +1,8 @@
 package com.flight.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,11 +18,10 @@ import com.flight.model.Airplane;
 import com.flight.model.Airport;
 import com.flight.model.BookingInformation;
 import com.flight.model.Flight;
-import com.flight.model.Traveller;
+import com.flight.service.AirplaneService;
 import com.flight.service.AirportService;
 import com.flight.service.BookingInformationService;
 import com.flight.service.FlightService;
-import com.flight.service.TravellerService;
 
 @RestController
 @RequestMapping(value = "/admin/flight")
@@ -29,7 +30,8 @@ public class FlightController {
 	FlightService flightService;
 	@Autowired
 	AirportService airportService;
-	
+	@Autowired
+	AirplaneService airplaneService;
 	@Autowired
 	BookingInformationService bookingInformationService;
 	
@@ -78,21 +80,16 @@ public ModelAndView flightAdd() {
 	    	return new ModelAndView("admin/flight/view", "flight", flight);
 	    }
 	 
-		/* Departure Airport Drop-down */
+		/* Departure & Arrival  Airport  & Airplane Drop-down */
 	 @RequestMapping(value = "/add", method = RequestMethod.GET) 
 	  public ModelAndView airportView(){ 
+			Map<String, Object> flightSeat = new HashMap<String, Object>();
+			  List<Airplane> airplane = airplaneService.getAll();
 		  List<Airport> airport = airportService.getAll();
-	return new ModelAndView("admin/flight/add", "airport", airport); 
+		  flightSeat.put("airplane", airplane);
+		  flightSeat.put("airport", airport);
+	return new ModelAndView("admin/flight/add", "flightSeat", flightSeat); 
 	}
 	 
-//		@RequestMapping(value = "/booking/getBySeat", method = RequestMethod.POST)
-//	    public Flight getBySeat(HttpServletRequest request){
-//	        BookingInformation binfo = bookingInformationService.getFlightBySeat(request.getParameter("seat_no"));
-//	        System.out.println(binfo.getFlight_code());
-//	        
-//	        Flight flight = flightService.getFlightByCode(binfo.getFlight_code());
-//
-//	        return flight;
-//	    }
-	 
+
 }
