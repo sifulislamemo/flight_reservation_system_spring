@@ -21,13 +21,9 @@ import com.flight.service.SearchFlightService;
 @RestController
 @RequestMapping(value = "/home")
 public class SearchFlightController {
-	
-
-	
 	@Autowired
 	SearchFlightService searchFlightService;
-	
-	
+
 	@RequestMapping(value = "/available/flight", method = RequestMethod.POST)
     public ModelAndView serachFlight(HttpServletRequest request) {
 		System.out.println(request.getParameter("departure_airport"));

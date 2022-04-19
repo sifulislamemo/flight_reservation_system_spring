@@ -12,27 +12,29 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.flight.model.Flight;
+
 @Repository(value = "searchFlightDAO")
 @Transactional
 public class SearchFlightDAO {
 	@Autowired
-    private EntityManager entityManager;
-    
-    private Session getSession() {
-        return entityManager.unwrap(Session.class);
-    }
-    public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
-        String hqlQuery = "from flight where departure_airport = :departure_airport and arrival_airport = :arrival_airport";
-        Query query = getSession().createQuery(hqlQuery);
-        query.setParameter("departure_airport", departure_airport);
-        query.setParameter("arrival_airport", arrival_airport);
-      System.out.println("search" +departure_airport+ "searchairport" +arrival_airport);
-        List<Flight> flightList = query.list();
-        getSession().flush();
-      
-        return flightList;
-        }
-    
+	private EntityManager entityManager;
+
+	private Session getSession() {
+		return entityManager.unwrap(Session.class);
+	}
+
+	public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
+		String hqlQuery = "from flight where departure_airport = :departure_airport and arrival_airport = :arrival_airport";
+		Query query = getSession().createQuery(hqlQuery);
+		query.setParameter("departure_airport", departure_airport);
+		query.setParameter("arrival_airport", arrival_airport);
+		System.out.println("search" + departure_airport + "searchairport" + arrival_airport);
+		List<Flight> flightList = query.list();
+		getSession().flush();
+
+		return flightList;
+	}
+
 //		/* flight information */
 //    
 //    public Flight getFlightById(int pid) {

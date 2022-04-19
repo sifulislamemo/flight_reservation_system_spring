@@ -1,6 +1,5 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
 
 <div role="tabpanel" class="tab-pane active container" id="flights">
@@ -15,9 +14,8 @@
 						<label for="name">Flight Code</label> <input type="text"
 							class="form-control" id="flight_code" name="flight_code">
 					</div>
-					
 			</div>
-<div class="form-group">
+			<div class="form-group">
 				<label for="">Airplane:</label> <select id="inputState"
 					class="form-control" name="departure_airport">
 					<c:forEach items="${flightSeat.airplane}" var="airplane">
@@ -35,7 +33,7 @@
 				<label for="">Departure Airport:</label> <select id="inputState"
 					class="form-control" name="departure_airport">
 					<c:forEach items="${flightSeat.airport}" var="airport">
-<!-- 					<option selected>Select A Country</option> -->
+						<!-- 					<option selected>Select A Country</option> -->
 						<option value="${airport.name}">${airport.name}</option>
 					</c:forEach>
 				</select>
@@ -44,10 +42,10 @@
 
 
 			<div class="form-group">
-				<label for="">Arrival Airport:</label>
-				<select id="inputState" class="form-control" name="arrival_airport">
+				<label for="">Arrival Airport:</label> <select id="inputState"
+					class="form-control" name="arrival_airport">
 					<c:forEach items="${flightSeat.airport}" var="airport">
-<!-- 					<option selected>Select A Country</option> -->
+						<!-- 					<option selected>Select A Country</option> -->
 						<option value="${airport.name}">${airport.name}</option>
 					</c:forEach>
 				</select>

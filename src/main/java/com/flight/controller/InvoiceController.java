@@ -25,34 +25,28 @@ public class InvoiceController {
 	InvoiceService invoiceService;
 	@Autowired
 	BookingInformationService bookingInformationService;
-	
+
 	@RequestMapping(value = "/book/invoice/search")
 	public ModelAndView invoiceSearch() {
 		return new ModelAndView("invoice/search");
 	}
-	
+
 	@RequestMapping(value = "/book/invoice/usersearch", method = RequestMethod.POST)
 	public List<BookingInformation> invoiceSearchByUser(HttpServletRequest request) {
-	    List<BookingInformation> bList = invoiceService.getByEmail(request.getParameter("temail"));
+		List<BookingInformation> bList = invoiceService.getByEmail(request.getParameter("temail"));
 		return bList;
 	}
-	
+
 	@RequestMapping(value = "/book/invoice/cancel")
 	public ModelAndView invoiceCancel() {
 		return new ModelAndView("invoice/cancel");
 	}
-	
-	
+
 	@RequestMapping(value = "/cancelbook/{id}", method = RequestMethod.GET)
 	public ModelAndView update(HttpServletRequest request, @PathVariable("id") int id) {
 		BookingInformation bookingInformation = invoiceService.getById(id);
 		BookingInformation p = invoiceService.cancelStatus(bookingInformation);
 		return new ModelAndView("invoice/cancel");
 	}
-//	@RequestMapping(value = "/book/invoice/search")
-//	public ModelAndView invoiceSearch() {
-//		 
-//		
-//		return new ModelAndView("invoice/search" );
-//		}
+
 }

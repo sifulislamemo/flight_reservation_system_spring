@@ -17,12 +17,12 @@ public class SearchFlightService {
 	SearchFlightDAO searchFlightDAO;
 //	@Autowired
 //	FlightDAO flightDAO;
-	
-	 public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
-	      System.out.println("search" +departure_airport+ "searchairportser" +arrival_airport);
-         return searchFlightDAO.searchFlight(departure_airport, arrival_airport);
-    }
-	 
+
+	public List<Flight> searchFlight(String departure_airport, String arrival_airport) {
+		System.out.println("search" + departure_airport + "searchairportser" + arrival_airport);
+		return searchFlightDAO.searchFlight(departure_airport, arrival_airport);
+	}
+
 //	 public Flight getFlightById(int pid) {
 //	        return flightDAO.getFlightById(pid);
 //	    }

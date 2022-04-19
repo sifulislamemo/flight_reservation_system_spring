@@ -7,11 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class LoginController {
 	@RequestMapping(value = "/login")
-public ModelAndView login() {
-	return new ModelAndView("login/login");
-}
-	@RequestMapping(value = "/signUp")
-public ModelAndView signUp() {
-	return new ModelAndView("login/signUp");
-}
+	public ModelAndView login() {
+		return new ModelAndView("login/login");
+	}
 }

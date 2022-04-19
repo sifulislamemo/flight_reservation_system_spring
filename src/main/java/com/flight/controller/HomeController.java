@@ -17,17 +17,11 @@ import com.flight.service.FlightService;
 public class HomeController {
 	@Autowired
 	FlightService flightService;
-	
-//	@RequestMapping(value = "/", method = RequestMethod.GET) 
-//	public ModelAndView home() {
-//		return new ModelAndView("home/home");
-//	}
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET) 
-	  public ModelAndView flightView(){ 
-		  List<Flight> flight = flightService.getAll();
-	return new ModelAndView("home/home", "flight", flight); 
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public ModelAndView flightView() {
+		List<Flight> flight = flightService.getAll();
+		return new ModelAndView("home/home", "flight", flight);
 	}
-	
-	
+
 }

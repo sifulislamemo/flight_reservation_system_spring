@@ -14,22 +14,25 @@ public class BookService {
 	BookDAO bookDAO;
 	@Autowired
 	BookingInformationService bookingInformationService;
+
 	public BookingInformation approvedStatus(BookingInformation bookingInformation) {
 		return bookDAO.approvedStatus(bookingInformation);
 	}
-	
+
 	public BookingInformation getById(int pid) {
 		return bookDAO.getById(pid);
 	}
+
 	public List<BookingInformation> getByPending(String status) {
 		return bookDAO.getByPending(status);
 	}
+
 	public List<BookingInformation> getByApprove(String status) {
 		return bookDAO.getByApprove(status);
 	}
-	
+
 //	public BookingInformation cancelStatus(BookingInformation bookingInformation) {
 //		return bookDAO.cancelStatus(bookingInformation);
 //	}
-	
+
 }

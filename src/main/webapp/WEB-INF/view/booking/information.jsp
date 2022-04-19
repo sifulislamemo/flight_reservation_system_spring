@@ -213,16 +213,21 @@
 						<!-- <div class="seat sold"></div> -->
 					</div>
 
-<!-- 					<div class="row" id="d"> -->
+					<div class="row" id="d">
 <!-- 						<label for="">D1</label> <input class="seat" value="D1" id="d1"></input> -->
 <!-- 						<label for="">D2</label> <input class="seat" value="D2" id="d2"> -->
 <!-- 						</input> <label for="">D3</label> <input class="seat" value="D3" id="d3"></input> -->
-<!-- 					</div> -->
-<!-- 					<div class="row" id="e"> -->
+					</div>
+					<div class="row" id="e">
 <!-- 						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input> -->
 <!-- 						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input> -->
 <!-- 						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input> -->
-<!-- 					</div> -->
+					</div>
+					<div class="row" id="f">
+<!-- 						<label for="">E1</label> <input class="seat" value="E1" id="e1"></input> -->
+<!-- 						<label for="">E2</label> <input class="seat" value="E2" id="e2"></input> -->
+<!-- 						<label for="">E3</label> <input class="seat" value="E3" id="e3"></input> -->
+					</div>
 
 
 
@@ -329,19 +334,40 @@ var test = ${flightSeat.seat};
  console.log(test.length)
  var html = '';
  var html1 = '';
+ var html2 = '';
+ var html3 = '';
+ var html4 = '';
+ var html5 = '';
  
  for(i=0; i<test.length; i++){
-	 if(i<6){
+	 if(i>=0 && i<5){
 		 html += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
 	 }
-	 if(i>6 && i< 13){
+	 if(i>=5 && i<10){
 		 html1 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
 	 }
+	 if(i>=10 && i<15){
+		 html2 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+	 if(i>=15 && i<20){
+		 html3 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+	 if(i>=20 && i<25){
+		 html4 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+	 if(i>=25 && i<30){
+		 html5 += '<label for="">'+test[i].seat_no+'</label><input class="seat" value="'+test[i].seat_no+'" id="'+test[i].seat_no+'"></input>';
+	 }
+
 
 	 
  }
 $("#a").append(html);	
 $("#b").append(html1);
+$("#c").append(html2);
+$("#d").append(html3);
+$("#e").append(html4);
+$("#f").append(html5);
 
 
 

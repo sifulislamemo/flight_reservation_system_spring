@@ -9,8 +9,6 @@
 			<header class="panel-heading text-center">
 				<h1>Add Airplane</h1>
 			</header>
-
-
 			<div class="panel-body">
 
 				<form id="airplaneSave">
@@ -42,7 +40,7 @@
 					</div>
 					<div class="container bg-light">
 						<div class="col-md-12 text-center">
-							
+
 							<input type="button" value="Save" id="btnSave"
 								class="btn btn-primary" />
 						</div>

@@ -31,59 +31,52 @@ public class BookingInformationController {
 	InvoiceService invoiceService;
 	@Autowired
 	FlightService flightService;
-	
+
 	@Autowired
 	SeatService seatService;
-	
-	
+
 	@Autowired
 	BookingInformationService bookingInformationService;
-	
-	
+
 	@RequestMapping(value = "/booking/information/{id}", method = RequestMethod.GET)
-    public ModelAndView edit(@PathVariable String id){
+	public ModelAndView edit(@PathVariable String id) {
 //		System.out.println(id + "   ///");
-        int pid = Integer.valueOf(id);
-        
-        List<Flight> flights = flightService.getAll();
+		int pid = Integer.valueOf(id);
+
+		List<Flight> flights = flightService.getAll();
 		Map<String, Object> flightSeat = new HashMap<String, Object>();
 
-        List<Seat> seat = seatService.getAll();
-        
-        ObjectMapper mapper = new ObjectMapper();
-        
-        
-        try {
+		List<Seat> seat = seatService.getAll();
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		try {
 			flightSeat.put("seat", mapper.writeValueAsString(seat));
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-        flightSeat.put("flight", flights);
-        flightSeat.put("f", id);
-        return new ModelAndView("booking/information", "flightSeat", flightSeat);
-    }
-	
+		flightSeat.put("flight", flights);
+		flightSeat.put("f", id);
+		return new ModelAndView("booking/information", "flightSeat", flightSeat);
+	}
+
 	@RequestMapping(value = "/book/invoice", method = RequestMethod.POST)
-    public ModelAndView save(HttpServletRequest r, @ModelAttribute BookingInformation bookingInformation){
-		
+	public ModelAndView save(HttpServletRequest r, @ModelAttribute BookingInformation bookingInformation) {
+
 		BookingInformation b = bookingInformationService.save(bookingInformation, r);
-		
+
 //		System.out.println(bookingInformation.getAdult());
 		Map<String, Object> book = new HashMap<String, Object>();
-        List<BookingInformation> bList = invoiceService.getByEmail(b.getTemail());
+		List<BookingInformation> bList = invoiceService.getByEmail(b.getTemail());
 
-        book.put("bList", bList);
+		book.put("bList", bList);
 		return new ModelAndView("/booking/congratsBooking", "book", book);
-    }
-	
+	}
 
-	
 //	@RequestMapping(value = "/booking/information/", method = RequestMethod.GET) 
 //	  public ModelAndView view(){ 
 //		  List<Flight> flight = flightService.getAll();
 //	return new ModelAndView("/booking/information", "flight", flight); 
 //	}
-	
-
 
 }

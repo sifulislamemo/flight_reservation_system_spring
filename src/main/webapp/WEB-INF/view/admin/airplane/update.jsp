@@ -9,10 +9,7 @@
 			<header class="panel-heading text-center">
 				<h1>Update Airplane</h1>
 			</header>
-
-
 			<div class="panel-body">
-
 				<form method="post" action="/admin/airplane/update">
 					<div class="form-group">
 						<label for="airplane_name">Airplane Name:</label> <input

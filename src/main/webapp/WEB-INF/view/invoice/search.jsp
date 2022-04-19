@@ -221,7 +221,7 @@
 
 									<div class="row contacts">
 										<div class="col invoice-details">
-											<div class="invoice-id">INVOICE NO: </div>
+											<div class="invoice-id">INVOICE NO:</div>
 											<div class="invoice-id" id="id"></div>
 											<div class="date">Date of Invoice: 05/04/2022</div>
 										</div>
@@ -242,7 +242,7 @@
 											<div id="airpalne"></div>
 
 											<div style="font-weight: bold;">FLIGHT DATE:</div>
-											<div  id="departing_date"></div>
+											<div id="departing_date"></div>
 
 											<div style="font-weight: bold;">SEAT NO:</div>
 											<div id="seat_no"></div>
@@ -356,12 +356,12 @@
 								</main>
 							</div>
 						</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 
 

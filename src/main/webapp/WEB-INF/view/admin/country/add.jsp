@@ -1,7 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@include file="/WEB-INF/view/common/admin/admin_header.jsp"%>
 <div role="tabpanel" class="tab-pane active container" id="flights">
 	<div class="col-lg-12">

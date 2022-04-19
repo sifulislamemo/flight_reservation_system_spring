@@ -8,8 +8,6 @@
               <header class="panel-heading text-center">
                <h1> Update Airport</h1>
               </header>
-
-    
                 <div class="panel-body">
     <form id = "airportUpdate" action="/admin/airport/update" method="post">
         <div class="form-group">
@@ -39,21 +37,4 @@
     </form>
 </div> 
 <%@include file="/WEB-INF/view/common/admin/admin_footer.jsp"%> 
- <script>
-// 	$("#btnUpdate").on("click", function(e) {
-// 		$.ajax({
-// 			type : "POST",
-// 			url : "/admin/airport/update",
-// 			data : $("#airportUpdate").serialize(),
-// 			success : function(data, status) {
-// 				$("#airportUpdate").trigger('reset');
-// 				$.alert({
-// 					title : 'Update!',
-// 					content : 'Data Update successfully!',
-// 				});
-// 			}
-
-// 		});
-
-// 	});
-</script>
+ 

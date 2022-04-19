@@ -33,9 +33,6 @@ public class BookingInformation {
 	private String temail;
 	private String tpassport_no;
 	
-	
-	
-
 	//	Payment Information
 	private String card_holder_name;
 	private int card_number;

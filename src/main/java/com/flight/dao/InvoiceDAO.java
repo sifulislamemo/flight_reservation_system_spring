@@ -18,41 +18,42 @@ import com.flight.service.BookingInformationService;
 @Transactional
 public class InvoiceDAO {
 	@Autowired
-    private EntityManager entityManager;
+	private EntityManager entityManager;
 	@Autowired
 	BookingInformationService bookingInformationService;
-    
-    private Session getSession() {
-        return entityManager.unwrap(Session.class);
-    }
-    
-    public List<BookingInformation> getByEmail(String temail) {
-        String hqlQuery = "from bookingInformation where temail = :temail";
-        Query query = getSession().createQuery(hqlQuery);
-        query.setParameter("temail", temail);
-        
+
+	private Session getSession() {
+		return entityManager.unwrap(Session.class);
+	}
+
+	public List<BookingInformation> getByEmail(String temail) {
+		String hqlQuery = "from bookingInformation where temail = :temail";
+		Query query = getSession().createQuery(hqlQuery);
+		query.setParameter("temail", temail);
+
 //      System.out.println("search" +temail);
-        List<BookingInformation> bookingList = query.list();
-        getSession().flush();
-      
-        return bookingList;
-        }
-    
+		List<BookingInformation> bookingList = query.list();
+		getSession().flush();
+
+		return bookingList;
+	}
+
 //  cancel book
-    
-  public BookingInformation cancelStatus(BookingInformation bookingInformation) {
-		String hql = "update bookingInformation set cancel_status ='cancelbook' where id = '" + bookingInformation.getId() + "'";
+
+	public BookingInformation cancelStatus(BookingInformation bookingInformation) {
+		String hql = "update bookingInformation set cancel_status ='cancelbook' where id = '"
+				+ bookingInformation.getId() + "'";
 		Query q = getSession().createQuery(hql);
 		q.executeUpdate();
 		getSession().flush();
 		return bookingInformation;
 	}
-    
-  public BookingInformation getById(int pid) {
+
+	public BookingInformation getById(int pid) {
 		String sql = "from bookingInformation where id = '" + pid + "'";
 		List<BookingInformation> cList = getSession().createQuery(sql).list();
 		return cList.get(0);
 
 	}
-    
+
 }
