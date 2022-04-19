@@ -44,4 +44,10 @@ public class BookController {
 
 		return new ModelAndView("admin/book/confirm", "bookConfirm", bookConfirm);
 }
+	@RequestMapping(value = "/cancel", method = RequestMethod.GET)
+	public ModelAndView cancelBook() {
+//		  List<BookingInformation> cancelBook = bookService.getByApprove(null);
+
+		return new ModelAndView("admin/book/cancel");
+}
 }

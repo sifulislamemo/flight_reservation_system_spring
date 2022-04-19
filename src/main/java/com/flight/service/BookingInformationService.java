@@ -55,6 +55,7 @@ public class BookingInformationService {
 				seat.setSeat_status(1);
 				seatDAO.update(seat);
 			}
+			
 		}
 		return bookingInformationDAO.save(b);
 	}

@@ -40,23 +40,16 @@
                         									<p style="font-weight: bold; font-size: 20px;">Seat Charge :</p>
 <input id="seat_charge" name="seat_charge" style="color: red; font-weight: bold; font-size: 20px; border:none;" readonly></input>
                         
-                        <c:forEach items="${flightSeat.flight}" var="f">
-                        <h3><b>${f.departure_airport} - ${f.arrival_airport}</b></h3>
-                        <p><b>Airline Name:&nbsp &nbsp</b><span >${f.airline}</span></p>
-                        <p><b>Departing Date:&nbsp &nbsp</b><span>${f.departing_date}</span></p>
-                        <p><b>Departing Time:&nbsp &nbsp</b><span>${f.departing_time}</span></p>
-                        <p><b>Arrival Date:&nbsp &nbsp</b><span>${f.arrival_date}</span></p>
-                        <p><b>Arrival Time:&nbsp &nbsp</b><span>${f.arrival_time}</span></p>
-<%--                         <p>Class Name<span>${flight.class_name}</span></p> --%>
-<%--                         <h1>Price<span>${flight.flight_charge}</span></h1> --%>
-</c:forEach>
-
-
+                        <h3><b>${flightSeat.flight.departure_airport} - ${flightSeat.flight.arrival_airport}</b></h3>
+                        <p><b>Airline Name:&nbsp &nbsp</b><span >${flightSeat.flight.airline}</span></p>
+                        <p><b>Departing Date:&nbsp &nbsp</b><span>${flightSeat.flight.departing_date}</span></p>
+                        <p><b>Departing Time:&nbsp &nbsp</b><span>${flightSeat.flight.departing_time}</span></p>
+                        <p><b>Arrival Date:&nbsp &nbsp</b><span>${flightSeat.flight.arrival_date}</span></p>
+                        <p><b>Arrival Time:&nbsp &nbsp</b><span>${flightSeat.flight.arrival_time}</span></p>
 
 </div>
 </div>
                                          <input type="hidden" class="form-control"value="${flightSeat.f}" id="flight_id" name="flight_id">
-<%--                  <input type="hidden" class="form-control"value="${flightSeat.f}" id="seat_id" name="seat_id"> --%>
 
 <!-- Ticket Information -->
             <div class="col-xxs-12 col-xs-6 mt border" >

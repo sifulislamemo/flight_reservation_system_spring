@@ -43,7 +43,7 @@ public class BookingInformationController {
 //		System.out.println(id + "   ///");
 		int pid = Integer.valueOf(id);
 
-		List<Flight> flights = flightService.getAll();
+		Flight flights = flightService.getFlightById(pid);
 		Map<String, Object> flightSeat = new HashMap<String, Object>();
 
 		List<Seat> seat = seatService.getAll();

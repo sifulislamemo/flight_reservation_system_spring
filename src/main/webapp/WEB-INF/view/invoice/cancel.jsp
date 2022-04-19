@@ -51,8 +51,8 @@
 											<td id="lname"></td>
 											<td id="email"></td>
 											<td id="tpassport_no"></td>
-											<td id="ss"><a class="btn btn-primary">Cancel Book</a>
-
+											<td id="ss">
+											<a class="btn btn-primary"  id="cancel">Cancel Book</a> 
 											</td>
 										</tr>
 
@@ -94,6 +94,7 @@
 				},
 				success : function(data, status) {
 					// 					console.log(data[0].seat_no);
+					$("#cancel").attr("href", "/home/cancelbook/"+data[0].id);
 					$("#otp_div").hide();
 					$("#flight_code").text(data[0].flight_code);
 					$("#flight_name").text(data[0].flight_name);
